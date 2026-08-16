@@ -1,0 +1,163 @@
+الـoutput **قوي جدًا من ناحية الـEmbeddings، لكن كشف لنا مشاكل في WHO03 chunking لازم نصلحها قبل Qdrant**.
+
+تقييمي الحالي: **8.3/10 overall**. الـembedding/retrieval نفسه حوالي **9.3/10**، NICE3 parsing حوالي **9/10**، لكن WHO03 parsing/chunk metadata حوالي **6.5–7/10**.
+
+أهم نتيجة: الأربع queries رجّعوا الإجابة الصحيحة في **Rank 1 = 4/4**، يعني `Top-1 semantic retrieval accuracy = 100%` في الاختبار الصغير ده. سؤال أدوية الضغط الإنجليزي رجّع توصية WHO الصحيحة بـscore `0.7280`، والعربي رجّع نفس التوصية بـ`0.6871`.  
+
+وكمان BGE-M3 عامل شغل ممتاز في الـcross-language retrieval. السؤال العربي عن LDL رجّع مباشرة `NICE3_1.7.1_REC` وفيه الهدف الصحيح، وبـscore `0.7156`.  والنسخة الإنجليزية رجعتها Rank 1 بـ`0.7725`. 
+
+لكن عندنا **3 مشاكل مهمة جدًا**:
+
+1. **WHO03 فيه duplicates.**
+   سؤال first-line hypertension جاب في Rank 1:
+
+   ```text
+   WHO03_0_REC_006
+   Executive summary
+   ```
+
+   وفي Rank 2 جاب النسخة الأساسية الأفضل:
+
+   ```text
+   WHO03_3.4_REC_001
+   Section 3.4
+   ```
+
+   والنصين تقريبًا نفس التوصية.  
+
+   أنا عايز الـcanonical chunk:
+
+   ```text
+   WHO03_3.4_REC_001
+   ```
+
+   هو اللي يكسب دائمًا، مش نسخة الـExecutive Summary.
+
+2. **فيه metadata bug واضح في WHO03.** ودي أهم مشكلة في الملف كله.
+
+   عندك:
+
+   ```text
+   Chunk ID: WHO03_3.3_TBL_001
+   Section: 3 Recommendations
+   Topic: cardiovascular_risk_assessment
+   ```
+
+   لكن النص جوه الـchunk هو:
+
+   ```text
+   RECOMMENDATION ON DRUG CLASSES
+   TO BE USED AS FIRST-LINE AGENTS
+   ```
+
+   يعني المحتوى بتاع **3.4 pharmacological treatment** لكن متسجل كأنه **3.3 cardiovascular risk assessment**. 
+
+   دي لازم تتصلح **قبل Qdrant**، لأن metadata filtering بعدين ممكن يعمل مصيبة. لو سألنا:
+
+   ```text
+   cardiovascular risk assessment
+   ```
+
+   ممكن الـfilter يرجّع chunk بتاعة أدوية first-line بسبب الـmetadata الغلط.
+
+3. نفس الـchunk متصنفة:
+
+   ```text
+   TBL = table
+   ```
+
+   رغم إنها فعليًا recommendation + implementation remarks وليست table حقيقية. 
+
+   وعندنا مشكلة مشابهة في:
+
+   ```text
+   WHO03_0_TBL_003
+   ```
+
+   لأنها شايلة أكثر من recommendation مع بعض: جزء عن treatment threshold، ثم laboratory testing، ثم cardiovascular risk assessment. 
+
+   ده chunk واسع زيادة وغير نظيف للـclinical retrieval.
+
+أما **NICE3 فحالته أحسن بوضوح**. السؤال عن:
+
+```text
+LDL target for secondary prevention
+```
+
+رجّع:
+
+```text
+Rank 1
+NICE3_1.7.1_REC
+clinical_priority = 1
+secondary_prevention_lipid_target
+```
+
+ودي بالضبط النتيجة اللي كنا عايزينها. 
+
+حتى النتائج التالية منطقية:
+
+```text
+#1 Direct recommendation
+#2 Implementation impact
+#3 Primary prevention target
+#4 Committee rationale
+#5 CKD related recommendation
+```
+
+
+
+لكن بعد ما نضيف الـreranker، أنا عايز الترتيب يبقى أقرب لـ:
+
+```text
+1. direct recommendation      priority 1
+2. directly related recommendation
+3. committee rationale        priority 2
+4. special population         priority 1
+5. implementation impact      priority 3
+```
+
+يعني `NICE3_1.7_IMPACT_001` ماينفعش عادة يكون Rank 2 قدام clinical chunks لمجرد semantic similarity.
+
+### التقييم النهائي
+
+| Component                |     Rating |
+| ------------------------ | ---------: |
+| BGE-M3 English retrieval | **9.5/10** |
+| BGE-M3 Arabic retrieval  |   **9/10** |
+| Cross-language retrieval | **9.5/10** |
+| NICE3 chunks             |   **9/10** |
+| NICE3 metadata           |   **9/10** |
+| WHO03 chunks             |   **7/10** |
+| WHO03 metadata           | **6.5/10** |
+| Overall current pipeline | **8.3/10** |
+
+والأهم: **أنا مش شايف إننا محتاجين نغيّر embedding model. BGE-M3 نجح.**
+
+المشكلة الحالية **ليست embeddings**؛ المشكلة في **WHO03 parser/chunker**.
+
+قبل Qdrant، أنصح نعمل إصلاح واحد للـWHO03 parser:
+
+```text
+WHO03 Fix Pass
+
+1. Remove/mark Executive Summary duplicates
+             ↓
+2. Make section 3.x recommendation canonical
+             ↓
+3. Fix section-boundary assignment
+             ↓
+4. Stop detecting recommendation boxes as tables
+             ↓
+5. Prevent chunks spanning multiple recommendations
+             ↓
+6. Re-run embeddings
+             ↓
+7. Run 20–30 evaluation questions
+             ↓
+8. Qdrant
+```
+
+**خصوصًا `WHO03_3.3_TBL_001` لازم ما يعديش للـproduction بالشكل الحالي.** ده أهم bug ظهر لنا من الاختبار.
+
+لو تحب، الخطوة اللي أعملها لك دلوقتي هي **Prompt لـAntigravity لإصلاح WHO03 parser بناءً على المشاكل الحقيقية اللي ظهرت في `output.txt`** بدل ما نعدل يدويًا.
