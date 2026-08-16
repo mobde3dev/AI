@@ -18,26 +18,39 @@ logger = logging.getLogger(__name__)
 # Medical safelist — patterns that must NEVER be removed or altered
 # ---------------------------------------------------------------------------
 
-# Common medical abbreviations in the WHO hypertension guideline
+# Common medical abbreviations in cardiovascular and hypertension guidelines
 MEDICAL_ABBREVIATIONS = {
     "ACEi", "ARB", "CCB", "CKD", "CVD", "SBP", "DBP", "BP",
     "HCTZ", "ACEI", "MI", "HF", "LVH", "GFR", "eGFR", "WHO",
     "PICO", "GRADE", "RCT", "NNT", "CI", "HR", "OR", "RR",
-    "mmHg", "mg", "kg", "mL", "dL", "mg/dL", "mmol/L",
-    "HIV", "DM", "T2DM", "COPD", "AF", "PAD", "TIA", "ACS",
+    "mmHg", "mg", "kg", "mL", "dL", "mg/dL", "mmol/L", "mmol",
+    "HIV", "DM", "T2DM", "T1DM", "COPD", "AF", "PAD", "TIA", "ACS",
     "NSAID", "OTC", "ECG", "ABPM", "HBPM",
+    "LDL", "HDL", "non-HDL", "QRISK", "QRISK2", "QRISK3",
+    "HbA1c", "BMI", "ALT", "AST", "TSH", "CK", "PCSK9",
+    "TA385", "TA393", "TA394", "TA694", "TA733",
 }
 
 # Patterns that represent clinical content — protect from removal
 _CLINICAL_PATTERNS = [
     re.compile(r"\d{2,3}\s*[-–]\s*\d{2,3}\s*mmHg"),     # 130–139 mmHg
     re.compile(r"[≥≤<>]\s*\d{2,3}\s*mmHg"),              # ≥140 mmHg
-    re.compile(r"\d+(\.\d+)?\s*mg"),                      # 5 mg, 12.5 mg
+    re.compile(r"\d+(\.\d+)?\s*mg\b"),                   # 20 mg, 80 mg
     re.compile(r"\b\d+\s*[-–]\s*\d+\s*mg\b"),             # 25–50 mg
+    re.compile(r"\b\d+(\.\d+)?\s*mmol(?:\s+per\s+litre|/L)?\b", re.IGNORECASE), # 2.0 mmol per litre
+    re.compile(r"\b\d+%", re.IGNORECASE),                 # 10%, 40%
+    re.compile(r"\bQRISK[23]?\b", re.IGNORECASE),
+    re.compile(r"\batorvastatin\b", re.IGNORECASE),
+    re.compile(r"\bezetimibe\b", re.IGNORECASE),
+    re.compile(r"\bstatin[s]?\b", re.IGNORECASE),
     re.compile(r"(?:strong|conditional)\s+recommendation", re.IGNORECASE),
     re.compile(r"(?:high|moderate|low|very\s+low)[-–\s]*certainty\s+evidence", re.IGNORECASE),
     re.compile(r"WHO\s+(?:recommends|suggests)", re.IGNORECASE),
     re.compile(r"RECOMMENDATION\s+ON", re.IGNORECASE),
+    re.compile(r"\[(?:(?:January|February|March|April|May|June|July|August|September|October|November|December|\d{4})[^\]]*)\]"), # Date markers [May 2023]
+    re.compile(r"1\.(?:1[0-2]|[1-9])\.\d+"),              # Recommendation IDs
+    re.compile(r"Why\s+the\s+committee\s+made\s+(?:the|these)?\s*recommendations?", re.IGNORECASE),
+    re.compile(r"How\s+the\s+recommendations?\s+might\s+affect\s+(?:practice|services|the\s+NHS)", re.IGNORECASE),
 ]
 
 
@@ -48,6 +61,8 @@ _CLINICAL_PATTERNS = [
 # Known boilerplate patterns (case-insensitive)
 _BOILERPLATE_PATTERNS = [
     re.compile(r"^\s*ISBN\s", re.IGNORECASE),
+    re.compile(r"^\s*[©\ufffd]?\s*NICE\s*\d{4}\..*", re.IGNORECASE),
+    re.compile(r"^\s*conditions#notice-of-rights.*", re.IGNORECASE),
     re.compile(r"^\s*©\s", re.IGNORECASE),
     re.compile(r"^\s*Copyright\s", re.IGNORECASE),
     re.compile(r"^\s*All\s+rights\s+reserved", re.IGNORECASE),
@@ -57,6 +72,9 @@ _BOILERPLATE_PATTERNS = [
     re.compile(r"^\s*Published\s+by\s", re.IGNORECASE),
     re.compile(r"^\s*WHO/", re.IGNORECASE),
     re.compile(r"^\s*GUIDELINE\s+FOR\s+THE\s+PHARMACOLOGICAL\s+TREATMENT\s+OF\s+HYPERTENSION\s+IN\s+ADULTS\s*$", re.IGNORECASE),
+    re.compile(r"^\s*Cardiovascular\s+disease:\s*risk\s+assessment\s+and\s+reduction.*lipid\s+modification\s*$", re.IGNORECASE),
+    re.compile(r"^\s*\(NG238\)\s*$", re.IGNORECASE),
+    re.compile(r"^\s*Page\s+\d+\s+of(?:\s+\d+)?\s*$", re.IGNORECASE),
     re.compile(r"^\s*RECOMMENDATIONS\s*$", re.IGNORECASE),
     re.compile(r"^\s*ANNEXES\s*$", re.IGNORECASE),
 ]
