@@ -13,7 +13,7 @@ import os
 import pytest
 from pathlib import Path
 
-from src.nice_recommendation_parser import (
+from src.segmenters.nice_rec_parser import (
     parse_date_marker,
     find_date_markers,
     validate_recommendation_id,
@@ -21,12 +21,12 @@ from src.nice_recommendation_parser import (
     extract_technology_appraisals,
     NiceRecommendation,
 )
-from src.nice_section_parser import (
+from src.segmenters.nice_segmenter import (
     NICE_SECTION_DEFS,
     get_topic_for_section,
     get_prevention_type,
 )
-from src.nice_metadata_extractor import (
+from src.enrichers.nice_enricher import (
     classify_content_type,
     determine_clinical_priority,
     extract_populations,
@@ -34,8 +34,8 @@ from src.nice_metadata_extractor import (
     extract_lipid_metadata,
     extract_drug_metadata,
 )
-from src.validate_chunks import validate_nice3_chunks
-from src.chunk_nice3 import NiceChunk
+from src.postprocessors.validator import validate_nice3_chunks
+from src.chunkers.nice_chunker import NiceChunk
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -235,13 +235,13 @@ class TestValidationEngine:
 
 class TestPipelineOutputs:
     @pytest.mark.skipif(
-        not os.path.exists(str(PROJECT_ROOT / "data" / "raw" / "NICE3.pdf")),
-        reason="NICE3.pdf raw file required for integration test"
+        not os.path.exists(str(PROJECT_ROOT / "data" / "raw" / "NICE_2023.pdf")),
+        reason="NICE_2023.pdf raw file required for integration test"
     )
     def test_pipeline_execution(self):
-        from src.run_nice3_pipeline import run_nice3_pipeline
+        from src.pipelines.nice_pipeline import run_nice_pipeline
 
-        chunks, stats = run_nice3_pipeline()
+        chunks, stats = run_nice_pipeline()
 
         assert len(chunks) > 20
         assert stats["direct_recommendations"] > 0
@@ -249,7 +249,7 @@ class TestPipelineOutputs:
         assert stats["validation_errors"] == 0
 
         # Verify output files exist
-        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "nice3_chunks.json"))
-        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "nice3_chunks.jsonl"))
-        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "nice3_chunks_preview.md"))
-        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "nice3_processing_report.json"))
+        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "NICE_2023_chunks.json"))
+        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "NICE_2023_chunks.jsonl"))
+        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "NICE_2023_chunks_preview.md"))
+        assert os.path.exists(str(PROJECT_ROOT / "data" / "processed" / "NICE_2023_processing_report.json"))

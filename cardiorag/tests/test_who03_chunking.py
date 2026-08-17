@@ -21,20 +21,20 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.parse_who03 import extract_pages, extract_toc
-from src.clean_text import (
+from src.parsers.who_parser import extract_pages, extract_toc
+from src.core.clean_text import (
     clean_page_text,
     normalize_text,
     detect_noise_patterns,
     _is_clinical_line,
 )
-from src.section_parser import build_sections, EXPECTED_SECTIONS
-from src.metadata_extractor import (
+from src.segmenters.who_segmenter import build_sections, EXPECTED_SECTIONS
+from src.enrichers.who_enricher import (
     detect_recommendation,
     classify_content_type,
     extract_clinical_entities,
 )
-from src.chunk_who03 import (
+from src.chunkers.who_chunker import (
     count_tokens,
     generate_chunk_id,
     reset_id_counters,
@@ -47,8 +47,8 @@ from src.chunk_who03 import (
 # Fixtures
 # ---------------------------------------------------------------------------
 
-PDF_PATH = str(PROJECT_ROOT / "data" / "raw" / "WHO03.pdf")
-CHUNKS_PATH = str(PROJECT_ROOT / "data" / "processed" / "who03_chunks.json")
+PDF_PATH = str(PROJECT_ROOT / "data" / "raw" / "WHO_2021.pdf")
+CHUNKS_PATH = str(PROJECT_ROOT / "data" / "processed" / "WHO_2021_chunks.json")
 
 
 def _load_chunks():
@@ -250,7 +250,7 @@ class TestChunkStructure:
     def test_all_chunks_have_source_file(self):
         """Every chunk must have source_file metadata."""
         for c in self.chunks:
-            assert c["metadata"].get("source_file") == "WHO03.pdf", \
+            assert c["metadata"].get("source_file") == "WHO_2021.pdf", \
                 f"Missing/wrong source_file in {c['chunk_id']}"
 
     def test_all_chunks_have_page_number(self):

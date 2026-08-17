@@ -2072,132 +2072,220 @@
     "after_snippet": "2008"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_1_EVID_002",
-    "action": "Stripped running header/footer noise fragment",
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.2_REC_001",
+    "action": "Enriched canonical recommendation with Implementation remarks",
     "field_name": "text",
-    "before_snippet": "Section: 1 Introduction\n\nScope and objectives of the hypertension guideline\nThe 2021 WHO hypertension guideline aims to provide the most current and r",
-    "after_snippet": "Section: 1 Introduction\n\nScope and objectives of the hypertension guideline\nThe 2021 WHO hypertension guideline aims to provide the most current and r"
+    "before_snippet": "Section: 3.2 Laboratory testing before and during pharmacological treatment\n\n2. RECOMMENDATION ON LABORATORY TESTING\nWhen starting pharmacological the",
+    "after_snippet": "Section: 3.2 Laboratory testing before and during pharmacological treatment\n\n2. RECOMMENDATION ON LABORATORY TESTING\nWhen starting pharmacological the"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_2.2_DRUG_001",
-    "action": "Stripped running header/footer noise fragment",
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.3_REC_001",
+    "action": "Enriched canonical recommendation with Implementation remarks",
     "field_name": "text",
-    "before_snippet": "Section: 2.2 Analytical framework and PICOs\n\n2.2 Analytical framework and PICOs\nAn initial GDG meeting was held in Geneva in July 2019 to determine th",
-    "after_snippet": "Section: 2.2 Analytical framework and PICOs\n\n2.2 Analytical framework and PICOs\nAn initial GDG meeting was held in Geneva in July 2019 to determine th"
+    "before_snippet": "Section: 3.3 Cardiovascular disease risk assessment as guide to initiation of antihypertensive medications\n\n3. RECOMMENDATION ON CARDIOVASCULAR DISEAS",
+    "after_snippet": "Section: 3.3 Cardiovascular disease risk assessment as guide to initiation of antihypertensive medications\n\n3. RECOMMENDATION ON CARDIOVASCULAR DISEAS"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_2.5_EVID_001",
-    "action": "Stripped running header/footer noise fragment",
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.4_REC_001",
+    "action": "Enriched canonical recommendation with Implementation remarks",
     "field_name": "text",
-    "before_snippet": "Section: 2.5 Certainty of evidence and strength of recommendations\n\n2.5 Certainty of evidence and strength of recommendations\nThe GDG rated the certai",
-    "after_snippet": "Section: 2.5 Certainty of evidence and strength of recommendations\n\n2.5 Certainty of evidence and strength of recommendations\nThe GDG rated the certai"
+    "before_snippet": "Section: 3.4 Drug classes to be used as first-line agents\n\n4. RECOMMENDATION ON DRUG CLASSES TO BE USED AS FIRST-LINE AGENTS\nFor adults with hypertens",
+    "after_snippet": "Section: 3.4 Drug classes to be used as first-line agents\n\n4. RECOMMENDATION ON DRUG CLASSES TO BE USED AS FIRST-LINE AGENTS\nFor adults with hypertens"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_3.4_E2D_001",
-    "action": "Stripped running header/footer noise fragment",
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.5_REC_001",
+    "action": "Enriched canonical recommendation with Implementation remarks",
     "field_name": "text",
-    "before_snippet": "Section: 3.4 Drug classes to be used as first-line agents\n\nframeworks of PICO questions 4 and 5 (see Annex 4) were used to develop one recommendation.",
-    "after_snippet": "Section: 3.4 Drug classes to be used as first-line agents\n\nframeworks of PICO questions 4 and 5 (see Annex 4) were used to develop one recommendation."
+    "before_snippet": "Section: 3.5 Combination therapy\n\n5. RECOMMENDATION ON COMBINATION THERAPY\nFor adults with hypertension requiring pharmacological treatment, WHO sugge",
+    "after_snippet": "Section: 3.5 Combination therapy\n\n5. RECOMMENDATION ON COMBINATION THERAPY\nFor adults with hypertension requiring pharmacological treatment, WHO sugge"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_3.5_E2D_004",
-    "action": "Stripped running header/footer noise fragment",
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.8_REC_001",
+    "action": "Enriched canonical recommendation with Implementation remarks",
     "field_name": "text",
-    "before_snippet": "Section: 3.5 Combination therapy\n\nThus, the intervention is likely feasible\nto implement. The GDG acknowledged some challenges to single-pill combinat",
-    "after_snippet": "Section: 3.5 Combination therapy\n\nThus, the intervention is likely feasible\nto implement. The GDG acknowledged some challenges to single-pill combinat"
+    "before_snippet": "Section: 3.8 Administration of treatment by nonphysician professionals\n\n8. RECOMMENDATION ON TREATMENT BY NONPHYSICIAN PROFESSIONALS\nWHO suggests that",
+    "after_snippet": "Section: 3.8 Administration of treatment by nonphysician professionals\n\n8. RECOMMENDATION ON TREATMENT BY NONPHYSICIAN PROFESSIONALS\nWHO suggests that"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_4.1_SPEC_001",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: 4.1 Hypertension in disaster, humanitarian and emergency settings\n\n4.1 Hypertension in disaster, humanitarian and emergency settings\nHyperten",
-    "after_snippet": "Section: 4.1 Hypertension in disaster, humanitarian and emergency settings\n\n4.1 Hypertension in disaster, humanitarian and emergency settings\nHyperten"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.2_TBL_005",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.2_TBL_005",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 3. RECOMMENDATION ON CARDIOVASCULAR DISEASE RISK ASSESSMENT\n\n3. RECOMMENDATION ON CARDIOVASCULAR DISEASE RISK ASSESSMENT\n---\nWHO suggests cardi",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_4.3_THR_003",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: 4.3 Pregnancy and hypertension\n\nIn summary, HTN in pregnancy, manifested by the various hypertensive pregnancy disorders, is a very\ncommon me",
-    "after_snippet": "Section: 4.3 Pregnancy and hypertension\n\nIn summary, HTN in pregnancy, manifested by the various hypertensive pregnancy disorders, is a very\ncommon me"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.6_TBL_002",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.6_TBL_002",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 7. RECOMMENDATION ON FREQUENCY OF ASSESSMENT\n\n7. RECOMMENDATION ON FREQUENCY OF ASSESSMENT\n---\nWHO suggests a monthly follow up after initiatio",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_5.5_EVID_001",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: 5.5 Research gaps\n\n5.5 Research gaps\nSeveral research gaps were identified by the GDG according to the theme of the PICOs.\nThresholds to dete",
-    "after_snippet": "Section: 5.5 Research gaps\n\n5.5 Research gaps\nSeveral research gaps were identified by the GDG according to the theme of the PICOs.\nThresholds to dete"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.6_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.6_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 6. RECOMMENDATION ON TARGET BLOOD PRESSURES\n\n6. RECOMMENDATION ON TARGET BLOOD PRESSURES\n---\nWHO recommends a target blood pressure treatment g",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_6.1_EVID_001",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: 6.1 Guideline recommendations\n\n6.1 Guideline recommendations\nGraphic summaries of the guideline recommendations are presented below in an alg",
-    "after_snippet": "Section: 6.1 Guideline recommendations\n\n6.1 Guideline recommendations\nGraphic summaries of the guideline recommendations are presented below in an alg"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.2_TBL_003",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.2_TBL_003",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: Laboratory tests\n\nLaboratory tests\n---\nECG\n\nSource: WHO03\nSection: 3.2 Laboratory testing before and during pharmacological treatment\nPage: 21",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_6.2_ALGO_003",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: 6.2 Drug- and dose-specific protocols\n\nIf BP is not at goal,\nadd a thiazide/thiazide-like\ndiuretic at half maximal dose\n(hydrochlorothiazide ",
-    "after_snippet": "Section: 6.2 Drug- and dose-specific protocols\n\nIf BP is not at goal,\nadd a thiazide/thiazide-like\ndiuretic at half maximal dose\n(hydrochlorothiazide "
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.3_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.3_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 4. RECOMMENDATION ON DRUG CLASSES TO BE USED AS FIRST-LINE AGENTS\n\n4. RECOMMENDATION ON DRUG CLASSES TO BE USED AS FIRST-LINE AGENTS\n---\nFor ad",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_0_METH_001",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: Annex 3: Treatment outcomes relevant to hypertension\n\nAnnex 3: Treatment outcomes\nrelevant to hypertension\nMembers of the WHO Steering Group,",
-    "after_snippet": "Section: Annex 3: Treatment outcomes relevant to hypertension\n\nAnnex 3: Treatment outcomes\nrelevant to hypertension\nMembers of the WHO Steering Group,"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_0_TBL_002",
+    "action": "Removed redundant/misclassified table chunk WHO03_0_TBL_002",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 1. RECOMMENDATION ON BLOOD PRESSURE THRESHOLD FOR INITIATION OF\nPHARMACOLOGICAL TREATMENT\n\n1. RECOMMENDATION ON BLOOD PRESSURE THRESHOLD FOR IN",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_0_THR_002",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: Annex 4: PICO questions\n\nP\nAdult men and women with hypertension requiring pharmacological treatment\nBB, CCB, diuretics, ACEi, or ARB\nPlacebo",
-    "after_snippet": "Section: Annex 4: PICO questions\n\nP\nAdult men and women with hypertension requiring pharmacological treatment\nBB, CCB, diuretics, ACEi, or ARB\nPlacebo"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_0_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_0_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: \n\n |  |  |  |  | \n--- | --- | --- | --- | --- | ---\n |  |  |  |  | \n |  |  |  |  | \n\nSource: WHO03\nSection: Tables\nPage: 1",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_0_THR_004",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Section: Annex 4: PICO questions\n\nAdverse effects\nPatient satisfaction\nAdherence\nBP level/change\nNumber of antihypertensive medications\ns\nBased on dif",
-    "after_snippet": "Section: Annex 4: PICO questions\n\nAdverse effects\nPatient satisfaction\nAdherence\nBP level/change\nNumber of antihypertensive medications\ns\nBased on dif"
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_3_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 1. RECOMMENDATION ON BLOOD PRESSURE THRESHOLD FOR INITIATION OF\nPHARMACOLOGICAL TREATMENT\n\n1. RECOMMENDATION ON BLOOD PRESSURE THRESHOLD FOR IN",
+    "after_snippet": null
   },
   {
-    "rule_id": "R3",
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.1_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.1_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 2. RECOMMENDATION ON LABORATORY TESTING\n\n2. RECOMMENDATION ON LABORATORY TESTING\n---\nWhen starting pharmacological therapy for hypertension, WH",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.8_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.8_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 8. RECOMMENDATION ON TREATMENT BY NONPHYSICIAN PROFESSIONALS\n\n8. RECOMMENDATION ON TREATMENT BY NONPHYSICIAN PROFESSIONALS\n---\nWHO suggests tha",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_0_TBL_004",
+    "action": "Removed redundant/misclassified table chunk WHO03_0_TBL_004",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: WHO recommends a target systolic blood pressure treatment goal of <130 mmHg in patients\nwith hypertension and known cardiovascular disease (CVD",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.2_TBL_004",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.2_TBL_004",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: Treatment\n\nTreatment\n---\n\nSource: WHO03\nSection: 3.2 Laboratory testing before and during pharmacological treatment\nPage: 21",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_0_TBL_003",
+    "action": "Removed redundant/misclassified table chunk WHO03_0_TBL_003",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: WHO suggests pharmacological antihypertensive treatment of individuals without\ncardiovascular disease but with high cardiovascular risk, diabet",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.4_TBL_001",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.4_TBL_001",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: 5. RECOMMENDATION ON COMBINATION THERAPY\n\n5. RECOMMENDATION ON COMBINATION THERAPY\n---\nFor adults with hypertension requiring pharmacological t",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_0_TBL_017",
+    "action": "Removed redundant/misclassified table chunk WHO03_0_TBL_017",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: \n\n |  |  |  |  |  | \n--- | --- | --- | --- | --- | --- | ---\n |  |  |  |  |  | \n |  |  |  |  |  | \n |  |  |  |  |  | \n |  |  |  |  |  | \n\nSourc",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R5",
+    "chunk_id": "WHO03_3.2_TBL_002",
+    "action": "Removed redundant/misclassified table chunk WHO03_3.2_TBL_002",
+    "field_name": "chunk_id",
+    "before_snippet": "Table: People with\n\nPeople with\n---\nhigh BP\n\nSource: WHO03\nSection: 3.2 Laboratory testing before and during pharmacological treatment\nPage: 21",
+    "after_snippet": null
+  },
+  {
+    "rule_id": "R6",
+    "chunk_id": "WHO03_3.4_REC_001",
+    "action": "Updated metadata drug_class: ['thiazide_or_thiazide_like', 'ace_inhibitor', 'calcium_channel_blocker'] -> ['thiazide_or_thiazide_like', 'ace_inhibitor', 'calcium_channel_blocker', 'beta_blocker']",
+    "field_name": "drug_class",
+    "before_snippet": "['thiazide_or_thiazide_like', 'ace_inhibitor', 'calcium_channel_blocker']",
+    "after_snippet": "['thiazide_or_thiazide_like', 'ace_inhibitor', 'calcium_channel_blocker', 'beta_blocker']"
+  },
+  {
+    "rule_id": "R6",
+    "chunk_id": "WHO03_3.4_REC_001",
+    "action": "Updated metadata age_group: None -> 65 years",
+    "field_name": "age_group",
+    "before_snippet": "None",
+    "after_snippet": "65 years"
+  },
+  {
+    "rule_id": "R6",
+    "chunk_id": "WHO03_3.4_REC_001",
+    "action": "Updated metadata comorbidity: None -> cardiovascular_disease, diabetes_mellitus, heart_failure, chronic_kidney_disease, ischaemic_heart_disease",
+    "field_name": "comorbidity",
+    "before_snippet": "None",
+    "after_snippet": "cardiovascular_disease, diabetes_mellitus, heart_failure, chronic_kidney_disease, ischaemic_heart_disease"
+  },
+  {
+    "rule_id": "R6",
+    "chunk_id": "WHO03_3.5_REC_001",
+    "action": "Updated metadata bp_threshold: None -> ≥20/10 mmHg higher than target",
+    "field_name": "bp_threshold",
+    "before_snippet": "None",
+    "after_snippet": "≥20/10 mmHg higher than target"
+  },
+  {
+    "rule_id": "R6",
     "chunk_id": "WHO03_6_ALGO_001",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Fig. 1\t Analytic framework for antihypertensive medication treatment\t 3\n\nGUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS\nFigures",
-    "after_snippet": "Fig. 1\t Analytic framework for antihypertensive medication treatment\t 3\n\nFigures\nFig. 1\nAnalytic framework for antihypertensive medication treatment\nF"
+    "action": "Updated metadata page_label_start: 43 -> iv",
+    "field_name": "page_label_start",
+    "before_snippet": "43",
+    "after_snippet": "iv"
   },
   {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_5.5_ALGO_001",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Fig. 3\t An approach for starting treatment with a single-pill combination  Treat adults with BP ≥140 mmHg or ≥90   (SBP ≥130 mmHg for those with CVD, ",
-    "after_snippet": "Fig. 3\t An approach for starting treatment with a single-pill combination  Treat adults with BP ≥140 mmHg or ≥90   (SBP ≥130 mmHg for those with CVD, "
-  },
-  {
-    "rule_id": "R3",
-    "chunk_id": "WHO03_6.1_ALGO_002",
-    "action": "Stripped running header/footer noise fragment",
-    "field_name": "text",
-    "before_snippet": "Fig. 5 Algorithm 1 Start ARB–CCB at  half-maximal doses\n\nGUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS\n6.2 Drug- and dose-spec",
-    "after_snippet": "Fig. 5 Algorithm 1 Start ARB–CCB at  half-maximal doses\n\n6.2 Drug- and dose-specific protocols\nTwo examples of suggested drug and dose-specific protoc"
+    "rule_id": "R6",
+    "chunk_id": "WHO03_6_ALGO_001",
+    "action": "Updated metadata page_label_end: 43 -> iv",
+    "field_name": "page_label_end",
+    "before_snippet": "43",
+    "after_snippet": "iv"
   },
   {
     "rule_id": "R6",
@@ -2206,22 +2294,6 @@
     "field_name": "section",
     "before_snippet": "6",
     "after_snippet": "6 Implementation tools"
-  },
-  {
-    "rule_id": "R6",
-    "chunk_id": "WHO03_6.1_ALGO_002",
-    "action": "Updated metadata section: 6 -> 6 Implementation tools",
-    "field_name": "section",
-    "before_snippet": "6",
-    "after_snippet": "6 Implementation tools"
-  },
-  {
-    "rule_id": "R6",
-    "chunk_id": "WHO03_6.1_ALGO_002",
-    "action": "Updated metadata subsection: 6.1 Guideline recommendations -> 6.2 Drug- and dose-specific protocols",
-    "field_name": "subsection",
-    "before_snippet": "6.1 Guideline recommendations",
-    "after_snippet": "6.2 Drug- and dose-specific protocols"
   },
   {
     "rule_id": "R8",
@@ -2289,14 +2361,6 @@
   },
   {
     "rule_id": "R8",
-    "chunk_id": "WHO03_3.3_REC_001",
-    "action": "Set canonical status on WHO03_3.3_REC_001",
-    "field_name": "is_duplicate",
-    "before_snippet": "is_duplicate=True",
-    "after_snippet": "is_duplicate=False"
-  },
-  {
-    "rule_id": "R8",
     "chunk_id": "WHO03_0_REC_005",
     "action": "Marked WHO03_0_REC_005 as duplicate pointing to canonical WHO03_3.3_REC_001 with priority 2",
     "field_name": "canonical_chunk_id",
@@ -2337,14 +2401,6 @@
   },
   {
     "rule_id": "R8",
-    "chunk_id": "WHO03_3.6_REC_001",
-    "action": "Set canonical status on WHO03_3.6_REC_001",
-    "field_name": "is_duplicate",
-    "before_snippet": "is_duplicate=True",
-    "after_snippet": "is_duplicate=False"
-  },
-  {
-    "rule_id": "R8",
     "chunk_id": "WHO03_0_REC_008",
     "action": "Marked WHO03_0_REC_008 as duplicate pointing to canonical WHO03_3.6_REC_001 with priority 2",
     "field_name": "canonical_chunk_id",
@@ -2382,14 +2438,6 @@
     "field_name": "canonical_chunk_id",
     "before_snippet": "WHO03_3.6_REC_003",
     "after_snippet": "WHO03_3.6_REC_003"
-  },
-  {
-    "rule_id": "R8",
-    "chunk_id": "WHO03_3.7_REC_001",
-    "action": "Set canonical status on WHO03_3.7_REC_001",
-    "field_name": "is_duplicate",
-    "before_snippet": "is_duplicate=True",
-    "after_snippet": "is_duplicate=False"
   },
   {
     "rule_id": "R8",
@@ -2513,27 +2561,11 @@
   },
   {
     "rule_id": "R11",
-    "chunk_id": "WHO03_2.2_DRUG_001",
-    "action": "Updated PDF page span: (15, 16) -> (15, 15)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "15-16",
-    "after_snippet": "15-15"
-  },
-  {
-    "rule_id": "R11",
     "chunk_id": "WHO03_2.3_METH_001",
     "action": "Updated PDF page span: (16, 16) -> (16, 55)",
     "field_name": "pdf_page_start",
     "before_snippet": "16-16",
     "after_snippet": "16-55"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_2.5_EVID_001",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "17-18",
-    "after_snippet": "17-17"
   },
   {
     "rule_id": "R11",
@@ -2610,41 +2642,41 @@
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_3.5_REC_001",
-    "action": "Updated PDF page span: (25, 28) -> (25, 25)",
+    "action": "Updated PDF page span: (25, 27) -> (25, 25)",
     "field_name": "pdf_page_start",
-    "before_snippet": "25-28",
+    "before_snippet": "25-27",
     "after_snippet": "25-25"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_3.5_E2D_001",
-    "action": "Updated PDF page span: (25, 28) -> (26, 26)",
+    "action": "Updated PDF page span: (25, 27) -> (26, 26)",
     "field_name": "pdf_page_start",
-    "before_snippet": "25-28",
+    "before_snippet": "25-27",
     "after_snippet": "26-26"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_3.5_E2D_002",
-    "action": "Updated PDF page span: (25, 28) -> (26, 27)",
+    "action": "Updated PDF page span: (25, 27) -> (26, 27)",
     "field_name": "pdf_page_start",
-    "before_snippet": "25-28",
+    "before_snippet": "25-27",
     "after_snippet": "26-27"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_3.5_E2D_003",
-    "action": "Updated PDF page span: (25, 28) -> (27, 27)",
+    "action": "Updated PDF page span: (25, 27) -> (27, 27)",
     "field_name": "pdf_page_start",
-    "before_snippet": "25-28",
+    "before_snippet": "25-27",
     "after_snippet": "27-27"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_3.5_E2D_004",
-    "action": "Updated PDF page span: (25, 28) -> (27, 27)",
+    "action": "Updated PDF page span: (25, 27) -> (27, 27)",
     "field_name": "pdf_page_start",
-    "before_snippet": "25-28",
+    "before_snippet": "25-27",
     "after_snippet": "27-27"
   },
   {
@@ -2665,34 +2697,18 @@
   },
   {
     "rule_id": "R11",
-    "chunk_id": "WHO03_4.1_SPEC_001",
-    "action": "Updated PDF page span: (33, 34) -> (33, 33)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "33-34",
-    "after_snippet": "33-33"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_4.3_THR_001",
-    "action": "Updated PDF page span: (34, 36) -> (34, 35)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "34-36",
-    "after_snippet": "34-35"
-  },
-  {
-    "rule_id": "R11",
     "chunk_id": "WHO03_4.3_THR_002",
-    "action": "Updated PDF page span: (34, 36) -> (35, 35)",
+    "action": "Updated PDF page span: (34, 35) -> (35, 35)",
     "field_name": "pdf_page_start",
-    "before_snippet": "34-36",
+    "before_snippet": "34-35",
     "after_snippet": "35-35"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_4.3_THR_003",
-    "action": "Updated PDF page span: (34, 36) -> (35, 35)",
+    "action": "Updated PDF page span: (34, 35) -> (35, 35)",
     "field_name": "pdf_page_start",
-    "before_snippet": "34-36",
+    "before_snippet": "34-35",
     "after_snippet": "35-35"
   },
   {
@@ -2706,49 +2722,25 @@
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_5.5_EVID_001",
-    "action": "Updated PDF page span: (36, 38) -> (37, 37)",
+    "action": "Updated PDF page span: (36, 37) -> (37, 37)",
     "field_name": "pdf_page_start",
-    "before_snippet": "36-38",
+    "before_snippet": "36-37",
     "after_snippet": "37-37"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_6.1_EVID_001",
-    "action": "Updated PDF page span: (38, 40) -> (23, 39)",
+    "action": "Updated PDF page span: (38, 39) -> (23, 39)",
     "field_name": "pdf_page_start",
-    "before_snippet": "38-40",
+    "before_snippet": "38-39",
     "after_snippet": "23-39"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "WHO03_6.2_ALGO_001",
-    "action": "Updated PDF page span: (40, 42) -> (40, 41)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "40-42",
-    "after_snippet": "40-41"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_6.2_ALGO_002",
-    "action": "Updated PDF page span: (40, 42) -> (40, 41)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "40-42",
-    "after_snippet": "40-41"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_6.2_ALGO_003",
-    "action": "Updated PDF page span: (40, 42) -> (40, 41)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "40-42",
-    "after_snippet": "40-41"
-  },
-  {
-    "rule_id": "R11",
     "chunk_id": "WHO03_0_METH_001",
-    "action": "Updated PDF page span: (55, 56) -> (5, 55)",
+    "action": "Updated PDF page span: (55, 55) -> (5, 55)",
     "field_name": "pdf_page_start",
-    "before_snippet": "55-56",
+    "before_snippet": "55-55",
     "after_snippet": "5-55"
   },
   {
@@ -2794,6 +2786,14 @@
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_6.2_ALGO_004",
+    "action": "Updated PDF page span: (40, 40) -> (40, 41)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "40-40",
+    "after_snippet": "40-41"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "WHO03_6.2_ALGO_005",
     "action": "Updated PDF page span: (41, 41) -> (40, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-41",

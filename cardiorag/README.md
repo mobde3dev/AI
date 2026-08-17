@@ -1,64 +1,80 @@
 # CardioRAG — Medical Guideline PDF Parsing & Chunking Pipeline
 
-A robust Python pipeline that converts clinical guideline documents into high-quality, medically meaningful RAG chunks with rich clinical metadata.
+A modular Python pipeline that converts clinical guideline documents into high-quality, medically verified RAG chunks with rich clinical metadata.
 
 Supported Guidelines:
-1. **NICE Guideline NG238** (Cardiovascular disease: risk assessment and reduction, including lipid modification, 14 December 2023)
-2. **WHO Guideline 2021** (Pharmacological treatment of hypertension in adults)
+1. **NICE Guideline NG238 (2023)** — *Cardiovascular disease: risk assessment and reduction, including lipid modification* (`data/raw/NICE_2023.pdf`)
+2. **WHO Guideline (2021)** — *Guideline for the pharmacological treatment of hypertension in adults* (`data/raw/WHO_2021.pdf`)
 
 ---
 
 ## Overview
 
-This pipeline is the **ingestion layer** for the CardioRAG medical RAG system. It is deterministic and rule-based, designed for high retrieval precision, medical safety, and zero clinical hallucination.
+This pipeline acts as the **deterministic ingestion layer** for the CardioRAG medical RAG system. It is deterministic and rule-based, designed for high retrieval precision, medical safety, and zero clinical hallucination.
 
 ### Key Capabilities
 
-1. **PDF Extraction**: Extracts text with page tracking (PyMuPDF) and structured tables (pdfplumber).
+1. **PDF Extraction**: Extracts text with page tracking (`PyMuPDF`) and structured tables (`pdfplumber`).
 2. **Medical Cleaning**: Strips repetitive header/footer boilerplate while preserving units, lipid values, thresholds, doses, and comparison operators.
-3. **Guideline Structure Detection**: Detects all major sections, subheadings, and committee rationale sections.
+3. **Guideline Structure Detection**: Detects all major sections, subheadings, algorithms, tables, and committee rationale sections.
 4. **Recommendation Parsing**: Extracts individual recommendation IDs (e.g. `1.7.1`, `1.6.7`), original/amended dates, and cross-references.
 5. **Rich Medical Metadata**: Extracts populations, risk tools (QRISK3), lipid targets, drug doses, lab tests, and technology appraisals (TAs).
-6. **Semantic Chunking**: Creates standalone recommendation chunks and separate committee rationale chunks with deterministic IDs.
-7. **Validation & Medical Safety**: Automated checks for 15 validation rules, numerical integrity, and priority assignment.
-8. **Multi-Format Output**: Emits JSON array, JSONL, markdown preview, and processing reports.
+6. **Semantic Chunking**: Creates standalone recommendation chunks, rationale chunks, tables, and algorithms with deterministic IDs.
+7. **Validation & Quality Gates (V1–V6)**: Comprehensive checks for ID uniqueness, completeness, token length bounds, provenance, and metadata consistency.
+8. **Multi-Format Output**: Emits JSON array, JSONL (vector DB ready), markdown preview, and processing reports.
 
 ---
 
-## Project Structure
+## Clean Project Structure
 
 ```text
 cardiorag/
 ├── data/
 │   ├── raw/
-│   │   ├── NICE3.pdf
-│   │   └── WHO03.pdf
+│   │   ├── NICE_2023.pdf                # Official NICE NG238 PDF
+│   │   └── WHO_2021.pdf                 # Official WHO Hypertension PDF
 │   └── processed/
-│       ├── nice3_chunks.json
-│       ├── nice3_chunks.jsonl
-│       ├── nice3_chunks_preview.md
-│       ├── nice3_processing_report.json
-│       ├── who03_chunks.json
-│       ├── who03_chunks.jsonl
-│       └── who03_chunks_preview.md
+│       ├── NICE_2023_chunks.json        # Parsed & validated chunks
+│       ├── NICE_2023_chunks.jsonl       # Vector-database ready
+│       ├── NICE_2023_chunks_preview.md  # Human QA markdown preview
+│       ├── NICE_2023_processing_report.json
+│       ├── WHO_2021_chunks.json
+│       ├── WHO_2021_chunks.jsonl
+│       ├── WHO_2021_chunks_preview.md
+│       ├── WHO_2021_stats.json
+│       ├── fix_report.json              # Validation & fix audit report
+│       └── figures/                     # Extracted clinical algorithms & figures
+│           ├── WHO_2021_fig_p06.png
+│           └── ...
 ├── src/
-│   ├── parse_nice3.py               # NICE3 PyMuPDF & table extractor
-│   ├── parse_who03.py               # WHO03 PyMuPDF & table extractor
-│   ├── clean_text.py                # Safe text cleaning & boilerplate stripping
-│   ├── nice_section_parser.py       # NICE3 section hierarchy & heading detection
-│   ├── section_parser.py            # WHO03 section parser
-│   ├── nice_recommendation_parser.py# NICE recommendation ID & date parser
-│   ├── nice_metadata_extractor.py   # NICE3 metadata schemas & clinical mapping
-│   ├── metadata_extractor.py        # WHO03 metadata extractor
-│   ├── chunk_nice3.py               # NICE3 semantic chunker
-│   ├── chunk_who03.py               # WHO03 semantic chunker
-│   ├── deduplicate.py               # Clinical-aware deduplication
-│   ├── validate_chunks.py           # 15-rule validation & numerical integrity
-│   ├── run_nice3_pipeline.py        # NICE3 pipeline orchestrator
-│   └── run_pipeline.py              # WHO03 pipeline orchestrator
+│   ├── core/                            # Core utilities
+│   │   ├── clean_text.py                # Safe text cleaning & boilerplate stripping
+│   │   └── deduplicate.py               # Chunk deduplication
+│   ├── parsers/                         # PDF & table parsers
+│   │   ├── nice_parser.py               # NICE PyMuPDF & table extractor
+│   │   └── who_parser.py                # WHO PyMuPDF & table extractor
+│   ├── segmenters/                      # Section & heading segmenters
+│   │   ├── nice_segmenter.py            # NICE hierarchy detection
+│   │   ├── nice_rec_parser.py           # NICE recommendation extraction
+│   │   └── who_segmenter.py             # WHO section segmentation
+│   ├── chunkers/                        # Semantic chunking engines
+│   │   ├── nice_chunker.py              # NICE recommendation & rationale chunker
+│   │   └── who_chunker.py               # WHO chunker (Recs, Evidence, Tables)
+│   ├── enrichers/                       # Clinical metadata enrichers
+│   │   ├── nice_enricher.py             # NICE clinical metadata
+│   │   └── who_enricher.py              # WHO clinical metadata
+│   ├── postprocessors/                  # Verification & repair
+│   │   ├── fixer.py                     # Validation Gates V1-V6 & repair rules
+│   │   ├── patcher.py                   # Chunk patcher & normalizer
+│   │   └── validator.py                 # Structural validator
+│   ├── pipelines/                       # Modular pipeline definitions
+│   │   ├── nice_pipeline.py             # NICE pipeline runner
+│   │   └── who_pipeline.py              # WHO pipeline runner
+│   └── pipeline.py                      # Unified CLI entry point
 ├── tests/
-│   ├── test_nice3_chunking.py       # NICE3 test suite
-│   └── test_who03_chunking.py       # WHO03 test suite
+│   ├── test_fix_rules.py                # Fix & quality gate tests
+│   ├── test_nice3_chunking.py           # NICE pipeline unit & integration tests
+│   └── test_who03_chunking.py           # WHO pipeline unit & integration tests
 ├── requirements.txt
 └── README.md
 ```
@@ -73,58 +89,27 @@ cardiorag/
 pip install -r requirements.txt
 ```
 
-### Run NICE3 (NG238) Pipeline
+### Run Unified Ingestion Pipeline
 
 ```bash
-python src/run_nice3_pipeline.py
+# Process all guidelines (WHO + NICE)
+python -m src.pipeline --doc all
+
+# Or process individually:
+python -m src.pipeline --doc who
+python -m src.pipeline --doc nice
 ```
 
-### Run NICE3 Tests
+### Run Test Suite
 
 ```bash
-pytest tests/test_nice3_chunking.py -v
-```
-
----
-
-## Chunk Format Example (NICE NG238)
-
-```json
-{
-  "chunk_id": "NICE3_1.7.1_REC",
-  "text": "Section: 1.7 Lipid-lowering treatment for secondary prevention of cardiovascular disease\nSubheading: Lipid target for people taking lipid-lowering treatments\nRecommendation: 1.7.1\n\n1.7.1 For secondary prevention of CVD, aim for LDL cholesterol levels of 2.0 mmol per litre or less, or non-HDL cholesterol levels of 2.6 mmol per litre or less. [December 2023]",
-  "token_count": 78,
-  "metadata": {
-    "source_file": "NICE3.pdf",
-    "organization": "NICE",
-    "guideline_code": "NG238",
-    "document_title": "Cardiovascular disease: risk assessment and reduction, including lipid modification",
-    "original_publication_date": "2023-12-14",
-    "pdf_page_start": 26,
-    "pdf_page_end": 26,
-    "section": "1.7 Lipid-lowering treatment for secondary prevention of cardiovascular disease",
-    "subsection": "Lipid target for people taking lipid-lowering treatments",
-    "recommendation_id": "1.7.1",
-    "recommendation_original_date": "December 2023",
-    "recommendation_amended_dates": [],
-    "domain": "cardiovascular_disease",
-    "topic": "lipid_lowering_treatment",
-    "subtopic": "secondary_prevention_lipid_target",
-    "content_type": "recommendation",
-    "prevention_type": "secondary",
-    "population": ["people_with_cvd"],
-    "lipid_measure": ["LDL", "non-HDL"],
-    "clinical_priority": 1,
-    "historical_context": false,
-    "requires_manual_review": false
-  }
-}
+pytest -v
 ```
 
 ---
 
 ## Medical Safety Guarantee
 
-- **No Paraphrasing**: Guideline recommendation texts are verbatim extracts from the official PDF.
-- **No Model Inference**: Clinical thresholds, drug doses, and dates are never fabricated or rewritten by LLM knowledge.
-- **Traceability**: Every chunk preserves PDF page provenance for verifiable medical citations.
+- **No Paraphrasing**: Guideline recommendation texts are verbatim extracts from the official source PDFs.
+- **No Model Hallucination**: Clinical thresholds, drug doses, and dates are never fabricated or rewritten.
+- **Strict Provenance**: Every chunk preserves the exact source PDF page boundaries for clinical citation and traceability.
