@@ -7,11 +7,17 @@
 
 ## WHO03_0_REC_001
 
-**PDF Page:** 9
-**Printed page:** vii
+**Pages:** 9–19
+
+**Printed pages:** vii–7
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** high
 
 **Priority:** 2
 
@@ -36,11 +42,17 @@ Strong recommendation, moderate- to high-certainty evidence
 
 ## WHO03_0_REC_002
 
-**PDF Page:** 9
-**Printed page:** vii
+**Pages:** 9–19
+
+**Printed pages:** vii–7
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** high
 
 **Priority:** 2
 
@@ -64,11 +76,17 @@ Strong recommendation, moderate- to high-certainty evidence
 
 ## WHO03_0_REC_003
 
-**PDF Page:** 10
-**Printed page:** viii
+**Pages:** 10–19
+
+**Printed pages:** viii–7
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** high
 
 **Priority:** 2
 
@@ -93,11 +111,17 @@ Conditional recommendation, moderate- to high-certainty evidence
 
 ## WHO03_0_REC_004
 
-**PDF Page:** 10
-**Printed page:** viii
+**Pages:** 10–20
+
+**Printed pages:** viii–8
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 2
 
@@ -123,11 +147,15 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_0_REC_005
 
-**PDF Page:** 10
-**Printed page:** viii
+**Pages:** 9–12
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 2
 
@@ -153,11 +181,17 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_0_REC_006
 
-**PDF Page:** 10
-**Printed page:** viii
+**Pages:** 10–23
+
+**Printed pages:** viii–11
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** high
 
 **Priority:** 2
 
@@ -186,11 +220,17 @@ Strong recommendation, high-certainty evidence
 
 ## WHO03_0_REC_007
 
-**PDF Page:** 10
-**Printed page:** viii
+**Pages:** 10–25
+
+**Printed pages:** viii–13
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** moderate
 
 **Priority:** 2
 
@@ -219,11 +259,15 @@ Conditional recommendation, moderate-certainty evidence
 
 ## WHO03_0_REC_008
 
-**PDF Page:** 10
-**Printed page:** viii
+**Pages:** 9–12
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** moderate
 
 **Priority:** 2
 
@@ -247,11 +291,17 @@ Strong recommendation, moderate-certainty evidence
 
 ## WHO03_0_REC_009
 
-**PDF Page:** 11
-**Printed page:** ix
+**Pages:** 11–28
+
+**Printed pages:** ix–16
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** moderate
 
 **Priority:** 2
 
@@ -275,11 +325,15 @@ Strong recommendation, moderate-certainty evidence
 
 ## WHO03_0_REC_010
 
-**PDF Page:** 11
-**Printed page:** ix
+**Pages:** 9–12
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** moderate
 
 **Priority:** 2
 
@@ -304,11 +358,15 @@ Conditional recommendation, moderate-certainty evidence
 
 ## WHO03_0_REC_011
 
-**PDF Page:** 11
-**Printed page:** ix
+**Pages:** 9–12
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 2
 
@@ -332,11 +390,15 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_0_REC_012
 
-**PDF Page:** 11
-**Printed page:** ix
+**Pages:** 9–12
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 2
 
@@ -360,11 +422,17 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_0_REC_013
 
-**PDF Page:** 11
-**Printed page:** ix
+**Pages:** 11–31
+
+**Printed pages:** ix–19
+
 **Section:** Executive summary
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 2
 
@@ -391,8 +459,10 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_1_EVID_001
 
-**PDF Page:** 13
+**Page:** 13
+
 **Printed page:** 1
+
 **Section:** 1 Introduction
 
 **Type:** evidence_rationale
@@ -440,9 +510,9 @@ population.
 
 ## WHO03_1_EVID_002
 
-**PDF Pages:** 13–14
+**Pages:** 13–60
 
-**Printed pages:** 1–2
+**Printed pages:** 1–48
 
 **Section:** 1 Introduction
 
@@ -450,7 +520,7 @@ population.
 
 **Priority:** 2
 
-**Tokens:** 586
+**Tokens:** 558
 
 
 ### Text
@@ -465,7 +535,7 @@ population. Although several countries and professional societies have guideline
 these are specific to the population of that particular country or the specific setting or constituency of
 the professional society. Recent shifts in hypertension management, such as moving away from using
 beta-blockers as a first-line agent or the increased research and adoption of combination therapies
-and single-pill combinations, are all additional reasons for new guidance. The Guideline for the
+and single-pill combinations, are all additional reasons for new guidance. The 
 pharmacological treatment of hypertension in adults will be the first global guideline in the past two
 decades on the topic and will have specific relevance to low- and middle-income countries (LMICs). The guideline provides new recommendations on the threshold for the initiation of pharmacological
 treatment for hypertension, recommendations on intervals for follow up, target blood pressure to be
@@ -474,7 +544,6 @@ the basis for deciding whether to initiate treatment with monotherapy, dual ther
 combination, as well as guidance for countries on selecting medicines for hypertension control in their
 national guidelines for hypertension management. INTRODUCTION
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
 This guideline will replace the guidance in the modules Evidence-based protocols and Risk-based CVD
 management of the HEARTS technical package, as well as the guidance in the WHO PEN package
 regarding the threshold for initiation of treatment, and for the preferred pharmacological treatment for
@@ -498,8 +567,10 @@ management in regular care settings.
 
 ## WHO03_1_EVID_003
 
-**PDF Page:** 14
-**Printed page:** 2
+**Pages:** 13–14
+
+**Printed pages:** 1–2
+
 **Section:** 1 Introduction
 
 **Type:** evidence_rationale
@@ -537,8 +608,10 @@ recommendations, students, and hypertension medicine manufacturers.
 
 ## WHO03_2_METH_001
 
-**PDF Page:** 15
+**Page:** 15
+
 **Printed page:** 3
+
 **Section:** 2 Method for developing the guideline
 
 **Type:** research_methodology
@@ -562,8 +635,10 @@ guideline
 
 ## WHO03_2.2_DRUG_001
 
-**PDF Page:** 15
+**Page:** 15
+
 **Printed page:** 3
+
 **Section:** 2
 
 **Subsection:** 2.2 Analytical framework and PICOs
@@ -572,7 +647,7 @@ guideline
 
 **Priority:** 1
 
-**Tokens:** 406
+**Tokens:** 382
 
 
 ### Text
@@ -627,16 +702,16 @@ therapy
 Serious adverse effects
 METHOD FOR DEVELOPING THE GUIDELINE
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_2.3_METH_001
 
-**PDF Page:** 16
-**Printed page:** 4
+**Pages:** 16–55
+
+**Printed pages:** 4–43
+
 **Section:** 2
 
 **Subsection:** 2.3 Outcome importance rating
@@ -666,8 +741,10 @@ Annex 3.
 
 ## WHO03_2.4_EVID_001
 
-**PDF Page:** 16
+**Page:** 16
+
 **Printed page:** 4
+
 **Section:** 2
 
 **Subsection:** 2.4 Reviews of evidence
@@ -727,8 +804,10 @@ by GDG members. This review focused on evidence informing HTN management in low-
 
 ## WHO03_2.5_EVID_001
 
-**PDF Page:** 17
+**Page:** 17
+
 **Printed page:** 5
+
 **Section:** 2
 
 **Subsection:** 2.5 Certainty of evidence and strength of recommendations
@@ -737,7 +816,7 @@ by GDG members. This review focused on evidence informing HTN management in low-
 
 **Priority:** 2
 
-**Tokens:** 597
+**Tokens:** 573
 
 
 ### Text
@@ -788,16 +867,16 @@ effects of adhering to the recommendation probably outweigh the undesirable effe
 confident about these trade-offs.
 METHOD FOR DEVELOPING THE GUIDELINE
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_2.6_E2D_001
 
-**PDF Page:** 18
+**Page:** 18
+
 **Printed page:** 6
+
 **Section:** 2
 
 **Subsection:** 2.6 Deciding upon recommendations
@@ -834,8 +913,10 @@ eight recommendations.
 
 ## WHO03_2.7_METH_001
 
-**PDF Page:** 18
+**Page:** 18
+
 **Printed page:** 6
+
 **Section:** 2
 
 **Subsection:** 2.7 Funding
@@ -862,8 +943,10 @@ Prevention and the World Health Organization.
 
 ## WHO03_3_BG_001
 
-**PDF Page:** 19
+**Page:** 19
+
 **Printed page:** 7
+
 **Section:** 3 Recommendations
 
 **Type:** background
@@ -886,8 +969,10 @@ Section: 3 Recommendations
 
 ## WHO03_3.1_REC_001
 
-**PDF Page:** 19
+**Page:** 19
+
 **Printed page:** 7
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.1 Blood pressure threshold for initiation of pharmacological treatment
@@ -897,6 +982,10 @@ Section: 3 Recommendations
 **Topic:** treatment_initiation
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** high
 
 **Priority:** 1
 
@@ -919,8 +1008,10 @@ Strong recommendation, moderate- to high-certainty evidence
 
 ## WHO03_3.1_REC_002
 
-**PDF Page:** 19
+**Page:** 19
+
 **Printed page:** 7
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.1 Blood pressure threshold for initiation of pharmacological treatment
@@ -930,6 +1021,10 @@ Strong recommendation, moderate- to high-certainty evidence
 **Topic:** treatment_initiation
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** high
 
 **Priority:** 1
 
@@ -951,8 +1046,10 @@ Strong recommendation, moderate- to high-certainty evidence
 
 ## WHO03_3.1_REC_003
 
-**PDF Page:** 19
+**Page:** 19
+
 **Printed page:** 7
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.1 Blood pressure threshold for initiation of pharmacological treatment
@@ -962,6 +1059,10 @@ Strong recommendation, moderate- to high-certainty evidence
 **Topic:** treatment_initiation
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** high
 
 **Priority:** 1
 
@@ -984,8 +1085,10 @@ Conditional recommendation, moderate- to high-certainty evidence
 
 ## WHO03_3.2_REC_001
 
-**PDF Page:** 20
+**Page:** 20
+
 **Printed page:** 8
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.2 Laboratory testing before and during pharmacological treatment
@@ -995,6 +1098,10 @@ Conditional recommendation, moderate- to high-certainty evidence
 **Topic:** laboratory_testing
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 1
 
@@ -1023,8 +1130,10 @@ Implementation remarks:
 
 ## WHO03_3.3_REC_001
 
-**PDF Page:** 22
-**Printed page:** 10
+**Pages:** 22–23
+
+**Printed pages:** 10–11
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.3 Cardiovascular disease risk assessment as guide to initiation of antihypertensive medications
@@ -1034,6 +1143,10 @@ Implementation remarks:
 **Topic:** cardiovascular_risk_assessment
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 1
 
@@ -1061,8 +1174,10 @@ Implementation remarks:
 
 ## WHO03_3.4_REC_001
 
-**PDF Page:** 23
+**Page:** 23
+
 **Printed page:** 11
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.4 Drug classes to be used as first-line agents
@@ -1071,7 +1186,13 @@ Implementation remarks:
 
 **Topic:** pharmacological_treatment
 
+**Subtopic:** first_line_agents
+
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** high
 
 **Priority:** 1
 
@@ -1102,7 +1223,7 @@ Implementation remarks:
 
 ## WHO03_3.4_E2D_001
 
-**PDF Pages:** 23–24
+**Pages:** 23–24
 
 **Printed pages:** 11–12
 
@@ -1112,11 +1233,13 @@ Implementation remarks:
 
 **Topic:** pharmacological_treatment
 
+**Subtopic:** first_line_agents
+
 **Type:** evidence_to_decision
 
 **Priority:** 2
 
-**Tokens:** 582
+**Tokens:** 559
 
 
 ### Text
@@ -1133,7 +1256,7 @@ medications as an initial treatment:
 3. long-acting dihydropyridine calcium channel blockers (CCBs). Strong recommendation, high-certainty evidence
 Long-acting antihypertensives are preferred. Examples of indications to consider specific agents include diuretics or CCBs in patients over
 65 years or those of African descent, beta-blockers in ischaemic heart disease, ACEis/ARBs in
-patients with severe proteinuria, diabetes mellitus, heart failure or kidney disease. GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
+patients with severe proteinuria, diabetes mellitus, heart failure or kidney disease. 
 Data from 32 systematic reviews were used to derive evidence on benefits and harms of various
 medication classes (19 for comparisons against placebo and 13 for head-to-head comparisons). These
 reviews summarized the results of a many large randomized trials (Web Annex A). The anticipated
@@ -1153,13 +1276,17 @@ overall minimal differences in SBP or DBP.
 
 ## WHO03_3.4_E2D_002
 
-**PDF Page:** 24
+**Page:** 24
+
 **Printed page:** 12
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.4 Drug classes to be used as first-line agents
 
 **Topic:** pharmacological_treatment
+
+**Subtopic:** first_line_agents
 
 **Type:** evidence_to_decision
 
@@ -1202,7 +1329,7 @@ drug therapy is derived from trials conducted in adults at high risk for CVD/ath
 
 ## WHO03_3.4_E2D_003
 
-**PDF Pages:** 24–25
+**Pages:** 24–25
 
 **Printed pages:** 12–13
 
@@ -1211,6 +1338,8 @@ drug therapy is derived from trials conducted in adults at high risk for CVD/ath
 **Subsection:** 3.4 Drug classes to be used as first-line agents
 
 **Topic:** pharmacological_treatment
+
+**Subtopic:** first_line_agents
 
 **Type:** evidence_to_decision
 
@@ -1256,13 +1385,17 @@ numbers of adults have untreated HTN, as long as medications are available at lo
 
 ## WHO03_3.4_E2D_004
 
-**PDF Page:** 25
+**Page:** 25
+
 **Printed page:** 13
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.4 Drug classes to be used as first-line agents
 
 **Topic:** pharmacological_treatment
+
+**Subtopic:** first_line_agents
 
 **Type:** evidence_to_decision
 
@@ -1288,8 +1421,10 @@ available from many countries, including Bangladesh, Ghana and Nigeria (37, 38, 
 
 ## WHO03_3.5_REC_001
 
-**PDF Page:** 25
+**Page:** 25
+
 **Printed page:** 13
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.5 Combination therapy
@@ -1299,6 +1434,10 @@ available from many countries, including Bangladesh, Ghana and Nigeria (37, 38, 
 **Topic:** combination_therapy
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** moderate
 
 **Priority:** 1
 
@@ -1329,8 +1468,10 @@ Implementation remarks:
 
 ## WHO03_3.5_E2D_001
 
-**PDF Page:** 26
+**Page:** 26
+
 **Printed page:** 14
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.5 Combination therapy
@@ -1383,7 +1524,7 @@ regimens results in significant improvements in medication adherence, ranging fr
 
 ## WHO03_3.5_E2D_002
 
-**PDF Pages:** 26–27
+**Pages:** 26–27
 
 **Printed pages:** 14–15
 
@@ -1436,8 +1577,10 @@ scepticism may improve once BP control improves.
 
 ## WHO03_3.5_E2D_003
 
-**PDF Page:** 27
+**Page:** 27
+
 **Printed page:** 15
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.5 Combination therapy
@@ -1491,8 +1634,10 @@ one of its components (56).
 
 ## WHO03_3.5_E2D_004
 
-**PDF Page:** 27
+**Page:** 27
+
 **Printed page:** 15
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.5 Combination therapy
@@ -1503,7 +1648,7 @@ one of its components (56).
 
 **Priority:** 2
 
-**Tokens:** 239
+**Tokens:** 216
 
 
 ### Text
@@ -1521,7 +1666,7 @@ systems, such as the Kaiser Permanente system in the United States (57) and is a
 the WHO Global HEARTS Programme and the PAHO HEARTS in the Americas Initiative (53). Recently,
 combination antihypertensive medications in a single pill have been added to the WHO Essential
 Medicines List (49). This approach has demonstrated general acceptance by government, public, and
-private stakeholders and is demonstrating success in increasing HTN control rates worldwide. GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
+private stakeholders and is demonstrating success in increasing HTN control rates worldwide.
 
 
 ---
@@ -1529,8 +1674,10 @@ private stakeholders and is demonstrating success in increasing HTN control rate
 
 ## WHO03_3.6_REC_001
 
-**PDF Page:** 28
-**Printed page:** 16
+**Pages:** 28–29
+
+**Printed pages:** 16–17
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.6 Target blood pressure
@@ -1540,6 +1687,10 @@ private stakeholders and is demonstrating success in increasing HTN control rate
 **Topic:** blood_pressure_target
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** moderate
 
 **Priority:** 1
 
@@ -1562,8 +1713,10 @@ Strong recommendation, moderate-certainty evidence
 
 ## WHO03_3.6_REC_002
 
-**PDF Page:** 28
+**Page:** 28
+
 **Printed page:** 16
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.6 Target blood pressure
@@ -1573,6 +1726,10 @@ Strong recommendation, moderate-certainty evidence
 **Topic:** blood_pressure_target
 
 **Type:** recommendation
+
+**Strength:** strong
+
+**Evidence certainty:** moderate
 
 **Priority:** 1
 
@@ -1594,8 +1751,10 @@ Strong recommendation, moderate-certainty evidence
 
 ## WHO03_3.6_REC_003
 
-**PDF Page:** 28
-**Printed page:** 16
+**Pages:** 28–29
+
+**Printed pages:** 16–17
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.6 Target blood pressure
@@ -1605,6 +1764,10 @@ Strong recommendation, moderate-certainty evidence
 **Topic:** blood_pressure_target
 
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** moderate
 
 **Priority:** 1
 
@@ -1627,8 +1790,10 @@ Conditional recommendation, moderate-certainty evidence
 
 ## WHO03_3.7_REC_001
 
-**PDF Page:** 29
-**Printed page:** 17
+**Pages:** 29–30
+
+**Printed pages:** 17–18
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.7 Frequency of re-assessment
@@ -1637,7 +1802,13 @@ Conditional recommendation, moderate-certainty evidence
 
 **Topic:** follow_up
 
+**Subtopic:** reassessment_frequency
+
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 1
 
@@ -1660,8 +1831,10 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_3.7_REC_002
 
-**PDF Page:** 29
-**Printed page:** 17
+**Pages:** 29–30
+
+**Printed pages:** 17–18
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.7 Frequency of re-assessment
@@ -1670,7 +1843,13 @@ Conditional recommendation, low-certainty evidence
 
 **Topic:** follow_up
 
+**Subtopic:** reassessment_frequency
+
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 1
 
@@ -1692,8 +1871,10 @@ Conditional recommendation, low-certainty evidence
 
 ## WHO03_3.8_REC_001
 
-**PDF Page:** 31
+**Page:** 31
+
 **Printed page:** 19
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.8 Administration of treatment by nonphysician professionals
@@ -1702,7 +1883,13 @@ Conditional recommendation, low-certainty evidence
 
 **Topic:** healthcare_delivery
 
+**Subtopic:** nonphysician_management
+
 **Type:** recommendation
+
+**Strength:** conditional
+
+**Evidence certainty:** low
 
 **Priority:** 1
 
@@ -1732,8 +1919,10 @@ Implementation remarks:
 
 ## WHO03_4_SPEC_001
 
-**PDF Page:** 33
+**Page:** 33
+
 **Printed page:** 21
+
 **Section:** 4 Special settings
 
 **Type:** special_setting
@@ -1756,19 +1945,23 @@ Section: 4 Special settings
 
 ## WHO03_4.1_SPEC_001
 
-**PDF Page:** 33
+**Page:** 33
+
 **Printed page:** 21
+
 **Section:** 4
 
 **Subsection:** 4.1 Hypertension in disaster, humanitarian and emergency settings
 
 **Topic:** special_setting
 
+**Subtopic:** disaster_or_humanitarian
+
 **Type:** special_setting
 
 **Priority:** 2
 
-**Tokens:** 846
+**Tokens:** 822
 
 
 ### Text
@@ -1821,21 +2014,23 @@ hypertension is as follows:
 [ high psychological stress burden on both general population and health care personnel.
 SPECIAL SETTINGS
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_4.2_EVID_001
 
-**PDF Page:** 34
+**Page:** 34
+
 **Printed page:** 22
+
 **Section:** 4
 
 **Subsection:** 4.2 COVID-19 and hypertension
 
 **Topic:** special_setting
+
+**Subtopic:** covid_19
 
 **Type:** evidence_rationale
 
@@ -1882,7 +2077,7 @@ may provide clearer insight regarding the effect of ACEis or ARBs in patients wi
 
 ## WHO03_4.3_THR_001
 
-**PDF Pages:** 34–35
+**Pages:** 34–35
 
 **Printed pages:** 22–23
 
@@ -1891,6 +2086,8 @@ may provide clearer insight regarding the effect of ACEis or ARBs in patients wi
 **Subsection:** 4.3 Pregnancy and hypertension
 
 **Topic:** special_setting
+
+**Subtopic:** pregnancy
 
 **Type:** clinical_threshold
 
@@ -1935,13 +2132,17 @@ BP goal/target also has been subject to debate and is changing.
 
 ## WHO03_4.3_THR_002
 
-**PDF Page:** 35
+**Page:** 35
+
 **Printed page:** 23
+
 **Section:** 4
 
 **Subsection:** 4.3 Pregnancy and hypertension
 
 **Topic:** special_setting
+
+**Subtopic:** pregnancy
 
 **Type:** clinical_threshold
 
@@ -1985,19 +2186,23 @@ treat chronic HTN and gestational HTN during pregnancy.
 
 ## WHO03_4.3_THR_003
 
-**PDF Page:** 35
+**Page:** 35
+
 **Printed page:** 23
+
 **Section:** 4
 
 **Subsection:** 4.3 Pregnancy and hypertension
 
 **Topic:** special_setting
 
+**Subtopic:** pregnancy
+
 **Type:** clinical_threshold
 
 **Priority:** 3
 
-**Tokens:** 221
+**Tokens:** 197
 
 
 ### Text
@@ -2014,16 +2219,16 @@ of end organ damage to decrease the likelihood of the development of severe HTN 
 pregnancy. Even with the effective lowering of BP during the pregnancy and in the immediate postpartum period, the presence of hypertensive disorders of pregnancy significantly increases long-term CV
 risk, including future HTN, coronary disease, and stroke. SPECIAL SETTINGS
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_5_OTH_001
 
-**PDF Page:** 36
-**Printed page:** 24
+**Pages:** 36–37
+
+**Printed pages:** 24–25
+
 **Section:** 5 Publication, implementation, evaluation and research gaps
 
 **Type:** other
@@ -2047,8 +2252,10 @@ evaluation and research gaps
 
 ## WHO03_5.1_METH_001
 
-**PDF Page:** 36
+**Page:** 36
+
 **Printed page:** 24
+
 **Section:** 5
 
 **Subsection:** 5.1 Publication
@@ -2076,8 +2283,10 @@ available online.
 
 ## WHO03_5.2_SPEC_001
 
-**PDF Page:** 36
+**Page:** 36
+
 **Printed page:** 24
+
 **Section:** 5
 
 **Subsection:** 5.2 Implementation and dissemination
@@ -2111,8 +2320,10 @@ through all three levels of WHO.
 
 ## WHO03_5.3_OTH_001
 
-**PDF Page:** 36
+**Page:** 36
+
 **Printed page:** 24
+
 **Section:** 5
 
 **Subsection:** 5.3 Evaluation
@@ -2139,8 +2350,10 @@ reviewing the number of countries that have adapted or endorsed the guideline na
 
 ## WHO03_5.4_EVID_001
 
-**PDF Page:** 36
+**Page:** 36
+
 **Printed page:** 24
+
 **Section:** 5
 
 **Subsection:** 5.4 Future updating of the guideline
@@ -2170,8 +2383,10 @@ updates sooner.
 
 ## WHO03_5.5_EVID_001
 
-**PDF Page:** 36
-**Printed page:** 24
+**Page:** 37
+
+**Printed page:** 25
+
 **Section:** 5
 
 **Subsection:** 5.5 Research gaps
@@ -2180,7 +2395,7 @@ updates sooner.
 
 **Priority:** 2
 
-**Tokens:** 684
+**Tokens:** 660
 
 
 ### Text
@@ -2239,16 +2454,16 @@ the management of BP.
 needed.
 PUBLICATION, IMPLEMENTATION, EVALUATION AND RESEARCH GAPS
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_6_DRUG_001
 
-**PDF Page:** 38
+**Page:** 38
+
 **Printed page:** 26
+
 **Section:** 6 Implementation tools
 
 **Type:** drug_guidance
@@ -2271,8 +2486,10 @@ Section: 6 Implementation tools
 
 ## WHO03_6.1_EVID_001
 
-**PDF Page:** 38
-**Printed page:** 26
+**Pages:** 23–39
+
+**Printed pages:** 11–27
+
 **Section:** 6
 
 **Subsection:** 6.1 Guideline recommendations
@@ -2281,7 +2498,7 @@ Section: 6 Implementation tools
 
 **Priority:** 2
 
-**Tokens:** 819
+**Tokens:** 795
 
 
 ### Text
@@ -2341,16 +2558,16 @@ until patient reaches target.
 Follow up every 3–6 months for patients with BP under control.
 IMPLEMENTATION TOOLS
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_6.2_ALGO_001
 
-**PDF Page:** 40
-**Printed page:** 28
+**Pages:** 40–41
+
+**Printed pages:** 28–29
+
 **Section:** 6
 
 **Subsection:** 6.2 Drug- and dose-specific protocols
@@ -2417,8 +2634,10 @@ three drug classes (ACEis/ARBs, CCBs or thiazide/thiazide-like diuretics).
 
 ## WHO03_6.2_ALGO_002
 
-**PDF Page:** 40
-**Printed page:** 28
+**Pages:** 40–41
+
+**Printed pages:** 28–29
+
 **Section:** 6
 
 **Subsection:** 6.2 Drug- and dose-specific protocols
@@ -2486,8 +2705,10 @@ once a day).
 
 ## WHO03_6.2_ALGO_003
 
-**PDF Page:** 40
-**Printed page:** 28
+**Pages:** 40–41
+
+**Printed pages:** 28–29
+
 **Section:** 6
 
 **Subsection:** 6.2 Drug- and dose-specific protocols
@@ -2496,7 +2717,7 @@ once a day).
 
 **Priority:** 3
 
-**Tokens:** 271
+**Tokens:** 247
 
 
 ### Text
@@ -2525,23 +2746,23 @@ women. * Can be replaced with a thiazide/thiazide-like
 diuretic or an ACEi or ARB. An ACEi or ARB
 is preferred for patients with proteinuria. IMPLEMENTATION TOOLS
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_0_METH_001
 
-**PDF Page:** 5
-**Printed page:** iii
+**Pages:** 5–55
+
+**Printed pages:** iii–43
+
 **Section:** Annex 3: Treatment outcomes relevant to hypertension
 
 **Type:** research_methodology
 
 **Priority:** 3
 
-**Tokens:** 290
+**Tokens:** 266
 
 
 ### Text
@@ -2588,17 +2809,15 @@ Time to BP control
 Patient satisfaction
 Pill/medication burden
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
-
 
 ---
 
 
 ## WHO03_0_THR_001
 
-**PDF Pages:** 5–57
+**Page:** 56
 
-**Printed pages:** iii–45
+**Printed page:** 44
 
 **Section:** Annex 4: PICO questions
 
@@ -2677,9 +2896,9 @@ should be used as first-line agents?
 
 ## WHO03_0_THR_002
 
-**PDF Pages:** 57–58
+**Pages:** 19–60
 
-**Printed pages:** 45–46
+**Printed pages:** 7–48
 
 **Section:** Annex 4: PICO questions
 
@@ -2687,7 +2906,7 @@ should be used as first-line agents?
 
 **Priority:** 3
 
-**Tokens:** 501
+**Tokens:** 477
 
 
 ### Text
@@ -2726,7 +2945,6 @@ Based on different effect modifiers such as: estimated cardiovascular risk; pre-
 stroke, diabetes, age, sex, chronic kidney disease and race/ethnicity, level of baseline blood
 pressure
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
 In adults with hypertension requiring pharmacological treatment, which drugs
 (monotherapy using BB, CCB, diuretics, ACEi or ARB vs combination therapy using
 BB, CCB, diuretics, ACEi or ARB) should be used as first-line agents?
@@ -2737,8 +2955,10 @@ BB, CCB, diuretics, ACEi or ARB) should be used as first-line agents?
 
 ## WHO03_0_THR_003
 
-**PDF Page:** 57
-**Printed page:** 45
+**Pages:** 19–60
+
+**Printed pages:** 7–48
+
 **Section:** Annex 4: PICO questions
 
 **Type:** clinical_threshold
@@ -2802,9 +3022,9 @@ stroke), stroke, myocardial infarction, end-stage renal disease and heart failur
 
 ## WHO03_0_THR_004
 
-**PDF Pages:** 15–60
+**Page:** 59
 
-**Printed pages:** 3–48
+**Printed page:** 47
 
 **Section:** Annex 4: PICO questions
 
@@ -2812,7 +3032,7 @@ stroke), stroke, myocardial infarction, end-stage renal disease and heart failur
 
 **Priority:** 3
 
-**Tokens:** 530
+**Tokens:** 506
 
 
 ### Text
@@ -2857,7 +3077,6 @@ s
 Titration phase vs controlled HTN follow up, level of initial BP, other conditions, remote
 monitoring vs clinical visit
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
 11 Can pharmacological management of hypertension be provided by nonphysician
 care providers? P
 Adult men and women
@@ -2883,8 +3102,10 @@ Ethnicity
 
 ## WHO03_2.5_TBL_001
 
-**PDF Page:** 17
+**Page:** 17
+
 **Printed page:** 5
+
 **Section:** 2
 
 **Subsection:** 2.5 Certainty of evidence and strength of recommendations
@@ -2918,8 +3139,10 @@ Page: 17
 
 ## WHO03_3.2_TBL_001
 
-**PDF Page:** 21
+**Page:** 21
+
 **Printed page:** 9
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.2 Laboratory testing before and during pharmacological treatment
@@ -2957,8 +3180,10 @@ Page: 21
 
 ## WHO03_0_TBL_005
 
-**PDF Page:** 55
+**Page:** 55
+
 **Printed page:** 43
+
 **Section:** Annex 3: Treatment outcomes relevant to hypertension
 
 **Type:** table
@@ -3012,8 +3237,10 @@ Page: 55
 
 ## WHO03_0_TBL_006
 
-**PDF Page:** 56
+**Page:** 56
+
 **Printed page:** 44
+
 **Section:** Annex 3: Treatment outcomes relevant to hypertension
 
 **Type:** table
@@ -3045,8 +3272,10 @@ Page: 56
 
 ## WHO03_0_TBL_007
 
-**PDF Page:** 56
+**Page:** 56
+
 **Printed page:** 44
+
 **Section:** Annex 3: Treatment outcomes relevant to hypertension
 
 **Type:** table
@@ -3078,8 +3307,10 @@ Page: 56
 
 ## WHO03_0_TBL_008
 
-**PDF Page:** 57
+**Page:** 57
+
 **Printed page:** 45
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3111,8 +3342,10 @@ Page: 57
 
 ## WHO03_0_TBL_009
 
-**PDF Page:** 57
+**Page:** 57
+
 **Printed page:** 45
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3144,8 +3377,10 @@ Page: 57
 
 ## WHO03_0_TBL_010
 
-**PDF Page:** 57
+**Page:** 57
+
 **Printed page:** 45
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3177,8 +3412,10 @@ Page: 57
 
 ## WHO03_0_TBL_011
 
-**PDF Page:** 57
-**Printed page:** 45
+**Page:** 58
+
+**Printed page:** 46
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3210,8 +3447,10 @@ Page: 58
 
 ## WHO03_0_TBL_012
 
-**PDF Page:** 57
-**Printed page:** 45
+**Page:** 58
+
+**Printed page:** 46
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3243,8 +3482,10 @@ Page: 58
 
 ## WHO03_0_TBL_013
 
-**PDF Page:** 57
-**Printed page:** 45
+**Page:** 59
+
+**Printed page:** 47
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3276,8 +3517,10 @@ Page: 59
 
 ## WHO03_0_TBL_014
 
-**PDF Page:** 56
-**Printed page:** 44
+**Page:** 59
+
+**Printed page:** 47
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3309,8 +3552,10 @@ Page: 59
 
 ## WHO03_0_TBL_015
 
-**PDF Page:** 59
+**Page:** 59
+
 **Printed page:** 47
+
 **Section:** Annex 4: PICO questions
 
 **Type:** table
@@ -3342,9 +3587,9 @@ Page: 59
 
 ## WHO03_0_TBL_016
 
-**PDF Pages:** 56–60
+**Page:** 60
 
-**Printed pages:** 44–48
+**Printed page:** 48
 
 **Section:** Annex 4: PICO questions
 
@@ -3377,15 +3622,17 @@ Page: 60
 
 ## WHO03_6_ALGO_001
 
-**PDF Page:** 6
+**Page:** 6
+
 **Printed page:** iv
+
 **Section:** 6 Implementation tools
 
 **Type:** algorithm
 
 **Priority:** 3
 
-**Tokens:** 144
+**Tokens:** 120
 
 
 ### Text
@@ -3393,7 +3640,6 @@ Page: 60
 
 Fig. 1	 Analytic framework for antihypertensive medication treatment	 3
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
 Figures
 Fig. 1
 Analytic framework for antihypertensive medication treatment
@@ -3416,8 +3662,10 @@ Fig. A3.1 Rating of outcomes
 
 ## WHO03_2_ALGO_001
 
-**PDF Page:** 15
+**Page:** 15
+
 **Printed page:** 3
+
 **Section:** 2 Method for developing the guideline
 
 **Type:** algorithm
@@ -3500,8 +3748,10 @@ METHOD FOR DEVELOPING THE GUIDELINE
 
 ## WHO03_3.2_ALGO_001
 
-**PDF Page:** 21
-**Printed page:** 9
+**Pages:** 21–23
+
+**Printed pages:** 9–11
+
 **Section:** 3 Recommendations
 
 **Subsection:** 3.2 Laboratory testing before and during pharmacological treatment
@@ -3583,8 +3833,10 @@ low due to serious concerns about the indirectness of evidence.
 
 ## WHO03_5.5_ALGO_001
 
-**PDF Page:** 38
+**Page:** 38
+
 **Printed page:** 26
+
 **Section:** 6 Implementation tools
 
 **Subsection:** 6.1 Guideline recommendations
@@ -3593,7 +3845,7 @@ low due to serious concerns about the indirectness of evidence.
 
 **Priority:** 3
 
-**Tokens:** 468
+**Tokens:** 444
 
 
 ### Text
@@ -3601,7 +3853,6 @@ low due to serious concerns about the indirectness of evidence.
 
 Fig. 3	 An approach for starting treatment with a single-pill combination  Treat adults with BP ≥140 mmHg or ≥90   (SBP ≥130 mmHg for those with CVD, DM, CKD).
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
 6 Implementation tools
 6.1 Guideline recommendations
 Graphic summaries of the guideline recommendations are presented below in an algorithmic approach
@@ -3635,8 +3886,10 @@ beta-blockers (BBs) post MI, ACEis/ARBs in those with DM, heart failure or CKD.
 
 ## WHO03_6.1_ALGO_001
 
-**PDF Page:** 39
+**Page:** 39
+
 **Printed page:** 27
+
 **Section:** 6 Implementation tools
 
 **Subsection:** 6.1 Guideline recommendations
@@ -3685,8 +3938,10 @@ IMPLEMENTATION TOOLS
 
 ## WHO03_6.1_ALGO_002
 
-**PDF Page:** 40
+**Page:** 40
+
 **Printed page:** 28
+
 **Section:** 6 Implementation tools
 
 **Subsection:** 6.2 Drug- and dose-specific protocols
@@ -3695,7 +3950,7 @@ IMPLEMENTATION TOOLS
 
 **Priority:** 3
 
-**Tokens:** 676
+**Tokens:** 652
 
 
 ### Text
@@ -3703,7 +3958,6 @@ IMPLEMENTATION TOOLS
 
 Fig. 5 Algorithm 1 Start ARB–CCB at  half-maximal doses
 
-GUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS
 6.2 Drug- and dose-specific protocols
 Two examples of suggested drug and dose-specific protocols are presented below (Figs 5 and 6). These
 should be viewed as examples and other approaches are possible.
@@ -3771,8 +4025,10 @@ combinations).
 
 ## WHO03_6.2_ALGO_004
 
-**PDF Page:** 41
-**Printed page:** 29
+**Pages:** 40–41
+
+**Printed pages:** 28–29
+
 **Section:** 6
 
 **Subsection:** 6.2 Drug- and dose-specific protocols

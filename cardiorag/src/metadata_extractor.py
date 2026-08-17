@@ -553,6 +553,7 @@ def build_chunk_metadata(
         "special_setting": special_setting,
         "region_scope": "global",
         "clinical_priority": priority,
+        "is_canonical": not is_duplicate,
         "is_duplicate": is_duplicate,
         "canonical_chunk_id": canonical_chunk_id,
         "parent_recommendation": parent_recommendation,

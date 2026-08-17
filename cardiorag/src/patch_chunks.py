@@ -50,6 +50,15 @@ except Exception:
     def count_tokens(t: str) -> int:
         return max(1, round(len(t) / 4))
 
+try:
+    from src.clean_text import clean_chunk_noise
+except ImportError:
+    try:
+        from clean_text import clean_chunk_noise
+    except ImportError:
+        def clean_chunk_noise(t: str) -> str:
+            return t
+
 WS = re.compile(r"\s+")
 def ws(s: str) -> str:
     return WS.sub("", s)
@@ -122,65 +131,132 @@ NICE_SPLITS = {
     "NICE3_1.5_IMPACT_001": re.compile(r"(?m)^(?:Choice of drug based on clinical trials\n)?(1\.5\.8)\n"),
 }
 
+NICE_CHUNKS_TO_REMOVE = {
+    "NICE3_1.7_IMPACT_002",
+    "NICE3_1.7_RATIONALE_004",
+}
+
 NICE_PAGE_MAP = {
-    "NICE3_1.1_OTH_001": (4, 4),
-    **{f"NICE3_1.1.{i}_REC": (4, 4) for i in range(1, 8)},
-    "NICE3_1.1.8_REC": (5, 5), "NICE3_1.1.9_REC": (5, 6), "NICE3_1.1.10_REC": (5, 6), "NICE3_1.1.11_REC": (6, 6),
-    "NICE3_1.1_RATIONALE_001": (7, 8), "NICE3_1.1_RATIONALE_002": (8, 9),
-    "NICE3_1.1_RISK_COMMUNICATION_ABOUT__001": (9, 9), "NICE3_1.1_IMPACT_001": (9, 9),
-    "NICE3_1.1.12_REC": (9, 9), "NICE3_1.1.13_REC": (9, 9),
-    **{f"NICE3_1.1.{i}_REC": (10, 10) for i in range(14, 18)},
-    "NICE3_1.1.18_REC": (10, 12),
-    "NICE3_1.2_OTH_001": (12, 12), "NICE3_1.2.1_REC": (12, 13),
-    "NICE3_1.3_OTH_001": (13, 13), "NICE3_1.3.1_REC": (13, 14),
-    **{f"NICE3_1.3.{i}_REC": (14, 14) for i in range(2, 5)},
-    "NICE3_1.3_RATIONALE_001": (14, 14), "NICE3_1.3_IMPACT_001": (14, 14),
-    "NICE3_1.3.5_REC": (14, 15), "NICE3_1.3.6_REC": (14, 15),
-    **{f"NICE3_1.3.{i}_REC": (15, 15) for i in range(7, 12)},
-    "NICE3_1.3.12_REC": (15, 16),
-    **{f"NICE3_1.4.{i}_REC": (17, 17) for i in range(1, 7)},
-    "NICE3_1.4.7_REC": (17, 18), "NICE3_1.4.8_REC": (18, 18),
+    "NICE3_1.1_OTH_001": (5, 5),
+    **{f"NICE3_1.1.{i}_REC": (5, 5) for i in range(1, 8)},
+    "NICE3_1.1.8_REC": (6, 6),
+    "NICE3_1.1.9_REC": (6, 6),
+    "NICE3_1.1.10_REC": (6, 7),
+    "NICE3_1.1.11_REC": (7, 7),
+    "NICE3_1.1_RATIONALE_001": (8, 9),
+    "NICE3_1.1_RATIONALE_002": (9, 9),
+    "NICE3_1.1_IMPACT_001": (10, 10),
+    "NICE3_1.1_RISK_COMMUNICATION_ABOUT__001": (11, 11),
+    "NICE3_1.1.12_REC": (11, 11),
+    "NICE3_1.1.13_REC": (11, 11),
+    "NICE3_1.1.14_REC": (11, 11),
+    "NICE3_1.1.15_REC": (11, 11),
+    "NICE3_1.1.16_REC": (11, 12),
+    "NICE3_1.1.17_REC": (12, 12),
+    "NICE3_1.1.18_REC": (11, 11),
+    "NICE3_1.1_RATIONALE_003": (12, 12),
+    "NICE3_1.1_IMPACT_002": (13, 13),
+    "NICE3_1.2_OTH_001": (14, 14),
+    "NICE3_1.2.1_REC": (14, 14),
+    "NICE3_1.2_RATIONALE_001": (14, 14),
+    "NICE3_1.3_OTH_001": (14, 14),
+    "NICE3_1.3.1_REC": (14, 15),
+    "NICE3_1.3.2_REC": (15, 15),
+    "NICE3_1.3.3_REC": (15, 15),
+    "NICE3_1.3.4_REC": (15, 15),
+    "NICE3_1.3_RATIONALE_001": (15, 15),
+    "NICE3_1.3_IMPACT_001": (15, 15),
+    "NICE3_1.3.5_REC": (16, 16),
+    "NICE3_1.3.6_REC": (16, 16),
+    "NICE3_1.3.7_REC": (16, 17),
+    "NICE3_1.3.8_REC": (17, 17),
+    "NICE3_1.3.9_REC": (17, 17),
+    "NICE3_1.3.10_REC": (17, 17),
+    "NICE3_1.3.11_REC": (17, 17),
+    "NICE3_1.3.12_REC": (17, 17),
+    **{f"NICE3_1.4.{i}_REC": (17, 18) for i in range(1, 7)},
+    "NICE3_1.4.7_REC": (18, 18),
+    "NICE3_1.4.8_REC": (18, 18),
     "NICE3_1.5_DRUG_001": (18, 18),
-    **{f"NICE3_1.5.{i}_REC": (18, 18) for i in range(1, 5)},
-    "NICE3_1.5.5_REC": (18, 19), "NICE3_1.5.6_REC": (19, 19), "NICE3_1.5.7_REC": (19, 19),
-    "NICE3_1.5_RATIONALE_001": (19, 20), "NICE3_1.5_IMPACT_001": (20, 20),
-    "NICE3_1.5.8_REC": (20, 20), "NICE3_1.5.9_REC": (20, 20), "NICE3_1.5.10_REC": (20, 20),
-    "NICE3_1.6_OTH_001": (20, 21), "NICE3_1.6_DRUG_PRIMARY_PREVENTION_O_001": (21, 21),
-    "NICE3_1.6.1_REC": (21, 21), "NICE3_1.6.2_REC": (21, 21), "NICE3_1.6.3_REC": (21, 22),
-    **{f"NICE3_1.6.{i}_REC": (22, 22) for i in range(4, 13)},
-    "NICE3_1.6_RATIONALE_001": (23, 24), "NICE3_1.6_IMPACT_001": (24, 25), "NICE3_1.6.13_REC": (25, 25),
-    "NICE3_1.7_OTH_001": (25, 26), "NICE3_1.7_DRUG_SECONDARY_PREVENTION_001": (26, 26),
+    **{f"NICE3_1.5.{i}_REC": (18, 19) for i in range(1, 5)},
+    "NICE3_1.5.5_REC": (19, 19),
+    "NICE3_1.5.6_REC": (19, 19),
+    "NICE3_1.5.7_REC": (20, 20),
+    "NICE3_1.5_RATIONALE_001": (20, 20),
+    "NICE3_1.5_IMPACT_001": (21, 21),
+    "NICE3_1.5.8_REC": (20, 20),
+    "NICE3_1.5.9_REC": (20, 20),
+    "NICE3_1.5.10_REC": (20, 21),
+    "NICE3_1.6_OTH_001": (22, 22),
+    "NICE3_1.6_DRUG_PRIMARY_PREVENTION_O_001": (22, 22),
+    "NICE3_1.6.1_REC": (22, 22),
+    "NICE3_1.6.2_REC": (22, 22),
+    "NICE3_1.6.3_REC": (22, 22),
+    **{f"NICE3_1.6.{i}_REC": (22, 23) for i in range(4, 9)},
+    "NICE3_1.6.9_REC": (23, 23),
+    "NICE3_1.6.10_REC": (23, 23),
+    "NICE3_1.6.11_REC": (23, 24),
+    "NICE3_1.6.12_REC": (24, 24),
+    "NICE3_1.6_RATIONALE_001": (24, 25),
+    "NICE3_1.6_IMPACT_001": (25, 25),
+    "NICE3_1.6.13_REC": (26, 26),
+    "NICE3_1.7_OTH_001": (26, 26),
+    "NICE3_1.7_DRUG_SECONDARY_PREVENTION_001": (26, 26),
     "NICE3_1.7.1_REC": (26, 26),
-    "NICE3_1.7_RATIONALE_001": (26, 28), "NICE3_1.7_RATIONALE_002": (28, 29), "NICE3_1.7_RATIONALE_003": (29, 29),
-    "NICE3_1.7_IMPACT_001": (29, 29),
-    "NICE3_1.7.2_REC": (29, 30), "NICE3_1.7.3_REC": (30, 30), "NICE3_1.7.4_REC": (30, 30),
-    "NICE3_1.7.5_REC": (30, 31), "NICE3_1.7.6_REC": (30, 31),
-    "NICE3_1.7.7_REC": (31, 31), "NICE3_1.7.8_REC": (31, 31), "NICE3_1.7.9_REC": (31, 31),
-    "NICE3_1.7.10_REC": (31, 34),
-    "NICE3_1.8_DRUG_001": (35, 36), "NICE3_1.8.1_REC": (36, 36), "NICE3_1.8.2_REC": (36, 36),
-    "NICE3_1.8.3_REC": (36, 36), "NICE3_1.8_OTH_SECONDARY_PREVENTION_001": (36, 36),
-    "NICE3_1.9.1_REC": (36, 36), "NICE3_1.9.2_REC": (36, 36), "NICE3_1.9.3_REC": (36, 36),
-    "NICE3_1.9.4_REC": (36, 36), "NICE3_1.9_RATIONALE_001": (36, 37), "NICE3_1.9_IMPACT_001": (37, 37),
+    "NICE3_1.7_RATIONALE_001": (27, 28),
+    "NICE3_1.7_RATIONALE_002": (28, 28),
+    "NICE3_1.7_RATIONALE_003": (29, 29),
+    "NICE3_1.7_IMPACT_001": (29, 30),
+    "NICE3_1.7.2_REC": (30, 30),
+    "NICE3_1.7.3_REC": (30, 30),
+    "NICE3_1.7.4_REC": (30, 30),
+    "NICE3_1.7.5_REC": (30, 30),
+    "NICE3_1.7_RATIONALE_INITIAL_TREATMEN_001": (31, 31),
+    "NICE3_1.7_IMPACT_INITIAL_TREATMENT_001": (31, 31),
+    "NICE3_1.7.6_REC": (31, 31),
+    "NICE3_1.7.7_REC": (31, 32),
+    "NICE3_1.7.8_REC": (32, 32),
+    "NICE3_1.7.9_REC": (32, 32),
+    "NICE3_1.7.10_REC": (32, 32),
+    "NICE3_1.8_DRUG_001": (36, 36),
+    "NICE3_1.8.1_REC": (36, 36),
+    "NICE3_1.8.2_REC": (36, 36),
+    "NICE3_1.8.3_REC": (36, 36),
+    "NICE3_1.8_OTH_SECONDARY_PREVENTION_001": (36, 36),
+    "NICE3_1.9.1_REC": (36, 37),
+    "NICE3_1.9.2_REC": (37, 37),
+    "NICE3_1.9.3_REC": (37, 37),
+    "NICE3_1.9.4_REC": (37, 37),
+    "NICE3_1.9_RATIONALE_001": (37, 38),
+    "NICE3_1.9_IMPACT_001": (38, 38),
     "NICE3_1.10_CONTRA_001": (38, 38),
-    **{f"NICE3_1.10.{i}_REC": (38, 38) for i in range(1, 4)},
-    "NICE3_1.10.4_REC": (38, 39), "NICE3_1.10_RATIONALE_001": (39, 40), "NICE3_1.10_IMPACT_001": (40, 40),
-    "NICE3_1.11_OTH_001": (41, 41), "NICE3_1.11.1_REC": (41, 41), "NICE3_1.11.2_REC": (41, 41),
-    "NICE3_1.11.3_REC": (41, 42), "NICE3_1.11.4_REC": (42, 42), "NICE3_1.11.5_REC": (42, 42),
-    "NICE3_1.11.6_REC": (42, 42), "NICE3_1.11.7_REC": (42, 42),
-    **{f"NICE3_1.11.{i}_REC": (42, 42) for i in range(8, 11)},
-    "NICE3_1.11.11_REC": (42, 43), "NICE3_1.11.12_REC": (43, 43),
-    "NICE3_1.11_RATIONALE_001": (43, 43), "NICE3_1.11_IMPACT_001": (44, 44),
+    **{f"NICE3_1.10.{i}_REC": (38, 39) for i in range(1, 5)},
+    "NICE3_1.10_RATIONALE_001": (40, 40),
+    "NICE3_1.10_IMPACT_001": (41, 41),
+    "NICE3_1.11_OTH_001": (41, 41),
+    "NICE3_1.11.1_REC": (41, 41),
+    "NICE3_1.11.2_REC": (41, 41),
+    "NICE3_1.11.3_REC": (41, 42),
+    "NICE3_1.11.4_REC": (42, 42),
+    "NICE3_1.11.5_REC": (42, 42),
+    "NICE3_1.11.6_REC": (42, 42),
+    "NICE3_1.11.7_REC": (42, 42),
+    **{f"NICE3_1.11.{i}_REC": (42, 43) for i in range(8, 12)},
+    "NICE3_1.11.12_REC": (43, 43),
+    "NICE3_1.11_RATIONALE_001": (43, 44),
+    "NICE3_1.11_IMPACT_001": (44, 44),
     "NICE3_1.12_DRUG_001": (44, 44),
-    **{f"NICE3_1.12.{i}_REC": (44, 44) for i in range(1, 7)},
-    "NICE3_1.12.7_REC": (44, 45),
+    **{f"NICE3_1.12.{i}_REC": (44, 45) for i in range(1, 8)},
     "NICE3_TERM_THIS_SECTION_DEFINES_TERMS_THA_001": (45, 46),
-    "NICE3_TERM_FULL_LIPID_PROFILE_THIS_INVOLV_001": (45, 46),
-    "NICE3_TERM_SEVERE_MENTAL_ILLNESS_A_DIAGNO_001": (46, 46),
-    "NICE3_research_RESEARCH_001": (47, 48), "NICE3_research_RATIONALE_001": (48, 49),
-    "NICE3_context_CTX_001": (49, 50), "NICE3_finding_more_OTH_001": (50, 51),
-    "NICE3_update_info_UPDATE_001": (51, 52),
-    "NICE3_update_info_UPDATE_CARDIOPROTECTIVE_DIE_001": (51, 52),
-    "NICE3_update_info_UPDATE_INITIAL_TREATMENT_001": (51, 52),
+    "NICE3_TERM_FULL_LIPID_PROFILE_THIS_INVOLV_001": (46, 46),
+    "NICE3_TERM_SEVERE_MENTAL_ILLNESS_A_DIAGNO_001": (47, 47),
+    "NICE3_research_RESEARCH_001": (48, 48),
+    "NICE3_research_RATIONALE_001": (49, 49),
+    "NICE3_context_CTX_001": (50, 50),
+    "NICE3_finding_more_OTH_001": (51, 51),
+    "NICE3_update_info_UPDATE_001": (52, 52),
+    "NICE3_update_info_UPDATE_CARDIOPROTECTIVE_DIE_001": (52, 52),
+    "NICE3_update_info_UPDATE_INITIAL_TREATMENT_001": (52, 52),
 }
 
 NICE_SUBSECTION_FIX = {
@@ -346,7 +422,8 @@ def patch_nice(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dic
                 t["text"] += body_of(by_id.pop(f)["text"])
                 report["merged"].append(f)
 
-    chunks[:] = [c for c in chunks if c["chunk_id"] in by_id]
+    # Prune duplicate supporting chunks
+    chunks[:] = [c for c in chunks if c["chunk_id"] in by_id and c["chunk_id"] not in NICE_CHUNKS_TO_REMOVE]
 
     # 2) Complete truncated tails
     for cid, suffix in NICE_COMPLETIONS.items():
@@ -354,7 +431,7 @@ def patch_nice(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dic
             by_id[cid]["text"] = by_id[cid]["text"].rstrip() + " " + suffix
             report["completed"].append(cid)
 
-    # 3) Strip leaking section/subheading titles
+    # 3) Strip leaking section/subheading titles and running header/footer noise
     for c in chunks:
         changed = True
         while changed:
@@ -365,6 +442,8 @@ def patch_nice(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dic
                     c["text"] = new_text
                     changed = True
                     report["stripped"].append(c["chunk_id"])
+
+        c["text"] = clean_chunk_noise(c["text"])
 
     # 4) Extract buried recommendations
     for cid, rx in NICE_SPLITS.items():
@@ -394,6 +473,13 @@ def patch_nice(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dic
             by_id[nc["chunk_id"]] = nc
             report["split_new"].append(nc["chunk_id"])
 
+    # Clean 1.7.10 pure recommendation text
+    if "NICE3_1.7.10_REC" in by_id:
+        t = by_id["NICE3_1.7.10_REC"]["text"]
+        why_idx = t.find("Why the committee made these recommendations")
+        if why_idx != -1:
+            by_id["NICE3_1.7.10_REC"]["text"] = t[:why_idx].rstrip()
+
     # 5) Page numbers, subsections, dates & priority hierarchy
     for c in chunks:
         cid = c["chunk_id"]
@@ -406,7 +492,11 @@ def patch_nice(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dic
             c["metadata"]["recommendation_original_date"] = o
             c["metadata"]["recommendation_amended_dates"] = a
 
-        # Enforce clinical priority hierarchy
+        # Enforce canonicality & priority
+        c["metadata"]["is_canonical"] = True
+        c["metadata"]["is_duplicate"] = False
+        c["metadata"]["canonical_chunk_id"] = None
+
         ct = c["metadata"].get("content_type", "other")
         if ct in ("recommendation", "drug_guidance", "lifestyle_guidance", "lipid_target", "specialist_referral"):
             c["metadata"]["clinical_priority"] = 1
@@ -414,12 +504,6 @@ def patch_nice(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dic
             c["metadata"]["clinical_priority"] = 2
         else:
             c["metadata"]["clinical_priority"] = 3
-
-    # Review flags for complex combined rationale chunks
-    for cid in ("NICE3_1.7.10_REC", "NICE3_1.1.18_REC"):
-        if cid in by_id:
-            by_id[cid]["metadata"]["requires_manual_review"] = True
-            by_id[cid]["metadata"]["review_reason"] = "mixed recommendation+rationale+impact; consider splitting"
 
     for c in chunks:
         retokenize(c)
@@ -446,10 +530,14 @@ def patch_who(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dict
     for can_id, dup_id in WHO_CANONICAL_PAIRS:
         if can_id in by_id:
             by_id[can_id]["metadata"]["is_duplicate"] = False
+            by_id[can_id]["metadata"]["is_canonical"] = True
             by_id[can_id]["metadata"]["canonical_chunk_id"] = None
+            by_id[can_id]["metadata"]["clinical_priority"] = 1
         if dup_id in by_id:
             by_id[dup_id]["metadata"]["is_duplicate"] = True
+            by_id[dup_id]["metadata"]["is_canonical"] = False
             by_id[dup_id]["metadata"]["canonical_chunk_id"] = can_id
+            by_id[dup_id]["metadata"]["clinical_priority"] = 2
             report["flipped_pairs"].append((can_id, dup_id))
 
     # 4) Remove pseudo-table recommendation boxes, multi-spanning tables, and noise fragments
@@ -460,8 +548,11 @@ def patch_who(chunks: List[Dict[str, Any]], report: Dict[str, Any]) -> List[Dict
             report["removed_tables"].append(cid)
             removed_count += 1
 
-    # 5) Retokenize
+    # 5) Clean noise & set canonical flags across all WHO chunks
     for c in chunks:
+        c["text"] = clean_chunk_noise(c["text"])
+        m = c["metadata"]
+        m["is_canonical"] = not m.get("is_duplicate", False)
         retokenize(c)
 
     return chunks

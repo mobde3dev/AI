@@ -1,0 +1,262 @@
+النسخة الجديدة **أحسن من الأولى في WHO03 بوضوح**، لكن ظهر عندنا **regression مهم في NICE3 متعلق بالـpage metadata**. تقييمي الإجمالي الحالي: **8.5/10**.
+
+### اللي اتحسن
+
+الـEmbeddings نفسها ممتازة. الأربع test queries ما زالت ترجع الـcorrect answer في **Rank 1 = 4/4**. سؤال الضغط بالإنجليزي والعربي رجّع توصية WHO الصحيحة، وسؤال LDL بالإنجليزي والعربي رجّع `NICE3_1.7.1_REC` مباشرة.    
+
+وفي WHO03 المشكلة الكبيرة السابقة بتاعة:
+
+```text
+WHO03_3.3_TBL_001
+```
+
+اللي كانت متصنفة cardiovascular risk بينما محتواها first-line drugs **اختفت من Top results**. ده تحسن مهم.
+
+كمان الـcanonical recommendation أصبحت سليمة:
+
+```text
+WHO03_3.4_REC_001
+topic = pharmacological_treatment
+subtopic = first_line_agents
+clinical_priority = 1
+```
+
+ومعاها الـimplementation remarks بشكل نظيف. 
+
+### لسه عندنا مشكلة WHO03 واحدة
+
+الـExecutive Summary duplicate ما زال Rank 1:
+
+```text
+WHO03_0_REC_006
+clinical_priority = 2
+```
+
+بينما النسخة اللي المفروض نعتمدها:
+
+```text
+WHO03_3.4_REC_001
+clinical_priority = 1
+```
+
+جاءت Rank 2.  
+
+وده طبيعي لأن الـvector similarity **مش عارفة معنى `clinical_priority`**؛ هي شايفة نصين شبه بعض، والـExecutive Summary score بتاعها أعلى شوية:
+
+```text
+Executive summary = 0.7280
+Canonical 3.4    = 0.7126
+```
+
+الحل مش تغيير BGE-M3. الحل لاحقًا:
+
+```python
+final_score = semantic_score + priority_bonus
+```
+
+أو الأفضل نستبعد executive-summary duplicates من الـmain clinical retrieval collection:
+
+```text
+is_canonical = false
+clinical_priority = 2
+```
+
+ونخلي:
+
+```text
+WHO03_3.4_REC_001
+is_canonical = true
+```
+
+---
+
+### في WHO03 فيه تنظيف صغير كمان
+
+`WHO03_3.4_E2D_001` ما زال فيه contamination في آخر النص:
+
+```text
+... heart failure or kidney disease. GUIDELINE FOR T
+```
+
+
+
+`GUIDELINE FOR T` واضح إنه جزء من running header/footer اتسحب أثناء parsing.
+
+لازم cleaner يشيل أي fragments مثل:
+
+```text
+GUIDELINE FOR THE ...
+Cardiovascular disease...
+© NICE...
+Page X of...
+```
+
+لو اتقطعت داخل chunk.
+
+---
+
+# المشكلة الجديدة الأهم: NICE3 Pages
+
+الـdirect recommendation نفسها ممتازة:
+
+```text
+NICE3_1.7.1_REC
+Page: 26
+```
+
+
+
+لكن فجأة:
+
+```text
+NICE3_1.7_IMPACT_001
+Page: 10
+```
+
+
+
+وبعدها:
+
+```text
+NICE3_1.7_IMPACT_002
+Page: 10
+```
+
+
+
+والأوضح:
+
+```text
+NICE3_1.7_RATIONALE_002
+Page: 8
+```
+
+مع إنه تابع لنفس Section `1.7`. 
+
+دي **page provenance bug**.
+
+وده أهم شيء لازم نصلحه قبل Qdrant لأن لو الـRAG جاوب:
+
+> Source: NICE NG238, page 8
+
+بينما النص الحقيقي مش في page 8، يبقى citation غلط رغم إن الإجابة الطبية نفسها صحيحة.
+
+الحل إن كل text block من الـPDF يحمل الـpage من أول مرحلة parsing:
+
+```python
+{
+    "text": "...",
+    "pdf_page": 29,
+    "block_index": 4
+}
+```
+
+وبعدين لما نعمل:
+
+```text
+block
+ ↓
+section
+ ↓
+rationale
+ ↓
+chunk
+```
+
+ما نحاولش نحسب الصفحة من section index أو array index.
+
+الـchunk النهائي ياخد:
+
+```python
+pdf_page_start = min(block_pages)
+pdf_page_end   = max(block_pages)
+```
+
+---
+
+### فيه Duplicate صغير في NICE3
+
+لاحظ:
+
+```text
+NICE3_1.7_IMPACT_001
+```
+
+و:
+
+```text
+NICE3_1.7_IMPACT_002
+```
+
+عندهم أجزاء كبيرة جدًا متكررة من:
+
+> It is expected that recommending a specific lipid target...
+
+ 
+
+ده هيعمل:
+
+```text
+same information
+   ↓
+multiple vectors
+   ↓
+occupies Top-K slots
+```
+
+يعني بدل:
+
+```text
+Top 5:
+Recommendation
+Related recommendation
+Rationale
+Monitoring
+Special population
+```
+
+ممكن يبقى:
+
+```text
+Recommendation
+Impact duplicate 1
+Impact duplicate 2
+Rationale
+...
+```
+
+وده مش مثالي.
+
+---
+
+## التقييم الجديد
+
+| Component                    |       Rating |
+| ---------------------------- | -----------: |
+| BGE-M3 Embeddings            |   **9.5/10** |
+| English Retrieval            |   **9.5/10** |
+| Arabic Retrieval             |   **9.2/10** |
+| Cross-language Retrieval     |   **9.5/10** |
+| WHO03 section classification | **8.5/10 ↑** |
+| WHO03 chunk quality          |   **8/10 ↑** |
+| NICE3 recommendation chunks  |   **9.3/10** |
+| NICE3 page provenance        |   **6/10 ↓** |
+| Deduplication                |   **7.5/10** |
+| **Overall**                  |   **8.5/10** |
+
+فأنا **مش هغيّر BGE-M3 نهائيًا** حاليًا.
+
+قبل Qdrant عندنا فقط 3 fixes:
+
+```text
+1. WHO03
+   canonical recommendation > executive summary duplicate
+
+2. NICE3
+   FIX PAGE PROVENANCE ← أهم واحدة
+
+3. WHO03 + NICE3
+   remove near-duplicate supporting chunks
+```
+
+بعد الثلاثة دول، أعتبر الـingestion pipeline حوالي **9+/10** ونقدر نروح بثقة لـ**Qdrant + metadata filtering + reranking**.

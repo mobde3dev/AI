@@ -18,6 +18,7 @@ import logging
 from dataclasses import dataclass, field
 from typing import List, Optional, Dict, Tuple, Set
 
+from .clean_text import clean_chunk_noise
 from .nice_section_parser import (
     NiceSection,
     NiceSectionBlock,
@@ -687,5 +688,10 @@ def chunk_nice_section_block(
                 l_start, l_end, subsection=sub_heading,
             )
             chunks.extend(narrative_chunks)
+
+    for c in chunks:
+        c.text = clean_chunk_noise(c.text)
+        c.token_count = count_tokens(c.text)
+        c.metadata["token_count"] = c.token_count
 
     return chunks

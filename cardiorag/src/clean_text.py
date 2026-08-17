@@ -89,7 +89,7 @@ def _is_clinical_line(line: str) -> bool:
         if pat.search(stripped):
             return True
     for abbr in MEDICAL_ABBREVIATIONS:
-        if abbr in stripped:
+        if re.search(r"\b" + re.escape(abbr) + r"\b", stripped):
             return True
     return False
 
@@ -117,6 +117,10 @@ def detect_noise_patterns(pages_text: List[str], min_frequency: float = 0.10) ->
 
     for line_text, count in line_counter.items():
         if count < threshold:
+            continue
+        # If it's a known boilerplate header, it's definitely noise
+        if _is_boilerplate(line_text):
+            noise.add(line_text)
             continue
         # Do NOT flag clinical content
         if _is_clinical_line(line_text):
@@ -184,17 +188,58 @@ def clean_page_text(
         if _is_page_number_only(stripped):
             continue
 
-        # Skip noise patterns (repeated headers/footers)
-        if stripped in noise_patterns:
+        # Skip known boilerplate headers/footers
+        if _is_boilerplate(stripped):
             continue
 
-        # Skip boilerplate — but only if NOT clinical
-        if _is_boilerplate(stripped) and not _is_clinical_line(stripped):
+        # Skip noise patterns (repeated headers/footers)
+        if stripped in noise_patterns:
             continue
 
         cleaned.append(line)
 
     return "\n".join(cleaned)
+
+
+# ---------------------------------------------------------------------------
+# Chunk-level noise cleaning
+# ---------------------------------------------------------------------------
+
+_CHUNK_LEAK_PATTERNS = [
+    re.compile(r"\bGUIDELINE\s+FOR\s+THE\s+PHARMACOLOGICAL\s+TREATMENT\s+OF\s+HYPERTENSION\s+IN\s+ADULTS\b", re.IGNORECASE),
+    re.compile(r"\bGUIDELINE\s+FOR\s+T(?:HE)?\b", re.IGNORECASE),
+    re.compile(r"\bCardiovascular\s+disease:\s*risk\s+assessment\s+and\s+reduction(?:,\s*including\s+lipid\s+modification)?\b", re.IGNORECASE),
+    re.compile(r"\(NG238\)", re.IGNORECASE),
+    re.compile(r"[©\ufffd]?\s*NICE\s*\d{4}\..*", re.IGNORECASE),
+    re.compile(r"Subject\s+to\s+Notice\s+of\s+rights.*", re.IGNORECASE),
+    re.compile(r"conditions#notice-of-rights\)?\.?", re.IGNORECASE),
+    re.compile(r"Page\s+\d+\s+of(?:\s+\d+)?", re.IGNORECASE),
+]
+
+
+def clean_chunk_noise(text: str) -> str:
+    """Strip running header/footer leaks and contamination from chunk text."""
+    lines = text.split("\n")
+    cleaned_lines = []
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            cleaned_lines.append("")
+            continue
+        # Skip pure boilerplate lines
+        if _is_boilerplate(stripped):
+            continue
+        # Remove embedded leak patterns
+        cur = line
+        for pat in _CHUNK_LEAK_PATTERNS:
+            cur = pat.sub("", cur)
+        if cur.strip():
+            cleaned_lines.append(cur)
+
+    result = "\n".join(cleaned_lines)
+    # Collapse multiple blank lines
+    result = re.sub(r"\n{3,}", "\n\n", result)
+    return result.strip()
 
 
 # ---------------------------------------------------------------------------
@@ -280,3 +325,4 @@ def clean_all_pages(pages_raw_text: List[Tuple[int, str]]) -> List[Tuple[int, st
 
     logger.info("Cleaned %d pages", len(results))
     return results
+

@@ -125,9 +125,13 @@ class TestR1_TruncatedMerge:
         text_norm = " ".join(by_id["NICE3_1.6.3_REC"]["text"].lower().split())
         assert "weight management services" in text_norm
 
-    def test_r1_fixture_1_1_impact_merge(self, raw_nice_chunks):
+    def test_r1_fixture_1_1_impact_merge(self):
         rep = FixReporter()
-        chunks = copy.deepcopy(raw_nice_chunks)
+        chunks = [
+            {"chunk_id": "NICE3_1.1_IMPACT_001", "text": "Base impact text.\n", "metadata": {}},
+            {"chunk_id": "NICE3_1.1_LIFE_PHYSICAL_ACTIVITY_001", "text": "physical activity, smoking", "metadata": {}},
+            {"chunk_id": "NICE3_1.1_LIFE_ALCOHOL_CONSUMPTION_001", "text": "and alcohol consumption", "metadata": {}},
+        ]
         chunks = apply_r1_truncated_merge(chunks, rep)
         by_id = {c["chunk_id"]: c for c in chunks}
 
@@ -314,12 +318,21 @@ class TestR8_CanonicalDirection:
         for can_id, dup_id in WHO_CANONICAL_PAIRS:
             if can_id in by_id:
                 assert by_id[can_id]["metadata"]["is_duplicate"] is False
+                assert by_id[can_id]["metadata"]["is_canonical"] is True
                 assert by_id[can_id]["metadata"]["canonical_chunk_id"] is None
                 assert by_id[can_id]["metadata"]["clinical_priority"] == 1
             if dup_id in by_id:
                 assert by_id[dup_id]["metadata"]["is_duplicate"] is True
+                assert by_id[dup_id]["metadata"]["is_canonical"] is False
                 assert by_id[dup_id]["metadata"]["canonical_chunk_id"] == can_id
                 assert by_id[dup_id]["metadata"]["clinical_priority"] == 2
+
+        assert by_id["WHO03_3.4_REC_001"]["metadata"]["is_canonical"] is True
+        assert by_id["WHO03_3.4_REC_001"]["metadata"]["clinical_priority"] == 1
+        assert by_id["WHO03_0_REC_006"]["metadata"]["is_canonical"] is False
+        assert by_id["WHO03_0_REC_006"]["metadata"]["is_duplicate"] is True
+        assert by_id["WHO03_0_REC_006"]["metadata"]["canonical_chunk_id"] == "WHO03_3.4_REC_001"
+        assert by_id["WHO03_0_REC_006"]["metadata"]["clinical_priority"] == 2
 
 
 # ============================================================================
@@ -339,15 +352,9 @@ class TestR9_OversizedMixedSplit:
         assert "How the recommendations" not in rec_text
         assert count_tokens(rec_text) < 200
 
-        # Rationale child
-        assert "NICE3_1.7_RATIONALE_004" in by_id
-        assert by_id["NICE3_1.7_RATIONALE_004"]["metadata"]["content_type"] == "committee_rationale"
-        assert by_id["NICE3_1.7_RATIONALE_004"]["metadata"]["parent_recommendation"] == "1.7.10"
-
-        # Impact child
-        assert "NICE3_1.7_IMPACT_002" in by_id
-        assert by_id["NICE3_1.7_IMPACT_002"]["metadata"]["content_type"] == "implementation_impact"
-        assert by_id["NICE3_1.7_IMPACT_002"]["metadata"]["parent_recommendation"] == "1.7.10"
+        # Redundant near-duplicates should not be created
+        assert "NICE3_1.7_RATIONALE_004" not in by_id
+        assert "NICE3_1.7_IMPACT_002" not in by_id
 
     def test_r9_fixture_1_1_18_split(self, raw_nice_chunks):
         rep = FixReporter()
@@ -425,6 +432,14 @@ class TestR11_PageMetadata:
 
         # Recommendation 1.1.8 is on PDF page 6
         assert by_id["NICE3_1.1.8_REC"]["metadata"]["pdf_page_start"] == 6
+
+        # Section 1.7 page provenance verification (must not match page 8 or 10)
+        assert by_id["NICE3_1.7.1_REC"]["metadata"]["pdf_page_start"] == 26
+        assert by_id["NICE3_1.7_RATIONALE_001"]["metadata"]["pdf_page_start"] == 27
+        assert by_id["NICE3_1.7_RATIONALE_002"]["metadata"]["pdf_page_start"] == 28
+        assert by_id["NICE3_1.7_RATIONALE_003"]["metadata"]["pdf_page_start"] == 29
+        assert by_id["NICE3_1.7_IMPACT_001"]["metadata"]["pdf_page_start"] == 29
+        assert by_id["NICE3_1.7.10_REC"]["metadata"]["pdf_page_start"] == 32
 
 
 # ============================================================================

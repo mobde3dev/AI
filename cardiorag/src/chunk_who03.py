@@ -16,6 +16,7 @@ import logging
 from dataclasses import dataclass, field
 from typing import List, Optional, Dict, Tuple, Set
 
+from .clean_text import clean_chunk_noise
 from .section_parser import SectionBlock, Section, is_administrative_section
 from .metadata_extractor import (
     detect_recommendation,
@@ -728,11 +729,16 @@ def _normalize_for_dedup(text: str) -> str:
 
 
 def deduplicate_chunks(chunks: List[Chunk]) -> List[Chunk]:
-    """Mark duplicate chunks.
+    """Mark duplicate chunks and clean noise.
 
     The main recommendation section version is canonical (clinical_priority=1).
     Duplicates in executive summary or implementation tools are flagged.
     """
+    for chunk in chunks:
+        chunk.text = clean_chunk_noise(chunk.text)
+        chunk.token_count = count_tokens(chunk.text)
+        chunk.metadata["token_count"] = chunk.token_count
+
     # Group by normalized text
     text_to_chunks: Dict[str, List[Chunk]] = {}
     for chunk in chunks:
@@ -746,6 +752,8 @@ def deduplicate_chunks(chunks: List[Chunk]) -> List[Chunk]:
     duplicates_found = 0
     for key, group in text_to_chunks.items():
         if len(group) <= 1:
+            for chunk in group:
+                chunk.metadata["is_canonical"] = not chunk.metadata.get("is_duplicate", False)
             continue
 
         # Find the canonical chunk (highest priority = lowest number)
@@ -754,8 +762,13 @@ def deduplicate_chunks(chunks: List[Chunk]) -> List[Chunk]:
         for chunk in group:
             if chunk.chunk_id != canonical.chunk_id:
                 chunk.metadata["is_duplicate"] = True
+                chunk.metadata["is_canonical"] = False
                 chunk.metadata["canonical_chunk_id"] = canonical.chunk_id
                 duplicates_found += 1
+            else:
+                chunk.metadata["is_duplicate"] = False
+                chunk.metadata["is_canonical"] = True
+                chunk.metadata["canonical_chunk_id"] = None
 
     if duplicates_found:
         logger.info("Marked %d duplicate chunks", duplicates_found)

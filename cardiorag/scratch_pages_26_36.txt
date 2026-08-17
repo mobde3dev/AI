@@ -1,0 +1,393 @@
+================== PAGE 26 ==================
+Optimising statin treatment 
+See the section on optimising statin treatment. 
+Assessing response to treatment 
+See the section on assessing response to treatment. 
+Escalating treatment for people on statins 
+1.6.13 
+Ezetimibe, co-administered with a statin, is recommended as an option in NICE 
+technology appraisal guidance for treating primary hypercholesterolaemia in 
+some adults who have started statin therapy when serum total or low-density 
+lipoprotein (LDL) cholesterol concentration is not appropriately controlled. For full 
+details, see the guidance on ezetimibe (TA385, 2016). 
+1.7 Lipid-lowering treatment for secondary 
+prevention of cardiovascular disease 
+These recommendations apply to people with and without type 1 and 2 diabetes. Also see 
+the sections on optimising statin treatment and assessing response to treatment. 
+Lipid target for people taking lipid-lowering treatments 
+1.7.1 
+For secondary prevention of CVD, aim for LDL cholesterol levels of 2.0 mmol per 
+litre or less, or non-HDL cholesterol levels of 2.6 mmol per litre or less. 
+[December 2023] 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 26 of
+52
+
+
+================== PAGE 27 ==================
+Why the committee made these recommendations 
+Lipid target 
+The committee agreed LDL cholesterol and non-HDL cholesterol levels should be 
+reduced as much as possible in people with CVD. However, people respond differently 
+to statins and other lipid-lowering treatments, and it is not cost effective to offer the 
+full range of treatments to everyone with CVD. 
+The clinical evidence consisted of 34 randomised control trials (RCTs). Clinically 
+significant reductions in LDL cholesterol and non-HDL cholesterol levels compared to 
+placebo were seen for all 4 lipid-lowering treatments covered by the clinical trials: 
+alirocumab, evolocumab, ezetimibe and inclisiran. The majority of people in the trials 
+were also taking statins. 
+Modest reductions in major CVD events such as myocardial infarction, stroke and 
+related deaths were also seen for all 4 medicines. The committee recognised that 
+some of the trials involved short follow-up periods of 1 year or less, so these 
+medicines are likely to have a bigger impact on CVD events over the long term. There 
+was no clinically important increased risk of adverse events. Injection site reactions 
+were more frequent with alirocumab, evolocumab and inclisiran than with placebo but 
+these were mild and not persistent. 
+An economic model was developed using estimates of the impact of lipid-lowering 
+treatments on LDL cholesterol (from a network meta-analysis of the 34 RCTs), 
+combined with estimates of the impact of LDL cholesterol reduction on major 
+cardiovascular events (from a published meta-analysis of statin RCTs). The economic 
+model calculated, for all possible baseline LDL cholesterol levels, the reduced 
+admissions to hospital for stroke, myocardial infarction and cardiovascular procedures 
+and the associated life expectancy increases, quality of life improvements and 
+treatment cost savings as a result of taking lipid-lowering treatments. This was offset 
+against the cost of lipid-lowering treatments and associated monitoring costs. The 
+data for the 2 PCSK9 inhibitors (alirocumab and evolocumab) were combined and 
+were not analysed separately because treatment effects were found to be the same in 
+the network meta-analysis. 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 27 of
+52
+
+
+================== PAGE 28 ==================
+The model estimated the absolute LDL cholesterol target at which it was cost 
+effective to escalate treatment for people on a high-intensity statin. The analysis 
+explored different combinations of lipid-lowering treatments. 
+Escalation of treatment was cost effective for people on statins with LDL cholesterol 
+levels of more than 2.2 mmol per litre. There was a little more uncertainty about the 
+cost effectiveness of escalating treatment for people with LDL cholesterol levels 
+between 2.0 mmol and 2.2 mmol per litre. An LDL cholesterol target of 1.8 mmol per 
+litre was not cost effective. The committee decided that 2.0 mmol per litre was likely 
+to be cost effective and would allow more people to be treated than 2.2 mmol per 
+litre. 
+Even though the main economic analysis was based on the impact of lipid-lowering 
+treatment on LDL cholesterol levels, the committee recognised the need to identify a 
+non-HDL cholesterol target for use when LDL cholesterol levels have not been 
+requested or calculated. 
+Using the distribution of LDL cholesterol levels for the population with CVD and on a 
+statin in the clinical practice research datalink (CPRD) dataset, 42% of people had LDL 
+cholesterol levels of 2.0 mmol per litre or more. Using the same data, the threshold for 
+non-HDL cholesterol that would produce an identical number of people being 
+escalated for treatment was 2.6 mmol per litre. An alternative approach would be to 
+use the Friedewald equation and insert the mean triglyceride level of 1.4 mmol per litre 
+along with the LDL cholesterol of 2.0 mmol per litre. This approach also indicates a 
+non-HDL cholesterol target of 2.6 mmol per litre. 
+Both target measures are slightly higher than other national and international targets 
+because, unlike other targets, the LDL cholesterol target is based on the cost 
+effectiveness of treatment escalation. However, the committee thought it was 
+sufficiently similar and, because it was more affordable, was more likely to be 
+implemented. 
+Statin plus ezetimibe 
+In a separate analysis, escalation with statin plus ezetimibe (but no injectable 
+treatment) was evaluated at different LDL cholesterol levels. Ezetimibe was cost 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 28 of
+52
+
+
+================== PAGE 29 ==================
+effective regardless of LDL cholesterol, so the committee agreed that it could be 
+considered for people with lipid levels below the agreed target. They noted that the 
+trade-off between further reducing risk and increasing medication should be taken 
+into account. These should be considered and fully discussed with the person as part 
+of informed shared decision making. Furthermore, the committee agreed that 
+adherence may be lower for people on 2 pills rather than 1, especially if they are below 
+the target. 
+Full details of the evidence and the committee's discussion are in evidence review D: 
+escalation of lipid-lowering treatment for secondary prevention of CVD. 
+How the recommendations might affect practice 
+It is expected that recommending a specific lipid target for secondary prevention of 
+CVD will lead to an increased use of lipid-lowering treatments. The committee was 
+aware that NHS England had recently introduced a target as part of the Quality and 
+Outcomes Framework (QOF). The target recommended in this guideline is similar to 
+the 2023/24 QOF, although data showed that, in many people, the QOF target is not 
+being met. In June 2023, the CVDPREVENT audit reported that 28.7% were meeting 
+the target. 
+Increased uptake of statins, ezetimibe and other lipid-lowering treatments will result 
+in higher medication and monitoring costs to the NHS. It will also contribute to an 
+increased workload in primary care, including for GP practices and pharmacies, and in 
+laboratories that process lipid profile and liver function tests. The committee agreed 
+that increased uptake of lipid-lowering treatments is necessary for an overall 
+improvement in population health, but that the extra cost of lipid-lowering treatment 
+would be partly offset by savings due to a reduction in CVD events (including hospital 
+admissions for stroke, heart disease and cardiovascular procedures). 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 29 of
+52
+
+
+================== PAGE 30 ==================
+As part of the December 2023 update, a new NICE indicator was developed to 
+support quality improvement in managing cholesterol levels for people with CVD. This 
+NICE indicator is suitable for inclusion in local and national general practice 
+measurement frameworks, including those underpinned with financial incentives: 
+IND278: The percentage of patients with cardiovascular disease (CVD) in whom the 
+last recorded LDL or non-HDL cholesterol level (measured in the preceding 12 
+months) is 2.0 mmol per litre or less for LDL cholesterol or 2.6 mmol per litre or less 
+for non-HDL cholesterol. 
+Initial treatment 
+1.7.2 
+Offer atorvastatin 80 mg to people with CVD, whatever their cholesterol level, 
+unless the person meets the criteria in recommendation 1.7.3. [May 2023, 
+amended December 2023] 
+1.7.3 
+Offer a lower dose of atorvastatin if any of the following apply: 
+• it could react with other drugs 
+• there is a high risk of adverse effects 
+• the person would prefer to take a lower dose. [May 2023, amended 
+December 2023] 
+In December 2023, this was an off-label use of atorvastatin. See NICE's 
+information on prescribing medicines. 
+1.7.4 
+Do not delay statin treatment for secondary prevention of CVD but discuss 
+lifestyle changes at the same time if appropriate. [May 2023, amended 
+December 2023] 
+1.7.5 
+If a person has acute coronary syndrome, do not delay statin treatment. Measure 
+full lipid profile on admission and at 2 to 3 months after starting treatment. [May 
+2023, amended December 2023] 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 30 of
+52
+
+
+================== PAGE 31 ==================
+Why the committee made these recommendations 
+Evidence on both the effectiveness and adverse effects of statins showed high-
+intensity statins are clinically effective and cost effective compared to no statins, low-
+intensity statins, or medium-intensity statins for preventing CVD in people with CVD. 
+The evidence supported the 2014 recommendations on initial treatment with statins 
+and so they were retained. The recommendation on acute coronary syndromes was 
+amended to clarify that a full lipid profile is needed on admission to hospital and 2 to 
+3 months after starting treatment. See the section on assessing response to 
+treatment for further details. 
+Full details of the evidence and the committee's discussion are in evidence review C: 
+statins: efficacy and adverse effects. 
+How the recommendations might affect practice 
+These recommendations are in line with current practice and therefore will not have a 
+resource impact. 
+Treating comorbidities and secondary causes of dyslipidaemia 
+1.7.6 
+Treat comorbidities and secondary causes of dyslipidaemia at the same time as 
+starting statin treatment. [December 2023] 
+Optimising statin treatment 
+See the section on optimising statin treatment. 
+Escalating treatment for people on statins 
+1.7.7 
+Make decisions about escalating lipid-lowering treatment after an informed 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 31 of
+52
+
+
+================== PAGE 32 ==================
+discussion between the clinician and the person about the risks and benefits of 
+additional lipid-lowering treatments. [December 2023] 
+1.7.8 
+Take into account the person's preferences, the presence of any comorbidities, 
+whether they are on multiple medications, whether they are frail and their life 
+expectancy. (See also NICE's guideline on multimorbidity.) [December 2023] 
+1.7.9 
+If the person is taking the maximum tolerated dose and intensity of statin but the 
+lipid target for secondary prevention of CVD is not met (see 
+recommendation 1.7.1), consider additional lipid-lowering treatments 
+recommended as options in NICE's technology appraisal guidance on: 
+• alirocumab (TA393, June 2016) 
+• evolocumab (TA394, June 2016) 
+• ezetimibe (TA385, February 2016) 
+• inclisiran (TA733, October 2021). 
+See the relevant NICE technology appraisal guidance for full details. 
+[December 2023] 
+1.7.10 
+Consider ezetimibe in addition to the maximum tolerated intensity and dose of 
+statin to reduce CVD risk further, even if the lipid target for secondary prevention 
+of CVD is met (see recommendation 1.7.1). [December 2023] 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 32 of
+52
+
+
+================== PAGE 33 ==================
+Why the committee made these recommendations 
+Lipid target 
+The committee agreed LDL cholesterol and non-HDL cholesterol levels should be 
+reduced as much as possible in people with CVD. However, people respond differently 
+to statins and other lipid-lowering treatments, and it is not cost effective to offer the 
+full range of treatments to everyone with CVD. 
+The clinical evidence consisted of 34 randomised control trials (RCTs). Clinically 
+significant reductions in LDL cholesterol and non-HDL cholesterol levels compared to 
+placebo were seen for all 4 lipid-lowering treatments covered by the clinical trials: 
+alirocumab, evolocumab, ezetimibe and inclisiran. The majority of people in the trials 
+were also taking statins. 
+Modest reductions in major CVD events such as myocardial infarction, stroke and 
+related deaths were also seen for all 4 medicines. The committee recognised that 
+some of the trials involved short follow-up periods of 1 year or less, so these 
+medicines are likely to have a bigger impact on CVD events over the long term. There 
+was no clinically important increased risk of adverse events. Injection site reactions 
+were more frequent with alirocumab, evolocumab and inclisiran than with placebo but 
+these were mild and not persistent. 
+An economic model was developed using estimates of the impact of lipid-lowering 
+treatments on LDL cholesterol (from a network meta-analysis of the 34 RCTs), 
+combined with estimates of the impact of LDL cholesterol reduction on major 
+cardiovascular events (from a published meta-analysis of statin RCTs). The economic 
+model calculated, for all possible baseline LDL cholesterol levels, the reduced 
+admissions to hospital for stroke, myocardial infarction and cardiovascular procedures 
+and the associated life expectancy increases, quality of life improvements and 
+treatment cost savings as a result of taking lipid-lowering treatments. This was offset 
+against the cost of lipid-lowering treatments and associated monitoring costs. The 
+data for the 2 PCSK9 inhibitors (alirocumab and evolocumab) were combined and 
+were not analysed separately because treatment effects were found to be the same in 
+the network meta-analysis. 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 33 of
+52
+
+
+================== PAGE 34 ==================
+The model estimated the absolute LDL cholesterol target at which it was cost 
+effective to escalate treatment for people on a high-intensity statin. The analysis 
+explored different combinations of lipid-lowering treatments. 
+Escalation of treatment was cost effective for people on statins with LDL cholesterol 
+levels of more than 2.2 mmol per litre. There was a little more uncertainty about the 
+cost effectiveness of escalating treatment for people with LDL cholesterol levels 
+between 2.0 mmol and 2.2 mmol per litre. An LDL cholesterol target of 1.8 mmol per 
+litre was not cost effective. The committee decided that 2.0 mmol per litre was likely 
+to be cost effective and would allow more people to be treated than 2.2 mmol per 
+litre. 
+Even though the main economic analysis was based on the impact of lipid-lowering 
+treatment on LDL cholesterol levels, the committee recognised the need to identify a 
+non-HDL cholesterol target for use when LDL cholesterol levels have not been 
+requested or calculated. 
+Using the distribution of LDL cholesterol levels for the population with CVD and on a 
+statin in the clinical practice research datalink (CPRD) dataset, 42% of people had LDL 
+cholesterol levels of 2.0 mmol per litre or more. Using the same data, the threshold for 
+non-HDL cholesterol that would produce an identical number of people being 
+escalated for treatment was 2.6 mmol per litre. An alternative approach would be to 
+use the Friedewald equation and insert the mean triglyceride level of 1.4 mmol per litre 
+along with the LDL cholesterol of 2.0 mmol per litre. This approach also indicates a 
+non-HDL cholesterol target of 2.6 mmol per litre. 
+Both target measures are slightly higher than other national and international targets 
+because, unlike other targets, the LDL cholesterol target is based on the cost 
+effectiveness of treatment escalation. However, the committee thought it was 
+sufficiently similar and, because it was more affordable, was more likely to be 
+implemented. 
+Statin plus ezetimibe 
+In a separate analysis, escalation with statin plus ezetimibe (but no injectable 
+treatment) was evaluated at different LDL cholesterol levels. Ezetimibe was cost 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 34 of
+52
+
+
+================== PAGE 35 ==================
+effective regardless of LDL cholesterol, so the committee agreed that it could be 
+considered for people with lipid levels below the agreed target. They noted that the 
+trade-off between further reducing risk and increasing medication should be taken 
+into account. These should be considered and fully discussed with the person as part 
+of informed shared decision making. Furthermore, the committee agreed that 
+adherence may be lower for people on 2 pills rather than 1, especially if they are below 
+the target. 
+Full details of the evidence and the committee's discussion are in evidence review D: 
+escalation of lipid-lowering treatment for secondary prevention of CVD. 
+How the recommendations might affect practice 
+It is expected that recommending a specific lipid target for secondary prevention of 
+CVD will lead to an increased use of lipid-lowering treatments. The committee was 
+aware that NHS England had recently introduced a target as part of the Quality and 
+Outcomes Framework (QOF). The target recommended in this guideline is similar to 
+the 2023/24 QOF, although data showed that, in many people, the QOF target is not 
+being met. In June 2023, the CVDPREVENT audit reported that 28.7% were meeting 
+the target. 
+Increased uptake of statins, ezetimibe and other lipid-lowering treatments will result 
+in higher medication and monitoring costs to the NHS. It will also contribute to an 
+increased workload in primary care, including for GP practices and pharmacies, and in 
+laboratories that process lipid profile and liver function tests. The committee agreed 
+that increased uptake of lipid-lowering treatments is necessary for an overall 
+improvement in population health, but that the extra cost of lipid-lowering treatment 
+would be partly offset by savings due to a reduction in CVD events (including hospital 
+admissions for stroke, heart disease and cardiovascular procedures). 
+Assessing response to treatment 
+See the section on assessing response to treatment. 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 35 of
+52
+
+
+================== PAGE 36 ==================
+1.8 Statins for primary and secondary prevention of 
+cardiovascular disease in people with chronic 
+kidney disease 
+See NICE's guideline on chronic kidney disease for CKD classification. People on renal 
+replacement therapy are outside the scope of this guideline. 
+1.8.1 
+Offer atorvastatin 20 mg for the primary or secondary prevention of CVD to 
+people with CKD. [May 2023] 
+1.8.2 
+If the lipid target for primary or secondary prevention of CVD (see 
+recommendation 1.6.1 and recommendation 1.7.1) is not met and eGFR is 30 ml per 
+minute per 1.73 m
+2 or more, increase the dose of atorvastatin. [May 2023, 
+amended December 2023] 
+1.8.3 
+Agree the use of higher doses with a renal specialist if eGFR is less than 30 ml 
+per minute per 1.73 m
+2. [May 2023] 
+Optimising statin treatment 
+See the section on optimising statin treatment. 
+Assessing response to treatment 
+See the section on assessing response to treatment. 
+1.9 Optimising statin treatment 
+1.9.1 
+If the lipid target for primary or secondary prevention of CVD (see 
+recommendation 1.6.1 and recommendation 1.7.1) is not met: 
+• discuss adherence and timing of statin dose with the person 
+• encourage them to continue improvements to their diet and lifestyle, and to 
+make further changes if appropriate 
+Cardiovascular disease: risk assessment and reduction, including lipid modification
+(NG238)
+© NICE 2026. All rights reserved. Subject to Notice of rights (https://www.nice.org.uk/terms-and-
+conditions#notice-of-rights).
+Page 36 of
+52
+
+

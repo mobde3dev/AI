@@ -718,6 +718,9 @@ def build_nice3_chunk_metadata(
 
         # Priority and flags
         "clinical_priority": clinical_priority,
+        "is_canonical": True,
+        "is_duplicate": False,
+        "canonical_chunk_id": None,
         "historical_context": historical,
         "off_label_statement_present": off_label,
 

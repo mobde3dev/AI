@@ -53,6 +53,15 @@ except ImportError:
     except ImportError:
         fitz = None
 
+try:
+    from src.clean_text import clean_chunk_noise
+except ImportError:
+    try:
+        from clean_text import clean_chunk_noise
+    except ImportError:
+        def clean_chunk_noise(t: str) -> str:
+            return t
+
 
 # ============================================================================
 # FIX REPORTING DATASTRUCTURES
@@ -346,6 +355,134 @@ WHO_TABLE_CHUNKS_TO_REMOVE = {
     "WHO03_3.2_TBL_004",
 }
 
+NICE_CHUNKS_TO_REMOVE = {
+    "NICE3_1.7_IMPACT_002",
+    "NICE3_1.7_RATIONALE_004",
+}
+
+NICE_PAGE_MAP = {
+    "NICE3_1.1_OTH_001": (5, 5),
+    **{f"NICE3_1.1.{i}_REC": (5, 5) for i in range(1, 8)},
+    "NICE3_1.1.8_REC": (6, 6),
+    "NICE3_1.1.9_REC": (6, 6),
+    "NICE3_1.1.10_REC": (6, 7),
+    "NICE3_1.1.11_REC": (7, 7),
+    "NICE3_1.1_RATIONALE_001": (8, 9),
+    "NICE3_1.1_RATIONALE_002": (9, 9),
+    "NICE3_1.1_IMPACT_001": (10, 10),
+    "NICE3_1.1_RISK_COMMUNICATION_ABOUT__001": (11, 11),
+    "NICE3_1.1.12_REC": (11, 11),
+    "NICE3_1.1.13_REC": (11, 11),
+    "NICE3_1.1.14_REC": (11, 11),
+    "NICE3_1.1.15_REC": (11, 11),
+    "NICE3_1.1.16_REC": (11, 12),
+    "NICE3_1.1.17_REC": (12, 12),
+    "NICE3_1.1.18_REC": (11, 11),
+    "NICE3_1.1_RATIONALE_003": (12, 12),
+    "NICE3_1.1_IMPACT_002": (13, 13),
+    "NICE3_1.2_OTH_001": (14, 14),
+    "NICE3_1.2.1_REC": (14, 14),
+    "NICE3_1.2_RATIONALE_001": (14, 14),
+    "NICE3_1.3_OTH_001": (14, 14),
+    "NICE3_1.3.1_REC": (14, 15),
+    "NICE3_1.3.2_REC": (15, 15),
+    "NICE3_1.3.3_REC": (15, 15),
+    "NICE3_1.3.4_REC": (15, 15),
+    "NICE3_1.3_RATIONALE_001": (15, 15),
+    "NICE3_1.3_IMPACT_001": (15, 15),
+    "NICE3_1.3.5_REC": (16, 16),
+    "NICE3_1.3.6_REC": (16, 16),
+    "NICE3_1.3.7_REC": (16, 17),
+    "NICE3_1.3.8_REC": (17, 17),
+    "NICE3_1.3.9_REC": (17, 17),
+    "NICE3_1.3.10_REC": (17, 17),
+    "NICE3_1.3.11_REC": (17, 17),
+    "NICE3_1.3.12_REC": (17, 17),
+    **{f"NICE3_1.4.{i}_REC": (17, 18) for i in range(1, 7)},
+    "NICE3_1.4.7_REC": (18, 18),
+    "NICE3_1.4.8_REC": (18, 18),
+    "NICE3_1.5_DRUG_001": (18, 18),
+    **{f"NICE3_1.5.{i}_REC": (18, 19) for i in range(1, 5)},
+    "NICE3_1.5.5_REC": (19, 19),
+    "NICE3_1.5.6_REC": (19, 19),
+    "NICE3_1.5.7_REC": (20, 20),
+    "NICE3_1.5_RATIONALE_001": (20, 20),
+    "NICE3_1.5_IMPACT_001": (21, 21),
+    "NICE3_1.5.8_REC": (20, 20),
+    "NICE3_1.5.9_REC": (20, 20),
+    "NICE3_1.5.10_REC": (20, 21),
+    "NICE3_1.6_OTH_001": (22, 22),
+    "NICE3_1.6_DRUG_PRIMARY_PREVENTION_O_001": (22, 22),
+    "NICE3_1.6.1_REC": (22, 22),
+    "NICE3_1.6.2_REC": (22, 22),
+    "NICE3_1.6.3_REC": (22, 22),
+    **{f"NICE3_1.6.{i}_REC": (22, 23) for i in range(4, 9)},
+    "NICE3_1.6.9_REC": (23, 23),
+    "NICE3_1.6.10_REC": (23, 23),
+    "NICE3_1.6.11_REC": (23, 24),
+    "NICE3_1.6.12_REC": (24, 24),
+    "NICE3_1.6_RATIONALE_001": (24, 25),
+    "NICE3_1.6_IMPACT_001": (25, 25),
+    "NICE3_1.6.13_REC": (26, 26),
+    "NICE3_1.7_OTH_001": (26, 26),
+    "NICE3_1.7_DRUG_SECONDARY_PREVENTION_001": (26, 26),
+    "NICE3_1.7.1_REC": (26, 26),
+    "NICE3_1.7_RATIONALE_001": (27, 28),
+    "NICE3_1.7_RATIONALE_002": (28, 28),
+    "NICE3_1.7_RATIONALE_003": (29, 29),
+    "NICE3_1.7_IMPACT_001": (29, 30),
+    "NICE3_1.7.2_REC": (30, 30),
+    "NICE3_1.7.3_REC": (30, 30),
+    "NICE3_1.7.4_REC": (30, 30),
+    "NICE3_1.7.5_REC": (30, 30),
+    "NICE3_1.7_RATIONALE_INITIAL_TREATMEN_001": (31, 31),
+    "NICE3_1.7_IMPACT_INITIAL_TREATMENT_001": (31, 31),
+    "NICE3_1.7.6_REC": (31, 31),
+    "NICE3_1.7.7_REC": (31, 32),
+    "NICE3_1.7.8_REC": (32, 32),
+    "NICE3_1.7.9_REC": (32, 32),
+    "NICE3_1.7.10_REC": (32, 32),
+    "NICE3_1.8_DRUG_001": (36, 36),
+    "NICE3_1.8.1_REC": (36, 36),
+    "NICE3_1.8.2_REC": (36, 36),
+    "NICE3_1.8.3_REC": (36, 36),
+    "NICE3_1.8_OTH_SECONDARY_PREVENTION_001": (36, 36),
+    "NICE3_1.9.1_REC": (36, 37),
+    "NICE3_1.9.2_REC": (37, 37),
+    "NICE3_1.9.3_REC": (37, 37),
+    "NICE3_1.9.4_REC": (37, 37),
+    "NICE3_1.9_RATIONALE_001": (37, 38),
+    "NICE3_1.9_IMPACT_001": (38, 38),
+    "NICE3_1.10_CONTRA_001": (38, 38),
+    **{f"NICE3_1.10.{i}_REC": (38, 39) for i in range(1, 5)},
+    "NICE3_1.10_RATIONALE_001": (40, 40),
+    "NICE3_1.10_IMPACT_001": (41, 41),
+    "NICE3_1.11_OTH_001": (41, 41),
+    "NICE3_1.11.1_REC": (41, 41),
+    "NICE3_1.11.2_REC": (41, 41),
+    "NICE3_1.11.3_REC": (41, 42),
+    "NICE3_1.11.4_REC": (42, 42),
+    "NICE3_1.11.5_REC": (42, 42),
+    "NICE3_1.11.6_REC": (42, 42),
+    "NICE3_1.11.7_REC": (42, 42),
+    **{f"NICE3_1.11.{i}_REC": (42, 43) for i in range(8, 12)},
+    "NICE3_1.11.12_REC": (43, 43),
+    "NICE3_1.11_RATIONALE_001": (43, 44),
+    "NICE3_1.11_IMPACT_001": (44, 44),
+    "NICE3_1.12_DRUG_001": (44, 44),
+    **{f"NICE3_1.12.{i}_REC": (44, 45) for i in range(1, 8)},
+    "NICE3_TERM_THIS_SECTION_DEFINES_TERMS_THA_001": (45, 46),
+    "NICE3_TERM_FULL_LIPID_PROFILE_THIS_INVOLV_001": (46, 46),
+    "NICE3_TERM_SEVERE_MENTAL_ILLNESS_A_DIAGNO_001": (47, 47),
+    "NICE3_research_RESEARCH_001": (48, 48),
+    "NICE3_research_RATIONALE_001": (49, 49),
+    "NICE3_context_CTX_001": (50, 50),
+    "NICE3_finding_more_OTH_001": (51, 51),
+    "NICE3_update_info_UPDATE_001": (52, 52),
+    "NICE3_update_info_UPDATE_CARDIOPROTECTIVE_DIE_001": (52, 52),
+    "NICE3_update_info_UPDATE_INITIAL_TREATMENT_001": (52, 52),
+}
+
 
 # ============================================================================
 # HELPER FUNCTIONS
@@ -474,7 +611,7 @@ def apply_r2_unclosed_date_brackets(chunks: List[Dict[str, Any]], reporter: FixR
 
 def apply_r3_heading_leak_strip(chunks: List[Dict[str, Any]], reporter: FixReporter) -> List[Dict[str, Any]]:
     """
-    R3: Strip leaked section/subheading titles from tail of chunks.
+    R3: Strip leaked section/subheading titles and running header/footer noise from chunks.
     """
     for chunk in chunks:
         cid = chunk["chunk_id"]
@@ -495,6 +632,20 @@ def apply_r3_heading_leak_strip(chunks: List[Dict[str, Any]], reporter: FixRepor
                         before_snippet=before,
                         after_snippet=new_text,
                     )
+
+        # Strip any running header/footer leaks
+        cleaned_noise = clean_chunk_noise(chunk["text"])
+        if cleaned_noise != chunk["text"]:
+            before = chunk["text"]
+            chunk["text"] = cleaned_noise
+            reporter.log(
+                rule_id="R3",
+                chunk_id=cid,
+                action="Stripped running header/footer noise fragment",
+                field_name="text",
+                before_snippet=before,
+                after_snippet=cleaned_noise,
+            )
 
     return chunks
 
@@ -627,71 +778,24 @@ def apply_r9_oversized_mixed_split(chunks: List[Dict[str, Any]], reporter: FixRe
         how_idx = text.find("How the recommendations might affect practice")
         if why_idx != -1 and how_idx != -1:
             rec_body = text[:why_idx].rstrip()
-            why_body = text[why_idx:how_idx].rstrip()
-            how_body = text[how_idx:].rstrip()
-
             before = c_1_7_10["text"]
             c_1_7_10["text"] = rec_body
+            c_1_7_10["metadata"]["requires_manual_review"] = False
+            c_1_7_10["metadata"]["review_reason"] = None
             reporter.log(
                 rule_id="R9",
                 chunk_id="NICE3_1.7.10_REC",
-                action="Split oversized mixed chunk: retained pure recommendation text",
+                action="Split oversized mixed chunk: retained pure recommendation text (deduplicated redundant rationale/impact)",
                 field_name="text",
                 before_snippet=before,
                 after_snippet=c_1_7_10["text"],
             )
 
-            # Rationale child
-            cid_rat = "NICE3_1.7_RATIONALE_004"
-            if cid_rat not in by_id:
-                c_rat = copy.deepcopy(c_1_7_10)
-                c_rat["chunk_id"] = cid_rat
-                c_rat["text"] = (
-                    f"Section: {c_1_7_10['metadata']['section']}\n"
-                    f"Subheading: {c_1_7_10['metadata']['subsection']}\n\n"
-                    f"{why_body}"
-                )
-                c_rat["metadata"]["content_type"] = "committee_rationale"
-                c_rat["metadata"]["clinical_priority"] = 2
-                c_rat["metadata"]["parent_recommendation"] = "1.7.10"
-                c_rat["metadata"]["recommendation_id"] = None
-                c_rat["metadata"]["requires_manual_review"] = True
-                c_rat["metadata"]["review_reason"] = "oversized rationale chunk (>1000 tokens)"
-                new_chunks.append(c_rat)
-                by_id[cid_rat] = c_rat
-                reporter.log(
-                    rule_id="R9",
-                    chunk_id=cid_rat,
-                    action="Created committee rationale chunk from 1.7.10 split",
-                    field_name="chunk_id",
-                    before_snippet=None,
-                    after_snippet=c_rat["text"],
-                )
-
-            # Impact child
-            cid_imp = "NICE3_1.7_IMPACT_002"
-            if cid_imp not in by_id:
-                c_imp = copy.deepcopy(c_1_7_10)
-                c_imp["chunk_id"] = cid_imp
-                c_imp["text"] = (
-                    f"Section: {c_1_7_10['metadata']['section']}\n"
-                    f"Subheading: {c_1_7_10['metadata']['subsection']}\n\n"
-                    f"{how_body}"
-                )
-                c_imp["metadata"]["content_type"] = "implementation_impact"
-                c_imp["metadata"]["clinical_priority"] = 3
-                c_imp["metadata"]["parent_recommendation"] = "1.7.10"
-                c_imp["metadata"]["recommendation_id"] = None
-                new_chunks.append(c_imp)
-                by_id[cid_imp] = c_imp
-                reporter.log(
-                    rule_id="R9",
-                    chunk_id=cid_imp,
-                    action="Created implementation impact chunk from 1.7.10 split",
-                    field_name="chunk_id",
-                    before_snippet=None,
-                    after_snippet=c_imp["text"],
-                )
+    # Prune duplicate supporting chunks if present
+    chunks[:] = [c for c in chunks if c["chunk_id"] not in NICE_CHUNKS_TO_REMOVE]
+    for cid in NICE_CHUNKS_TO_REMOVE:
+        if cid in by_id:
+            del by_id[cid]
 
     # Split NICE3_1.1.18_REC (REC + RATIONALE + IMPACT)
     c_1_1_18 = by_id.get("NICE3_1.1.18_REC")
@@ -928,15 +1032,17 @@ def apply_r4_subsection_misassignment(chunks: List[Dict[str, Any]], reporter: Fi
 
 def apply_r8_who_canonical_direction(chunks: List[Dict[str, Any]], reporter: FixReporter) -> List[Dict[str, Any]]:
     """
-    R8: Enforce canonicality: Section 3.x is canonical (is_duplicate=False), Executive summary is duplicate (is_duplicate=True).
+    R8: Enforce canonicality: Section 3.x is canonical (is_duplicate=False, is_canonical=True, priority=1),
+    Executive summary is duplicate (is_duplicate=True, is_canonical=False, priority=2).
     """
     by_id = {c["chunk_id"]: c for c in chunks}
 
     for can_id, dup_id in WHO_CANONICAL_PAIRS:
         if can_id in by_id:
             can_meta = by_id[can_id]["metadata"]
-            if can_meta.get("is_duplicate") is not False or can_meta.get("canonical_chunk_id") is not None:
+            if can_meta.get("is_duplicate") is not False or can_meta.get("canonical_chunk_id") is not None or can_meta.get("is_canonical") is not True:
                 can_meta["is_duplicate"] = False
+                can_meta["is_canonical"] = True
                 can_meta["canonical_chunk_id"] = None
                 can_meta["clinical_priority"] = 1
                 reporter.log(
@@ -952,8 +1058,10 @@ def apply_r8_who_canonical_direction(chunks: List[Dict[str, Any]], reporter: Fix
             dup_meta = by_id[dup_id]["metadata"]
             if (dup_meta.get("is_duplicate") is not True or 
                 dup_meta.get("canonical_chunk_id") != can_id or 
-                dup_meta.get("clinical_priority") != 2):
+                dup_meta.get("clinical_priority") != 2 or
+                dup_meta.get("is_canonical") is not False):
                 dup_meta["is_duplicate"] = True
+                dup_meta["is_canonical"] = False
                 dup_meta["canonical_chunk_id"] = can_id
                 dup_meta["clinical_priority"] = 2
                 reporter.log(
@@ -964,6 +1072,10 @@ def apply_r8_who_canonical_direction(chunks: List[Dict[str, Any]], reporter: Fix
                     before_snippet=str(dup_meta.get("canonical_chunk_id")),
                     after_snippet=can_id,
                 )
+
+    for c in chunks:
+        m = c.get("metadata", {})
+        m["is_canonical"] = not m.get("is_duplicate", False)
 
     return chunks
 
@@ -988,49 +1100,79 @@ def apply_r11_page_metadata(chunks: List[Dict[str, Any]], pdf_path: Optional[Pat
 
     for chunk in chunks:
         cid = chunk["chunk_id"]
-        # If chunk is already explicitly positioned via WHO_METADATA_UPDATES, skip heuristic page search
+        # If chunk is explicitly positioned via WHO_METADATA_UPDATES, skip heuristic search
         if cid in WHO_METADATA_UPDATES and "pdf_page_start" in WHO_METADATA_UPDATES[cid]:
             continue
 
         m = chunk["metadata"]
+
+        # Check NICE_PAGE_MAP for NICE chunks first
+        if not is_who and cid in NICE_PAGE_MAP:
+            p_start, p_end = NICE_PAGE_MAP[cid]
+            cur_start = m.get("pdf_page_start")
+            cur_end = m.get("pdf_page_end")
+            m["pdf_page_start"] = p_start
+            m["pdf_page_end"] = p_end
+            if page_labels and 1 <= p_start <= len(page_labels) and 1 <= p_end <= len(page_labels):
+                pl_start = page_labels[p_start - 1]
+                pl_end = page_labels[p_end - 1]
+                if "printed_page_start" in m or "printed_page_end" in m:
+                    m["printed_page_start"] = pl_start
+                    m["printed_page_end"] = pl_end
+                if "page_label_start" in m or "page_label_end" in m:
+                    m["page_label_start"] = pl_start
+                    m["page_label_end"] = pl_end
+            if cur_start != p_start or cur_end != p_end:
+                reporter.log(
+                    rule_id="R11",
+                    chunk_id=cid,
+                    action=f"Updated PDF page span via ground truth: ({cur_start}, {cur_end}) -> ({p_start}, {p_end})",
+                    field_name="pdf_page_start",
+                    before_snippet=f"{cur_start}-{cur_end}",
+                    after_snippet=f"{p_start}-{p_end}",
+                )
+            continue
+
         text = chunk["text"]
-        body = extract_body(text).strip()
-        lines = [l.strip() for l in body.split("\n") if l.strip()]
-        if not lines:
-            lines = [text.strip()]
+        # Extract substantive lines (ignoring generic headers)
+        subs = []
+        for line in text.split("\n"):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if any(stripped.startswith(pfx) for pfx in [
+                "Section:", "Subheading:", "Recommendation:", "Definition:",
+                "Table:", "Figure:", "Why the committee made", "How the recommendations might affect",
+                "Rationale and impact", "Terms used in this guideline", "Recommendations for research"
+            ]):
+                continue
+            norm = norm_ws(stripped)
+            if len(norm) >= 20:
+                subs.append(norm)
+
+        if not subs:
+            subs = [norm_ws(l) for l in text.split("\n") if len(norm_ws(l)) >= 15]
 
         start_page = None
         end_page = None
 
         if pdf_pages_norm:
-            # If WHO document and not in Executive Summary / front matter, search starting after front matter (page 12)
             search_start_idx = 0
+            search_end_idx = len(pdf_pages_norm)
             if is_who and "Executive summary" not in m.get("section", "") and "0_" not in cid:
                 search_start_idx = 12
 
-            for line in lines[:6]:
-                norm_line = norm_ws(re.sub(r"[^a-zA-Z0-9\s]", "", line.lower()))
-                if len(norm_line) < 12:
-                    continue
-                for p_idx in range(search_start_idx, len(pdf_pages_norm)):
-                    p_txt = pdf_pages_norm[p_idx]
-                    if norm_line[:35] in p_txt:
-                        start_page = p_idx + 1
-                        break
-                if start_page:
-                    break
+            matched_pages = []
+            for norm_line in subs:
+                key = norm_line[:40]
+                for p_idx in range(search_start_idx, search_end_idx):
+                    if key in pdf_pages_norm[p_idx]:
+                        if (p_idx + 1) not in matched_pages:
+                            matched_pages.append(p_idx + 1)
 
-            for line in reversed(lines[-6:]):
-                norm_line = norm_ws(re.sub(r"[^a-zA-Z0-9\s]", "", line.lower()))
-                if len(norm_line) < 12:
-                    continue
-                for p_idx in range(search_start_idx, len(pdf_pages_norm)):
-                    p_txt = pdf_pages_norm[p_idx]
-                    if norm_line[:35] in p_txt:
-                        end_page = p_idx + 1
-                        break
-                if end_page:
-                    break
+            if matched_pages:
+                start_page = min(matched_pages)
+                end_page = max(matched_pages)
 
         if start_page and not end_page:
             end_page = start_page
@@ -1054,7 +1196,7 @@ def apply_r11_page_metadata(chunks: List[Dict[str, Any]], pdf_path: Optional[Pat
                     after_snippet=f"{start_page}-{end_page}",
                 )
 
-            if page_labels:
+            if page_labels and 1 <= start_page <= len(page_labels) and 1 <= end_page <= len(page_labels):
                 pl_start = page_labels[start_page - 1]
                 pl_end = page_labels[end_page - 1]
                 if "printed_page_start" in m or "printed_page_end" in m:
@@ -1216,6 +1358,25 @@ def validate_gates(nice_chunks: List[Dict[str, Any]], who_chunks: List[Dict[str,
         tok = c.get("token_count", 0)
         if tok > 1000:
             assert c.get("metadata", {}).get("requires_manual_review") is True, f"Gate V5 Failed: Oversized chunk {cid} ({tok} tokens) without requires_manual_review=true"
+
+    # V6: Metadata schema check (is_canonical present and boolean, is_canonical == not is_duplicate)
+    for c in all_chunks:
+        cid = c["chunk_id"]
+        m = c.get("metadata", {})
+        assert "is_canonical" in m and isinstance(m["is_canonical"], bool), f"Gate V6 Failed: {cid} missing is_canonical bool"
+        assert m["is_canonical"] == (not m.get("is_duplicate", False)), f"Gate V6 Failed: {cid} is_canonical must equal (not is_duplicate)"
+
+    # V7: No running header/footer contamination
+    for c in all_chunks:
+        cid = c["chunk_id"]
+        t = c["text"]
+        for pat_str in [
+            r"GUIDELINE\s+FOR\s+THE\s+PHARMACOLOGICAL\s+TREATMENT\s+OF\s+HYPERTENSION\s+IN\s+ADULTS",
+            r"GUIDELINE\s+FOR\s+T\b",
+            r"Cardiovascular\s+disease:\s*risk\s+assessment\s+and\s+reduction,\s*including\s+lipid\s+modification",
+            r"conditions#notice-of-rights",
+        ]:
+            assert not re.search(pat_str, t, re.IGNORECASE), f"Gate V7 Failed: Noise pattern '{pat_str}' in {cid}"
 
 
 # ============================================================================

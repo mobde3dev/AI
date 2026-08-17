@@ -466,26 +466,10 @@
   {
     "rule_id": "R9",
     "chunk_id": "NICE3_1.7.10_REC",
-    "action": "Split oversized mixed chunk: retained pure recommendation text",
+    "action": "Split oversized mixed chunk: retained pure recommendation text (deduplicated redundant rationale/impact)",
     "field_name": "text",
     "before_snippet": "Section: 1.7 Lipid-lowering treatment for secondary prevention of cardiovascular disease\nSubheading: Escalating treatment for people on statins\nRecomm",
     "after_snippet": "Section: 1.7 Lipid-lowering treatment for secondary prevention of cardiovascular disease\nSubheading: Escalating treatment for people on statins\nRecomm"
-  },
-  {
-    "rule_id": "R9",
-    "chunk_id": "NICE3_1.7_RATIONALE_004",
-    "action": "Created committee rationale chunk from 1.7.10 split",
-    "field_name": "chunk_id",
-    "before_snippet": null,
-    "after_snippet": "Section: 1.7 Lipid-lowering treatment for secondary prevention of cardiovascular disease\nSubheading: Escalating treatment for people on statins\n\nWhy t"
-  },
-  {
-    "rule_id": "R9",
-    "chunk_id": "NICE3_1.7_IMPACT_002",
-    "action": "Created implementation impact chunk from 1.7.10 split",
-    "field_name": "chunk_id",
-    "before_snippet": null,
-    "after_snippet": "Section: 1.7 Lipid-lowering treatment for secondary prevention of cardiovascular disease\nSubheading: Escalating treatment for people on statins\n\nHow t"
   },
   {
     "rule_id": "R9",
@@ -786,15 +770,15 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_OTH_001",
-    "action": "Updated PDF page span: (5, 13) -> (3, 3)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "3-3"
+    "after_snippet": "5-5"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.1_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -802,7 +786,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.2_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -810,7 +794,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.3_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -818,7 +802,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.4_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -826,7 +810,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.5_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -834,7 +818,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.6_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -842,7 +826,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.7_REC",
-    "action": "Updated PDF page span: (5, 13) -> (5, 5)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (5, 5)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "5-5"
@@ -850,7 +834,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.8_REC",
-    "action": "Updated PDF page span: (5, 13) -> (6, 6)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (6, 6)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "6-6"
@@ -858,7 +842,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.9_REC",
-    "action": "Updated PDF page span: (5, 13) -> (6, 6)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (6, 6)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "6-6"
@@ -866,7 +850,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.10_REC",
-    "action": "Updated PDF page span: (5, 13) -> (6, 7)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (6, 7)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "6-7"
@@ -874,7 +858,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.11_REC",
-    "action": "Updated PDF page span: (5, 13) -> (7, 7)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (7, 7)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "7-7"
@@ -882,7 +866,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_RATIONALE_001",
-    "action": "Updated PDF page span: (5, 13) -> (8, 9)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (8, 9)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "8-9"
@@ -890,23 +874,23 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_RATIONALE_002",
-    "action": "Updated PDF page span: (5, 13) -> (8, 9)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (9, 9)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "8-9"
+    "after_snippet": "9-9"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_RISK_COMMUNICATION_ABOUT__001",
-    "action": "Updated PDF page span: (5, 13) -> (9, 10)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 11)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "9-10"
+    "after_snippet": "11-11"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_IMPACT_001",
-    "action": "Updated PDF page span: (5, 13) -> (10, 10)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (10, 10)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "10-10"
@@ -914,39 +898,63 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.18_REC",
-    "action": "Updated PDF page span: (5, 13) -> (11, 11)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 11)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "11-11"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.3.1_REC",
-    "action": "Updated PDF page span: (14, 17) -> (14, 14)",
+    "chunk_id": "NICE3_1.2_OTH_001",
+    "action": "Updated PDF page span via ground truth: (13, 14) -> (14, 14)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "13-14",
+    "after_snippet": "14-14"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.2.1_REC",
+    "action": "Updated PDF page span via ground truth: (13, 14) -> (14, 14)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "13-14",
+    "after_snippet": "14-14"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.3_OTH_001",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (14, 14)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
     "after_snippet": "14-14"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.3.1_REC",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (14, 15)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "14-17",
+    "after_snippet": "14-15"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3.2_REC",
-    "action": "Updated PDF page span: (14, 17) -> (14, 14)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (15, 15)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
-    "after_snippet": "14-14"
+    "after_snippet": "15-15"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3.3_REC",
-    "action": "Updated PDF page span: (14, 17) -> (14, 14)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (15, 15)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
-    "after_snippet": "14-14"
+    "after_snippet": "15-15"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3.4_REC",
-    "action": "Updated PDF page span: (14, 17) -> (15, 15)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (15, 15)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
     "after_snippet": "15-15"
@@ -954,175 +962,143 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3_RATIONALE_001",
-    "action": "Updated PDF page span: (14, 17) -> (8, 15)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (15, 15)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
-    "after_snippet": "8-15"
+    "after_snippet": "15-15"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3_IMPACT_001",
-    "action": "Updated PDF page span: (14, 17) -> (10, 15)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (15, 15)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
-    "after_snippet": "10-15"
+    "after_snippet": "15-15"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3.5_REC",
-    "action": "Updated PDF page span: (14, 17) -> (14, 14)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (16, 16)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
-    "after_snippet": "14-14"
+    "after_snippet": "16-16"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3.6_REC",
-    "action": "Updated PDF page span: (14, 17) -> (15, 16)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (16, 16)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
-    "after_snippet": "15-16"
+    "after_snippet": "16-16"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.3.7_REC",
-    "action": "Updated PDF page span: (14, 17) -> (16, 16)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "14-17",
-    "after_snippet": "16-16"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.3.8_REC",
-    "action": "Updated PDF page span: (14, 17) -> (16, 16)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "14-17",
-    "after_snippet": "16-16"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.3.9_REC",
-    "action": "Updated PDF page span: (14, 17) -> (16, 16)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "14-17",
-    "after_snippet": "16-16"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.3.10_REC",
-    "action": "Updated PDF page span: (14, 17) -> (16, 16)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "14-17",
-    "after_snippet": "16-16"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.3.11_REC",
-    "action": "Updated PDF page span: (14, 17) -> (16, 16)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "14-17",
-    "after_snippet": "16-16"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.3.12_REC",
-    "action": "Updated PDF page span: (14, 17) -> (16, 17)",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (16, 17)",
     "field_name": "pdf_page_start",
     "before_snippet": "14-17",
     "after_snippet": "16-17"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.4.1_REC",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
+    "chunk_id": "NICE3_1.3.8_REC",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (17, 17)",
     "field_name": "pdf_page_start",
-    "before_snippet": "17-18",
+    "before_snippet": "14-17",
     "after_snippet": "17-17"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.4.2_REC",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
+    "chunk_id": "NICE3_1.3.9_REC",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (17, 17)",
     "field_name": "pdf_page_start",
-    "before_snippet": "17-18",
+    "before_snippet": "14-17",
     "after_snippet": "17-17"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.4.3_REC",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
+    "chunk_id": "NICE3_1.3.10_REC",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (17, 17)",
     "field_name": "pdf_page_start",
-    "before_snippet": "17-18",
+    "before_snippet": "14-17",
     "after_snippet": "17-17"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.4.4_REC",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
+    "chunk_id": "NICE3_1.3.11_REC",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (17, 17)",
     "field_name": "pdf_page_start",
-    "before_snippet": "17-18",
+    "before_snippet": "14-17",
     "after_snippet": "17-17"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.4.5_REC",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
+    "chunk_id": "NICE3_1.3.12_REC",
+    "action": "Updated PDF page span via ground truth: (14, 17) -> (17, 17)",
     "field_name": "pdf_page_start",
-    "before_snippet": "17-18",
+    "before_snippet": "14-17",
     "after_snippet": "17-17"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.4.6_REC",
-    "action": "Updated PDF page span: (17, 18) -> (17, 17)",
+    "chunk_id": "NICE3_1.4.7_REC",
+    "action": "Updated PDF page span via ground truth: (17, 18) -> (18, 18)",
     "field_name": "pdf_page_start",
     "before_snippet": "17-18",
-    "after_snippet": "17-17"
+    "after_snippet": "18-18"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.4.8_REC",
+    "action": "Updated PDF page span via ground truth: (17, 18) -> (18, 18)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "17-18",
+    "after_snippet": "18-18"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5_DRUG_001",
-    "action": "Updated PDF page span: (18, 21) -> (3, 3)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (18, 18)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "3-3"
+    "after_snippet": "18-18"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.1_REC",
-    "action": "Updated PDF page span: (18, 21) -> (18, 18)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (18, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "18-18"
+    "after_snippet": "18-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.2_REC",
-    "action": "Updated PDF page span: (18, 21) -> (18, 18)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (18, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "18-18"
+    "after_snippet": "18-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.3_REC",
-    "action": "Updated PDF page span: (18, 21) -> (18, 18)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (18, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "18-18"
+    "after_snippet": "18-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.4_REC",
-    "action": "Updated PDF page span: (18, 21) -> (19, 19)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (18, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "19-19"
+    "after_snippet": "18-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.5_REC",
-    "action": "Updated PDF page span: (18, 21) -> (19, 19)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (19, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
     "after_snippet": "19-19"
@@ -1130,7 +1106,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.6_REC",
-    "action": "Updated PDF page span: (18, 21) -> (19, 19)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (19, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
     "after_snippet": "19-19"
@@ -1138,7 +1114,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.7_REC",
-    "action": "Updated PDF page span: (18, 21) -> (20, 20)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (20, 20)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
     "after_snippet": "20-20"
@@ -1146,47 +1122,55 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5_RATIONALE_001",
-    "action": "Updated PDF page span: (18, 21) -> (8, 20)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (20, 20)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "8-20"
+    "after_snippet": "20-20"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5_IMPACT_001",
-    "action": "Updated PDF page span: (18, 21) -> (10, 21)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (21, 21)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "10-21"
+    "after_snippet": "21-21"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.9_REC",
-    "action": "Updated PDF page span: (18, 21) -> (21, 21)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (20, 20)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "21-21"
+    "after_snippet": "20-20"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.10_REC",
-    "action": "Updated PDF page span: (18, 21) -> (21, 21)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (20, 21)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "21-21"
+    "after_snippet": "20-21"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.6_OTH_001",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 22)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "21-26",
+    "after_snippet": "22-22"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6_DRUG_PRIMARY_PREVENTION_O_001",
-    "action": "Updated PDF page span: (21, 26) -> (3, 21)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 22)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "3-21"
+    "after_snippet": "22-22"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.1_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 22)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "22-22"
@@ -1194,7 +1178,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.2_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 22)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "22-22"
@@ -1202,7 +1186,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.3_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 22)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "22-22"
@@ -1210,39 +1194,39 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.4_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "22-22"
+    "after_snippet": "22-23"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.5_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "22-22"
+    "after_snippet": "22-23"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.6_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "22-22"
+    "after_snippet": "22-23"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.7_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 22)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "22-22"
+    "after_snippet": "22-23"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.8_REC",
-    "action": "Updated PDF page span: (21, 26) -> (22, 23)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (22, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "22-23"
@@ -1250,7 +1234,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.9_REC",
-    "action": "Updated PDF page span: (21, 26) -> (23, 23)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (23, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "23-23"
@@ -1258,7 +1242,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.10_REC",
-    "action": "Updated PDF page span: (21, 26) -> (23, 23)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (23, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "23-23"
@@ -1266,55 +1250,63 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.11_REC",
-    "action": "Updated PDF page span: (21, 26) -> (23, 23)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (23, 24)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "23-23"
+    "after_snippet": "23-24"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.12_REC",
-    "action": "Updated PDF page span: (21, 26) -> (23, 23)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (24, 24)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "23-23"
+    "after_snippet": "24-24"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6_RATIONALE_001",
-    "action": "Updated PDF page span: (21, 26) -> (8, 20)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (24, 25)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "8-20"
+    "after_snippet": "24-25"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6_IMPACT_001",
-    "action": "Updated PDF page span: (21, 26) -> (10, 10)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (25, 25)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
-    "after_snippet": "10-10"
+    "after_snippet": "25-25"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.6.13_REC",
-    "action": "Updated PDF page span: (21, 26) -> (26, 26)",
+    "action": "Updated PDF page span via ground truth: (21, 26) -> (26, 26)",
     "field_name": "pdf_page_start",
     "before_snippet": "21-26",
     "after_snippet": "26-26"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "NICE3_1.7_DRUG_SECONDARY_PREVENTION_001",
-    "action": "Updated PDF page span: (26, 35) -> (3, 21)",
+    "chunk_id": "NICE3_1.7_OTH_001",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (26, 26)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
-    "after_snippet": "3-21"
+    "after_snippet": "26-26"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.7_DRUG_SECONDARY_PREVENTION_001",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (26, 26)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "26-35",
+    "after_snippet": "26-26"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.1_REC",
-    "action": "Updated PDF page span: (26, 35) -> (26, 26)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (26, 26)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "26-26"
@@ -1322,39 +1314,39 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7_RATIONALE_001",
-    "action": "Updated PDF page span: (26, 35) -> (8, 28)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (27, 28)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
-    "after_snippet": "8-28"
+    "after_snippet": "27-28"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7_RATIONALE_002",
-    "action": "Updated PDF page span: (26, 35) -> (8, 29)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (28, 28)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
-    "after_snippet": "8-29"
+    "after_snippet": "28-28"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7_RATIONALE_003",
-    "action": "Updated PDF page span: (26, 35) -> (8, 29)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (29, 29)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
-    "after_snippet": "8-29"
+    "after_snippet": "29-29"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7_IMPACT_001",
-    "action": "Updated PDF page span: (26, 35) -> (10, 28)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (29, 30)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
-    "after_snippet": "10-28"
+    "after_snippet": "29-30"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.2_REC",
-    "action": "Updated PDF page span: (26, 35) -> (30, 30)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (30, 30)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "30-30"
@@ -1362,7 +1354,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.3_REC",
-    "action": "Updated PDF page span: (26, 35) -> (30, 30)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (30, 30)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "30-30"
@@ -1370,7 +1362,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.4_REC",
-    "action": "Updated PDF page span: (26, 35) -> (30, 30)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (30, 30)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "30-30"
@@ -1378,7 +1370,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.5_REC",
-    "action": "Updated PDF page span: (26, 35) -> (30, 30)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (30, 30)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "30-30"
@@ -1386,15 +1378,15 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.6_REC",
-    "action": "Updated PDF page span: (26, 35) -> (22, 31)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (31, 31)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
-    "after_snippet": "22-31"
+    "after_snippet": "31-31"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.7_REC",
-    "action": "Updated PDF page span: (26, 35) -> (31, 32)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (31, 32)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "31-32"
@@ -1402,7 +1394,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.8_REC",
-    "action": "Updated PDF page span: (26, 35) -> (32, 32)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (32, 32)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "32-32"
@@ -1410,7 +1402,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.9_REC",
-    "action": "Updated PDF page span: (26, 35) -> (32, 32)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (32, 32)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "32-32"
@@ -1418,15 +1410,23 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.7.10_REC",
-    "action": "Updated PDF page span: (26, 35) -> (32, 32)",
+    "action": "Updated PDF page span via ground truth: (26, 35) -> (32, 32)",
     "field_name": "pdf_page_start",
     "before_snippet": "26-35",
     "after_snippet": "32-32"
   },
   {
     "rule_id": "R11",
+    "chunk_id": "NICE3_1.8_DRUG_001",
+    "action": "Updated PDF page span via ground truth: (35, 36) -> (36, 36)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "35-36",
+    "after_snippet": "36-36"
+  },
+  {
+    "rule_id": "R11",
     "chunk_id": "NICE3_1.8.1_REC",
-    "action": "Updated PDF page span: (35, 36) -> (36, 36)",
+    "action": "Updated PDF page span via ground truth: (35, 36) -> (36, 36)",
     "field_name": "pdf_page_start",
     "before_snippet": "35-36",
     "after_snippet": "36-36"
@@ -1434,7 +1434,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.8.2_REC",
-    "action": "Updated PDF page span: (35, 36) -> (36, 36)",
+    "action": "Updated PDF page span via ground truth: (35, 36) -> (36, 36)",
     "field_name": "pdf_page_start",
     "before_snippet": "35-36",
     "after_snippet": "36-36"
@@ -1442,7 +1442,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.8.3_REC",
-    "action": "Updated PDF page span: (35, 36) -> (36, 36)",
+    "action": "Updated PDF page span via ground truth: (35, 36) -> (36, 36)",
     "field_name": "pdf_page_start",
     "before_snippet": "35-36",
     "after_snippet": "36-36"
@@ -1450,15 +1450,15 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.8_OTH_SECONDARY_PREVENTION_001",
-    "action": "Updated PDF page span: (35, 36) -> (3, 36)",
+    "action": "Updated PDF page span via ground truth: (35, 36) -> (36, 36)",
     "field_name": "pdf_page_start",
     "before_snippet": "35-36",
-    "after_snippet": "3-36"
+    "after_snippet": "36-36"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.9.1_REC",
-    "action": "Updated PDF page span: (36, 38) -> (36, 37)",
+    "action": "Updated PDF page span via ground truth: (36, 38) -> (36, 37)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
     "after_snippet": "36-37"
@@ -1466,7 +1466,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.9.2_REC",
-    "action": "Updated PDF page span: (36, 38) -> (37, 37)",
+    "action": "Updated PDF page span via ground truth: (36, 38) -> (37, 37)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
     "after_snippet": "37-37"
@@ -1474,7 +1474,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.9.3_REC",
-    "action": "Updated PDF page span: (36, 38) -> (37, 37)",
+    "action": "Updated PDF page span via ground truth: (36, 38) -> (37, 37)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
     "after_snippet": "37-37"
@@ -1482,7 +1482,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.9.4_REC",
-    "action": "Updated PDF page span: (36, 38) -> (37, 37)",
+    "action": "Updated PDF page span via ground truth: (36, 38) -> (37, 37)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
     "after_snippet": "37-37"
@@ -1490,79 +1490,87 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.9_RATIONALE_001",
-    "action": "Updated PDF page span: (36, 38) -> (8, 20)",
+    "action": "Updated PDF page span via ground truth: (36, 38) -> (37, 38)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
-    "after_snippet": "8-20"
+    "after_snippet": "37-38"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.9_IMPACT_001",
-    "action": "Updated PDF page span: (36, 38) -> (10, 15)",
+    "action": "Updated PDF page span via ground truth: (36, 38) -> (38, 38)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
-    "after_snippet": "10-15"
+    "after_snippet": "38-38"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10_CONTRA_001",
-    "action": "Updated PDF page span: (38, 41) -> (3, 38)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (38, 38)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "3-38"
+    "after_snippet": "38-38"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10.1_REC",
-    "action": "Updated PDF page span: (38, 41) -> (38, 38)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (38, 39)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "38-38"
+    "after_snippet": "38-39"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10.2_REC",
-    "action": "Updated PDF page span: (38, 41) -> (38, 38)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (38, 39)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "38-38"
+    "after_snippet": "38-39"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10.3_REC",
-    "action": "Updated PDF page span: (38, 41) -> (38, 38)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (38, 39)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "38-38"
+    "after_snippet": "38-39"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10.4_REC",
-    "action": "Updated PDF page span: (38, 41) -> (39, 39)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (38, 39)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "39-39"
+    "after_snippet": "38-39"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10_RATIONALE_001",
-    "action": "Updated PDF page span: (38, 41) -> (8, 29)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (40, 40)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "8-29"
+    "after_snippet": "40-40"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.10_IMPACT_001",
-    "action": "Updated PDF page span: (38, 41) -> (10, 29)",
+    "action": "Updated PDF page span via ground truth: (38, 41) -> (41, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-41",
-    "after_snippet": "10-29"
+    "after_snippet": "41-41"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "NICE3_1.11_OTH_001",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (41, 41)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "41-44",
+    "after_snippet": "41-41"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.1_REC",
-    "action": "Updated PDF page span: (41, 44) -> (41, 41)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (41, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "41-41"
@@ -1570,7 +1578,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.2_REC",
-    "action": "Updated PDF page span: (41, 44) -> (41, 41)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (41, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "41-41"
@@ -1578,23 +1586,23 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.3_REC",
-    "action": "Updated PDF page span: (41, 44) -> (19, 41)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "41-44",
-    "after_snippet": "19-41"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.11.4_REC",
-    "action": "Updated PDF page span: (41, 44) -> (41, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (41, 42)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "41-42"
   },
   {
     "rule_id": "R11",
+    "chunk_id": "NICE3_1.11.4_REC",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 42)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "41-44",
+    "after_snippet": "42-42"
+  },
+  {
+    "rule_id": "R11",
     "chunk_id": "NICE3_1.11.5_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 42)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "42-42"
@@ -1602,7 +1610,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.6_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 42)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "42-42"
@@ -1610,7 +1618,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.7_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 42)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "42-42"
@@ -1618,31 +1626,31 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.8_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 43)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
-    "after_snippet": "42-42"
+    "after_snippet": "42-43"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.9_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 43)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
-    "after_snippet": "42-42"
+    "after_snippet": "42-43"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.10_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 42)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 43)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
-    "after_snippet": "42-42"
+    "after_snippet": "42-43"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.11_REC",
-    "action": "Updated PDF page span: (41, 44) -> (42, 43)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (42, 43)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "42-43"
@@ -1650,7 +1658,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11.12_REC",
-    "action": "Updated PDF page span: (41, 44) -> (43, 43)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (43, 43)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
     "after_snippet": "43-43"
@@ -1658,127 +1666,71 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11_RATIONALE_001",
-    "action": "Updated PDF page span: (41, 44) -> (8, 20)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (43, 44)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
-    "after_snippet": "8-20"
+    "after_snippet": "43-44"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.11_IMPACT_001",
-    "action": "Updated PDF page span: (41, 44) -> (10, 44)",
+    "action": "Updated PDF page span via ground truth: (41, 44) -> (44, 44)",
     "field_name": "pdf_page_start",
     "before_snippet": "41-44",
-    "after_snippet": "10-44"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.1_REC",
-    "action": "Updated PDF page span: (44, 45) -> (44, 44)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
     "after_snippet": "44-44"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.2_REC",
-    "action": "Updated PDF page span: (44, 45) -> (44, 44)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
-    "after_snippet": "44-44"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.3_REC",
-    "action": "Updated PDF page span: (44, 45) -> (44, 44)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
-    "after_snippet": "44-44"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.4_REC",
-    "action": "Updated PDF page span: (44, 45) -> (45, 45)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
-    "after_snippet": "45-45"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.5_REC",
-    "action": "Updated PDF page span: (44, 45) -> (45, 45)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
-    "after_snippet": "45-45"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.6_REC",
-    "action": "Updated PDF page span: (44, 45) -> (45, 45)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
-    "after_snippet": "45-45"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.12.7_REC",
-    "action": "Updated PDF page span: (44, 45) -> (45, 45)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "44-45",
-    "after_snippet": "45-45"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.12_DRUG_001",
-    "action": "Updated PDF page span: (44, 45) -> (3, 6)",
+    "action": "Updated PDF page span via ground truth: (44, 45) -> (44, 44)",
     "field_name": "pdf_page_start",
     "before_snippet": "44-45",
-    "after_snippet": "3-6"
+    "after_snippet": "44-44"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_TERM_THIS_SECTION_DEFINES_TERMS_THA_001",
-    "action": "Updated PDF page span: (45, 47) -> (45, 45)",
+    "action": "Updated PDF page span via ground truth: (45, 47) -> (45, 46)",
     "field_name": "pdf_page_start",
     "before_snippet": "45-47",
-    "after_snippet": "45-45"
+    "after_snippet": "45-46"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_TERM_FULL_LIPID_PROFILE_THIS_INVOLV_001",
-    "action": "Updated PDF page span: (45, 47) -> (17, 46)",
+    "action": "Updated PDF page span via ground truth: (45, 47) -> (46, 46)",
     "field_name": "pdf_page_start",
     "before_snippet": "45-47",
-    "after_snippet": "17-46"
+    "after_snippet": "46-46"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_TERM_SEVERE_MENTAL_ILLNESS_A_DIAGNO_001",
-    "action": "Updated PDF page span: (45, 47) -> (6, 47)",
+    "action": "Updated PDF page span via ground truth: (45, 47) -> (47, 47)",
     "field_name": "pdf_page_start",
     "before_snippet": "45-47",
-    "after_snippet": "6-47"
+    "after_snippet": "47-47"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_research_RESEARCH_001",
-    "action": "Updated PDF page span: (47, 49) -> (3, 3)",
+    "action": "Updated PDF page span via ground truth: (47, 49) -> (48, 48)",
     "field_name": "pdf_page_start",
     "before_snippet": "47-49",
-    "after_snippet": "3-3"
+    "after_snippet": "48-48"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_research_RATIONALE_001",
-    "action": "Updated PDF page span: (47, 49) -> (8, 20)",
+    "action": "Updated PDF page span via ground truth: (47, 49) -> (49, 49)",
     "field_name": "pdf_page_start",
     "before_snippet": "47-49",
-    "after_snippet": "8-20"
+    "after_snippet": "49-49"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_context_CTX_001",
-    "action": "Updated PDF page span: (49, 50) -> (50, 50)",
+    "action": "Updated PDF page span via ground truth: (49, 50) -> (50, 50)",
     "field_name": "pdf_page_start",
     "before_snippet": "49-50",
     "after_snippet": "50-50"
@@ -1786,39 +1738,39 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_finding_more_OTH_001",
-    "action": "Updated PDF page span: (50, 51) -> (3, 51)",
+    "action": "Updated PDF page span via ground truth: (50, 51) -> (51, 51)",
     "field_name": "pdf_page_start",
     "before_snippet": "50-51",
-    "after_snippet": "3-51"
+    "after_snippet": "51-51"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_update_info_UPDATE_001",
-    "action": "Updated PDF page span: (51, 52) -> (3, 52)",
+    "action": "Updated PDF page span via ground truth: (51, 52) -> (52, 52)",
     "field_name": "pdf_page_start",
     "before_snippet": "51-52",
-    "after_snippet": "3-52"
+    "after_snippet": "52-52"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.12_REC",
-    "action": "Updated PDF page span: (5, 13) -> (10, 10)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 11)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "10-10"
+    "after_snippet": "11-11"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.13_REC",
-    "action": "Updated PDF page span: (5, 13) -> (10, 10)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 11)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "10-10"
+    "after_snippet": "11-11"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.14_REC",
-    "action": "Updated PDF page span: (5, 13) -> (11, 11)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 11)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "11-11"
@@ -1826,7 +1778,7 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.15_REC",
-    "action": "Updated PDF page span: (5, 13) -> (11, 11)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 11)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
     "after_snippet": "11-11"
@@ -1834,58 +1786,42 @@
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.16_REC",
-    "action": "Updated PDF page span: (5, 13) -> (11, 11)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (11, 12)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "11-11"
+    "after_snippet": "11-12"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1.17_REC",
-    "action": "Updated PDF page span: (5, 13) -> (11, 11)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (12, 12)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "11-11"
+    "after_snippet": "12-12"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.5.8_REC",
-    "action": "Updated PDF page span: (18, 21) -> (21, 21)",
+    "action": "Updated PDF page span via ground truth: (18, 21) -> (20, 20)",
     "field_name": "pdf_page_start",
     "before_snippet": "18-21",
-    "after_snippet": "21-21"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.7_RATIONALE_004",
-    "action": "Updated PDF page span: (26, 35) -> (8, 29)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "26-35",
-    "after_snippet": "8-29"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "NICE3_1.7_IMPACT_002",
-    "action": "Updated PDF page span: (26, 35) -> (10, 29)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "26-35",
-    "after_snippet": "10-29"
+    "after_snippet": "20-20"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_RATIONALE_003",
-    "action": "Updated PDF page span: (5, 13) -> (8, 10)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (12, 12)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "8-10"
+    "after_snippet": "12-12"
   },
   {
     "rule_id": "R11",
     "chunk_id": "NICE3_1.1_IMPACT_002",
-    "action": "Updated PDF page span: (5, 13) -> (10, 13)",
+    "action": "Updated PDF page span via ground truth: (5, 13) -> (13, 13)",
     "field_name": "pdf_page_start",
     "before_snippet": "5-13",
-    "after_snippet": "10-13"
+    "after_snippet": "13-13"
   },
   {
     "rule_id": "R12",
@@ -2136,6 +2072,134 @@
     "after_snippet": "2008"
   },
   {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_1_EVID_002",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 1 Introduction\n\nScope and objectives of the hypertension guideline\nThe 2021 WHO hypertension guideline aims to provide the most current and r",
+    "after_snippet": "Section: 1 Introduction\n\nScope and objectives of the hypertension guideline\nThe 2021 WHO hypertension guideline aims to provide the most current and r"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_2.2_DRUG_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 2.2 Analytical framework and PICOs\n\n2.2 Analytical framework and PICOs\nAn initial GDG meeting was held in Geneva in July 2019 to determine th",
+    "after_snippet": "Section: 2.2 Analytical framework and PICOs\n\n2.2 Analytical framework and PICOs\nAn initial GDG meeting was held in Geneva in July 2019 to determine th"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_2.5_EVID_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 2.5 Certainty of evidence and strength of recommendations\n\n2.5 Certainty of evidence and strength of recommendations\nThe GDG rated the certai",
+    "after_snippet": "Section: 2.5 Certainty of evidence and strength of recommendations\n\n2.5 Certainty of evidence and strength of recommendations\nThe GDG rated the certai"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_3.4_E2D_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 3.4 Drug classes to be used as first-line agents\n\nframeworks of PICO questions 4 and 5 (see Annex 4) were used to develop one recommendation.",
+    "after_snippet": "Section: 3.4 Drug classes to be used as first-line agents\n\nframeworks of PICO questions 4 and 5 (see Annex 4) were used to develop one recommendation."
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_3.5_E2D_004",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 3.5 Combination therapy\n\nThus, the intervention is likely feasible\nto implement. The GDG acknowledged some challenges to single-pill combinat",
+    "after_snippet": "Section: 3.5 Combination therapy\n\nThus, the intervention is likely feasible\nto implement. The GDG acknowledged some challenges to single-pill combinat"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_4.1_SPEC_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 4.1 Hypertension in disaster, humanitarian and emergency settings\n\n4.1 Hypertension in disaster, humanitarian and emergency settings\nHyperten",
+    "after_snippet": "Section: 4.1 Hypertension in disaster, humanitarian and emergency settings\n\n4.1 Hypertension in disaster, humanitarian and emergency settings\nHyperten"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_4.3_THR_003",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 4.3 Pregnancy and hypertension\n\nIn summary, HTN in pregnancy, manifested by the various hypertensive pregnancy disorders, is a very\ncommon me",
+    "after_snippet": "Section: 4.3 Pregnancy and hypertension\n\nIn summary, HTN in pregnancy, manifested by the various hypertensive pregnancy disorders, is a very\ncommon me"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_5.5_EVID_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 5.5 Research gaps\n\n5.5 Research gaps\nSeveral research gaps were identified by the GDG according to the theme of the PICOs.\nThresholds to dete",
+    "after_snippet": "Section: 5.5 Research gaps\n\n5.5 Research gaps\nSeveral research gaps were identified by the GDG according to the theme of the PICOs.\nThresholds to dete"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_6.1_EVID_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 6.1 Guideline recommendations\n\n6.1 Guideline recommendations\nGraphic summaries of the guideline recommendations are presented below in an alg",
+    "after_snippet": "Section: 6.1 Guideline recommendations\n\n6.1 Guideline recommendations\nGraphic summaries of the guideline recommendations are presented below in an alg"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_6.2_ALGO_003",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: 6.2 Drug- and dose-specific protocols\n\nIf BP is not at goal,\nadd a thiazide/thiazide-like\ndiuretic at half maximal dose\n(hydrochlorothiazide ",
+    "after_snippet": "Section: 6.2 Drug- and dose-specific protocols\n\nIf BP is not at goal,\nadd a thiazide/thiazide-like\ndiuretic at half maximal dose\n(hydrochlorothiazide "
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_0_METH_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: Annex 3: Treatment outcomes relevant to hypertension\n\nAnnex 3: Treatment outcomes\nrelevant to hypertension\nMembers of the WHO Steering Group,",
+    "after_snippet": "Section: Annex 3: Treatment outcomes relevant to hypertension\n\nAnnex 3: Treatment outcomes\nrelevant to hypertension\nMembers of the WHO Steering Group,"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_0_THR_002",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: Annex 4: PICO questions\n\nP\nAdult men and women with hypertension requiring pharmacological treatment\nBB, CCB, diuretics, ACEi, or ARB\nPlacebo",
+    "after_snippet": "Section: Annex 4: PICO questions\n\nP\nAdult men and women with hypertension requiring pharmacological treatment\nBB, CCB, diuretics, ACEi, or ARB\nPlacebo"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_0_THR_004",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Section: Annex 4: PICO questions\n\nAdverse effects\nPatient satisfaction\nAdherence\nBP level/change\nNumber of antihypertensive medications\ns\nBased on dif",
+    "after_snippet": "Section: Annex 4: PICO questions\n\nAdverse effects\nPatient satisfaction\nAdherence\nBP level/change\nNumber of antihypertensive medications\ns\nBased on dif"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_6_ALGO_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Fig. 1\t Analytic framework for antihypertensive medication treatment\t 3\n\nGUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS\nFigures",
+    "after_snippet": "Fig. 1\t Analytic framework for antihypertensive medication treatment\t 3\n\nFigures\nFig. 1\nAnalytic framework for antihypertensive medication treatment\nF"
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_5.5_ALGO_001",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Fig. 3\t An approach for starting treatment with a single-pill combination  Treat adults with BP ≥140 mmHg or ≥90   (SBP ≥130 mmHg for those with CVD, ",
+    "after_snippet": "Fig. 3\t An approach for starting treatment with a single-pill combination  Treat adults with BP ≥140 mmHg or ≥90   (SBP ≥130 mmHg for those with CVD, "
+  },
+  {
+    "rule_id": "R3",
+    "chunk_id": "WHO03_6.1_ALGO_002",
+    "action": "Stripped running header/footer noise fragment",
+    "field_name": "text",
+    "before_snippet": "Fig. 5 Algorithm 1 Start ARB–CCB at  half-maximal doses\n\nGUIDELINE FOR THE PHARMACOLOGICAL TREATMENT OF HYPERTENSION IN ADULTS\n6.2 Drug- and dose-spec",
+    "after_snippet": "Fig. 5 Algorithm 1 Start ARB–CCB at  half-maximal doses\n\n6.2 Drug- and dose-specific protocols\nTwo examples of suggested drug and dose-specific protoc"
+  },
+  {
     "rule_id": "R6",
     "chunk_id": "WHO03_6.1_ALGO_001",
     "action": "Updated metadata section: 6 -> 6 Implementation tools",
@@ -2160,108 +2224,276 @@
     "after_snippet": "6.2 Drug- and dose-specific protocols"
   },
   {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.1_REC_001",
+    "action": "Set canonical status on WHO03_3.1_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_001",
+    "action": "Marked WHO03_0_REC_001 as duplicate pointing to canonical WHO03_3.1_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.1_REC_001",
+    "after_snippet": "WHO03_3.1_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.1_REC_002",
+    "action": "Set canonical status on WHO03_3.1_REC_002",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_002",
+    "action": "Marked WHO03_0_REC_002 as duplicate pointing to canonical WHO03_3.1_REC_002 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.1_REC_002",
+    "after_snippet": "WHO03_3.1_REC_002"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.1_REC_003",
+    "action": "Set canonical status on WHO03_3.1_REC_003",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_003",
+    "action": "Marked WHO03_0_REC_003 as duplicate pointing to canonical WHO03_3.1_REC_003 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.1_REC_003",
+    "after_snippet": "WHO03_3.1_REC_003"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.2_REC_001",
+    "action": "Set canonical status on WHO03_3.2_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_004",
+    "action": "Marked WHO03_0_REC_004 as duplicate pointing to canonical WHO03_3.2_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.2_REC_001",
+    "after_snippet": "WHO03_3.2_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.3_REC_001",
+    "action": "Set canonical status on WHO03_3.3_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_005",
+    "action": "Marked WHO03_0_REC_005 as duplicate pointing to canonical WHO03_3.3_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.3_REC_001",
+    "after_snippet": "WHO03_3.3_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.4_REC_001",
+    "action": "Set canonical status on WHO03_3.4_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_006",
+    "action": "Marked WHO03_0_REC_006 as duplicate pointing to canonical WHO03_3.4_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.4_REC_001",
+    "after_snippet": "WHO03_3.4_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.5_REC_001",
+    "action": "Set canonical status on WHO03_3.5_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_007",
+    "action": "Marked WHO03_0_REC_007 as duplicate pointing to canonical WHO03_3.5_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.5_REC_001",
+    "after_snippet": "WHO03_3.5_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.6_REC_001",
+    "action": "Set canonical status on WHO03_3.6_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_008",
+    "action": "Marked WHO03_0_REC_008 as duplicate pointing to canonical WHO03_3.6_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.6_REC_001",
+    "after_snippet": "WHO03_3.6_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.6_REC_002",
+    "action": "Set canonical status on WHO03_3.6_REC_002",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_009",
+    "action": "Marked WHO03_0_REC_009 as duplicate pointing to canonical WHO03_3.6_REC_002 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.6_REC_002",
+    "after_snippet": "WHO03_3.6_REC_002"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.6_REC_003",
+    "action": "Set canonical status on WHO03_3.6_REC_003",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_010",
+    "action": "Marked WHO03_0_REC_010 as duplicate pointing to canonical WHO03_3.6_REC_003 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.6_REC_003",
+    "after_snippet": "WHO03_3.6_REC_003"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.7_REC_001",
+    "action": "Set canonical status on WHO03_3.7_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_011",
+    "action": "Marked WHO03_0_REC_011 as duplicate pointing to canonical WHO03_3.7_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.7_REC_001",
+    "after_snippet": "WHO03_3.7_REC_001"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.7_REC_002",
+    "action": "Set canonical status on WHO03_3.7_REC_002",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_012",
+    "action": "Marked WHO03_0_REC_012 as duplicate pointing to canonical WHO03_3.7_REC_002 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.7_REC_002",
+    "after_snippet": "WHO03_3.7_REC_002"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_3.8_REC_001",
+    "action": "Set canonical status on WHO03_3.8_REC_001",
+    "field_name": "is_duplicate",
+    "before_snippet": "is_duplicate=True",
+    "after_snippet": "is_duplicate=False"
+  },
+  {
+    "rule_id": "R8",
+    "chunk_id": "WHO03_0_REC_013",
+    "action": "Marked WHO03_0_REC_013 as duplicate pointing to canonical WHO03_3.8_REC_001 with priority 2",
+    "field_name": "canonical_chunk_id",
+    "before_snippet": "WHO03_3.8_REC_001",
+    "after_snippet": "WHO03_3.8_REC_001"
+  },
+  {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_001",
-    "action": "Updated PDF page span: (9, 12) -> (9, 9)",
+    "action": "Updated PDF page span: (9, 12) -> (9, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "9-9"
+    "after_snippet": "9-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_002",
-    "action": "Updated PDF page span: (9, 12) -> (9, 9)",
+    "action": "Updated PDF page span: (9, 12) -> (9, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "9-9"
+    "after_snippet": "9-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_003",
-    "action": "Updated PDF page span: (9, 12) -> (10, 10)",
+    "action": "Updated PDF page span: (9, 12) -> (10, 19)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "10-10"
+    "after_snippet": "10-19"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_004",
-    "action": "Updated PDF page span: (9, 12) -> (10, 10)",
+    "action": "Updated PDF page span: (9, 12) -> (10, 20)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "10-10"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_REC_005",
-    "action": "Updated PDF page span: (9, 12) -> (10, 10)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "9-12",
-    "after_snippet": "10-10"
+    "after_snippet": "10-20"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_006",
-    "action": "Updated PDF page span: (9, 12) -> (10, 10)",
+    "action": "Updated PDF page span: (9, 12) -> (10, 23)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "10-10"
+    "after_snippet": "10-23"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_007",
-    "action": "Updated PDF page span: (9, 12) -> (10, 10)",
+    "action": "Updated PDF page span: (9, 12) -> (10, 25)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "10-10"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_REC_008",
-    "action": "Updated PDF page span: (9, 12) -> (10, 10)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "9-12",
-    "after_snippet": "10-10"
+    "after_snippet": "10-25"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_009",
-    "action": "Updated PDF page span: (9, 12) -> (11, 11)",
+    "action": "Updated PDF page span: (9, 12) -> (11, 28)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "11-11"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_REC_010",
-    "action": "Updated PDF page span: (9, 12) -> (11, 11)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "9-12",
-    "after_snippet": "11-11"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_REC_011",
-    "action": "Updated PDF page span: (9, 12) -> (11, 11)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "9-12",
-    "after_snippet": "11-11"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_REC_012",
-    "action": "Updated PDF page span: (9, 12) -> (11, 11)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "9-12",
-    "after_snippet": "11-11"
+    "after_snippet": "11-28"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_REC_013",
-    "action": "Updated PDF page span: (9, 12) -> (11, 11)",
+    "action": "Updated PDF page span: (9, 12) -> (11, 31)",
     "field_name": "pdf_page_start",
     "before_snippet": "9-12",
-    "after_snippet": "11-11"
+    "after_snippet": "11-31"
   },
   {
     "rule_id": "R11",
@@ -2273,11 +2505,11 @@
   },
   {
     "rule_id": "R11",
-    "chunk_id": "WHO03_1_EVID_003",
-    "action": "Updated PDF page span: (13, 14) -> (14, 14)",
+    "chunk_id": "WHO03_1_EVID_002",
+    "action": "Updated PDF page span: (13, 14) -> (13, 60)",
     "field_name": "pdf_page_start",
     "before_snippet": "13-14",
-    "after_snippet": "14-14"
+    "after_snippet": "13-60"
   },
   {
     "rule_id": "R11",
@@ -2286,6 +2518,14 @@
     "field_name": "pdf_page_start",
     "before_snippet": "15-16",
     "after_snippet": "15-15"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "WHO03_2.3_METH_001",
+    "action": "Updated PDF page span: (16, 16) -> (16, 55)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "16-16",
+    "after_snippet": "16-55"
   },
   {
     "rule_id": "R11",
@@ -2326,14 +2566,6 @@
     "field_name": "pdf_page_start",
     "before_snippet": "20-22",
     "after_snippet": "20-20"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_3.3_REC_001",
-    "action": "Updated PDF page span: (22, 23) -> (22, 22)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "22-23",
-    "after_snippet": "22-22"
   },
   {
     "rule_id": "R11",
@@ -2417,43 +2649,11 @@
   },
   {
     "rule_id": "R11",
-    "chunk_id": "WHO03_3.6_REC_001",
-    "action": "Updated PDF page span: (28, 29) -> (28, 28)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "28-29",
-    "after_snippet": "28-28"
-  },
-  {
-    "rule_id": "R11",
     "chunk_id": "WHO03_3.6_REC_002",
     "action": "Updated PDF page span: (28, 29) -> (28, 28)",
     "field_name": "pdf_page_start",
     "before_snippet": "28-29",
     "after_snippet": "28-28"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_3.6_REC_003",
-    "action": "Updated PDF page span: (28, 29) -> (28, 28)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "28-29",
-    "after_snippet": "28-28"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_3.7_REC_001",
-    "action": "Updated PDF page span: (29, 30) -> (29, 29)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "29-30",
-    "after_snippet": "29-29"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_3.7_REC_002",
-    "action": "Updated PDF page span: (29, 30) -> (29, 29)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "29-30",
-    "after_snippet": "29-29"
   },
   {
     "rule_id": "R11",
@@ -2497,122 +2697,106 @@
   },
   {
     "rule_id": "R11",
+    "chunk_id": "WHO03_5_OTH_001",
+    "action": "Updated PDF page span: (36, 36) -> (36, 37)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "36-36",
+    "after_snippet": "36-37"
+  },
+  {
+    "rule_id": "R11",
     "chunk_id": "WHO03_5.5_EVID_001",
-    "action": "Updated PDF page span: (36, 38) -> (36, 36)",
+    "action": "Updated PDF page span: (36, 38) -> (37, 37)",
     "field_name": "pdf_page_start",
     "before_snippet": "36-38",
-    "after_snippet": "36-36"
+    "after_snippet": "37-37"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_6.1_EVID_001",
-    "action": "Updated PDF page span: (38, 40) -> (38, 38)",
+    "action": "Updated PDF page span: (38, 40) -> (23, 39)",
     "field_name": "pdf_page_start",
     "before_snippet": "38-40",
-    "after_snippet": "38-38"
+    "after_snippet": "23-39"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_6.2_ALGO_001",
-    "action": "Updated PDF page span: (40, 42) -> (40, 40)",
+    "action": "Updated PDF page span: (40, 42) -> (40, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "40-42",
-    "after_snippet": "40-40"
+    "after_snippet": "40-41"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_6.2_ALGO_002",
-    "action": "Updated PDF page span: (40, 42) -> (40, 40)",
+    "action": "Updated PDF page span: (40, 42) -> (40, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "40-42",
-    "after_snippet": "40-40"
+    "after_snippet": "40-41"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_6.2_ALGO_003",
-    "action": "Updated PDF page span: (40, 42) -> (40, 40)",
+    "action": "Updated PDF page span: (40, 42) -> (40, 41)",
     "field_name": "pdf_page_start",
     "before_snippet": "40-42",
-    "after_snippet": "40-40"
+    "after_snippet": "40-41"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_METH_001",
-    "action": "Updated PDF page span: (55, 56) -> (5, 5)",
+    "action": "Updated PDF page span: (55, 56) -> (5, 55)",
     "field_name": "pdf_page_start",
     "before_snippet": "55-56",
-    "after_snippet": "5-5"
+    "after_snippet": "5-55"
   },
   {
     "rule_id": "R11",
     "chunk_id": "WHO03_0_THR_001",
-    "action": "Updated PDF page span: (56, 61) -> (5, 57)",
+    "action": "Updated PDF page span: (56, 61) -> (56, 56)",
     "field_name": "pdf_page_start",
     "before_snippet": "56-61",
-    "after_snippet": "5-57"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_THR_002",
-    "action": "Updated PDF page span: (56, 61) -> (57, 58)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "56-61",
-    "after_snippet": "57-58"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_THR_003",
-    "action": "Updated PDF page span: (56, 61) -> (57, 57)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "56-61",
-    "after_snippet": "57-57"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_THR_004",
-    "action": "Updated PDF page span: (56, 61) -> (15, 60)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "56-61",
-    "after_snippet": "15-60"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_TBL_011",
-    "action": "Updated PDF page span: (58, 58) -> (57, 57)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "58-58",
-    "after_snippet": "57-57"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_TBL_012",
-    "action": "Updated PDF page span: (58, 58) -> (57, 57)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "58-58",
-    "after_snippet": "57-57"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_TBL_013",
-    "action": "Updated PDF page span: (59, 59) -> (57, 57)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "59-59",
-    "after_snippet": "57-57"
-  },
-  {
-    "rule_id": "R11",
-    "chunk_id": "WHO03_0_TBL_014",
-    "action": "Updated PDF page span: (59, 59) -> (56, 56)",
-    "field_name": "pdf_page_start",
-    "before_snippet": "59-59",
     "after_snippet": "56-56"
   },
   {
     "rule_id": "R11",
-    "chunk_id": "WHO03_0_TBL_016",
-    "action": "Updated PDF page span: (60, 60) -> (56, 60)",
+    "chunk_id": "WHO03_0_THR_002",
+    "action": "Updated PDF page span: (56, 61) -> (19, 60)",
     "field_name": "pdf_page_start",
-    "before_snippet": "60-60",
-    "after_snippet": "56-60"
+    "before_snippet": "56-61",
+    "after_snippet": "19-60"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "WHO03_0_THR_003",
+    "action": "Updated PDF page span: (56, 61) -> (19, 60)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "56-61",
+    "after_snippet": "19-60"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "WHO03_0_THR_004",
+    "action": "Updated PDF page span: (56, 61) -> (59, 59)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "56-61",
+    "after_snippet": "59-59"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "WHO03_3.2_ALGO_001",
+    "action": "Updated PDF page span: (21, 21) -> (21, 23)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "21-21",
+    "after_snippet": "21-23"
+  },
+  {
+    "rule_id": "R11",
+    "chunk_id": "WHO03_6.2_ALGO_004",
+    "action": "Updated PDF page span: (41, 41) -> (40, 41)",
+    "field_name": "pdf_page_start",
+    "before_snippet": "41-41",
+    "after_snippet": "40-41"
   }
 ]
